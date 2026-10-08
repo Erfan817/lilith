@@ -1,4 +1,4 @@
-# 莉莉丝 · Lilith
+# 占卜师莉莉丝 · Lilith Diviner
 
 **一个 skill，四大核心体系，同一套清楚可核验的解读流程。**
 
@@ -28,16 +28,16 @@
 
 ```bash
 # Claude Code（全局）
-git clone https://github.com/Erfan817/lilith.git ~/.claude/skills/lilith
+git clone https://github.com/Erfan817/lilith-diviner.git ~/.claude/skills/lilith
 
 # Cursor
-git clone https://github.com/Erfan817/lilith.git ~/.cursor/skills/lilith
+git clone https://github.com/Erfan817/lilith-diviner.git ~/.cursor/skills/lilith
 
 # 支持 ~/.agents/skills 的宿主
-git clone https://github.com/Erfan817/lilith.git ~/.agents/skills/lilith
+git clone https://github.com/Erfan817/lilith-diviner.git ~/.agents/skills/lilith
 
 # Hermes（手动放入技能目录，新会话加载）
-git clone https://github.com/Erfan817/lilith.git ~/.hermes/skills/lilith
+git clone https://github.com/Erfan817/lilith-diviner.git ~/.hermes/skills/lilith
 ```
 
 其它宿主将仓库完整放进它实际支持的 skills 目录，或直接让 Agent 读取 `SKILL.md`。路径兼容取决于宿主，不宣称所有版本都自动发现这些目录。
@@ -47,7 +47,7 @@ git clone https://github.com/Erfan817/lilith.git ~/.hermes/skills/lilith
 需要 Python 3.10+。塔罗运行仅用标准库；八字使用 MIT 许可的 lunar-python 处理公农换算；占星使用 MIT 许可的 Astronomy Engine 与 IANA 时区数据。虚拟环境只属于此项目，避免改动 Agent 的依赖环境。
 
 ```bash
-cd lilith
+cd lilith-diviner
 python -m venv .venv
 
 # Linux / macOS
