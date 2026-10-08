@@ -1,0 +1,1357 @@
+{
+  "schema_version": 1,
+  "collection": "Lilith original Chinese Western astrology foundations",
+  "generated_at": "2026-10-08T12:13:32.224636Z",
+  "documents": [
+    "foundations.md",
+    "zodiac-signs.md",
+    "planets.md",
+    "houses.md",
+    "aspects.md",
+    "dignities.md",
+    "moon-nodes.md",
+    "chart-reading.md"
+  ],
+  "scope": "Original synthesis of commonly used Western astrology concepts; not comprehensive across all schools; not scientific prediction.",
+  "original_content_license": "MIT",
+  "source_rights": "Source authors retain rights. No source article bodies, long translations or artwork are included in the repository.",
+  "retrieval_policy": "Only actually read main articles support the eight documents. Partial, blocked, index and image-only candidates are retained with explicit outcomes and are not full-text evidence. Raw retrievals remain in private scratch, outside the repository.",
+  "source_count": 79,
+  "synthesis_source_count": 61,
+  "sources": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Yod_(astrology)",
+      "title": "Yod (astrology)",
+      "accessed_at": "2026-10-08T12:06:04.782312Z",
+      "topics": [
+        "aspect geometry, project orbs, patterns, applying and separating"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "main_article_read_via_web_extract",
+      "retrieval_method": "web_extract",
+      "used_for_synthesis": true,
+      "notes": "Initial extraction returned the article body and further-reading section without omission markers. Later extraction had omissions; direct browser retry was blocked. Only common three-point geometry is used, not unsupported claims about fate or creativity.",
+      "documents": [
+        "aspects.md"
+      ]
+    },
+    {
+      "url": "https://kerykeion.net/content/learn-astrology/dignities-face",
+      "title": "Face and Decan: Ten-Degree Divisions - Learn Astrology",
+      "accessed_at": "2026-10-08T09:47:09.353963Z",
+      "topics": [
+        "essential dignities, Egyptian bounds, Chaldean faces, triplicity, sect, reception"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://kerykeion.net/content/learn-astrology/dignities-face",
+      "body_characters_retrieved": 12645,
+      "used_for_synthesis": true,
+      "documents": [
+        "dignities.md"
+      ]
+    },
+    {
+      "url": "https://kerykeion.net/content/learn-astrology/dignities-terms",
+      "title": "Terms and Bounds: Planetary Divisions - Learn Astrology",
+      "accessed_at": "2026-10-08T09:46:01.785962Z",
+      "topics": [
+        "essential dignities, Egyptian bounds, Chaldean faces, triplicity, sect, reception"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://kerykeion.net/content/learn-astrology/dignities-terms",
+      "body_characters_retrieved": 14009,
+      "used_for_synthesis": true,
+      "notes": "Egyptian bounds table read; its Jupiter-in-Aries face-scoring example conflicts with the Chaldean face table and is not copied.",
+      "documents": [
+        "dignities.md"
+      ]
+    },
+    {
+      "url": "https://kerykeion.net/content/learn-astrology/tech-lunar-orbit",
+      "title": "The Lunar Orbit, Nodes, and Eclipses - Learn Astrology",
+      "accessed_at": "2026-10-08T11:57:05.312131Z",
+      "topics": [
+        "lunar node geometry, mean and true models, interpretive traditions, point scope"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://kerykeion.net/content/learn-astrology/tech-lunar-orbit",
+      "body_characters_retrieved": 9985,
+      "used_for_synthesis": true,
+      "notes": "Used only to distinguish lunar nodes from lunar apsides / Black Moon Lilith. Fixed eclipse-limit sufficiency claims and precision marketing are not adopted.",
+      "documents": [
+        "moon-nodes.md"
+      ]
+    },
+    {
+      "url": "https://library.keplercollege.org/questions-spiritual-astrology/",
+      "title": "Questions for Spiritual Astrology – Kepler College Research Library",
+      "accessed_at": "2026-10-08T12:02:52.136230Z",
+      "topics": [
+        "research-candidate"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "partial_extraction_not_used",
+      "retrieval_method": "web_extract; browser/HTTP retry where recorded",
+      "used_for_synthesis": false,
+      "notes": "Retrieved article text has an explicit truncation marker. Not claimed as a full-text source; other complete node sources used."
+    },
+    {
+      "url": "https://library.keplercollege.org/the-moons-nodes/",
+      "title": "The Moon's Nodes - Kepler College Research Library",
+      "accessed_at": "2026-10-08T09:54:26.565813Z",
+      "topics": [
+        "lunar node geometry, mean and true models, interpretive traditions, point scope"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://library.keplercollege.org/the-moons-nodes/",
+      "body_characters_retrieved": 3680,
+      "used_for_synthesis": true,
+      "documents": [
+        "moon-nodes.md"
+      ]
+    },
+    {
+      "url": "https://library.keplercollege.org/untangling-astro-symbols",
+      "title": "Untangling Astrology's Symbols: Pluto and Scorpio, Neptune and Pisces - Kepler College Research Library",
+      "accessed_at": "2026-10-08T09:42:27.936048Z",
+      "topics": [
+        "chart-reading method, input uncertainty, synthesis, ethics",
+        "twelve houses, house systems, house rulers, non-equivalence of symbols",
+        "ten main bodies, traditional seven, outer planets, lunar nodes, Chiron",
+        "zodiac signs, elements, modes, rulerships, differentiated placements, mythology"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "requests + BeautifulSoup",
+      "final_url": "https://library.keplercollege.org/untangling-astro-symbols/",
+      "body_characters_retrieved": 33905,
+      "used_for_synthesis": true,
+      "documents": [
+        "chart-reading.md",
+        "houses.md",
+        "planets.md",
+        "zodiac-signs.md"
+      ]
+    },
+    {
+      "url": "https://melaniereinhart.com/melanie/astrologyarticles/all-change.php",
+      "title": "Astrology | Venus Part I - Queen of Heaven & Earth | by Melanie Reinhart",
+      "accessed_at": "2026-10-08T09:47:11.619380Z",
+      "topics": [
+        "ten main bodies, traditional seven, outer planets, lunar nodes, Chiron"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://melaniereinhart.com/melanie/astrologyarticles/all-change.php",
+      "body_characters_retrieved": 16698,
+      "used_for_synthesis": true,
+      "article_title": "ALL CHANGE PLEASE",
+      "notes": "HTML title refers to Venus Part I, but visible article heading is ALL CHANGE PLEASE. Historical transit predictions and clinical assertions are not adopted.",
+      "documents": [
+        "planets.md"
+      ]
+    },
+    {
+      "url": "https://science.nasa.gov/moon/eclipses/",
+      "title": "Eclipses and the Moon - NASA Science",
+      "accessed_at": "2026-10-08T09:54:08.346760Z",
+      "topics": [
+        "foundations, coordinate systems, scientific and ethical limits",
+        "lunar node geometry, mean and true models, interpretive traditions, point scope"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://science.nasa.gov/moon/eclipses/",
+      "body_characters_retrieved": 9659,
+      "used_for_synthesis": true,
+      "documents": [
+        "foundations.md",
+        "moon-nodes.md"
+      ]
+    },
+    {
+      "url": "https://undsci.berkeley.edu/astrology-is-it-scientific/",
+      "title": "Astrology: Is it scientific?",
+      "accessed_at": "2026-10-08T09:42:24.480269Z",
+      "topics": [
+        "chart-reading method, input uncertainty, synthesis, ethics",
+        "foundations, coordinate systems, scientific and ethical limits"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "requests + BeautifulSoup",
+      "final_url": "https://undsci.berkeley.edu/astrology-is-it-scientific/",
+      "body_characters_retrieved": 4939,
+      "used_for_synthesis": true,
+      "documents": [
+        "chart-reading.md",
+        "foundations.md"
+      ]
+    },
+    {
+      "url": "https://www.astro.com/astrology/in_kd1_ari_e.htm",
+      "title": "Star Signs -  Aries",
+      "accessed_at": "2026-10-08T12:02:52.136034Z",
+      "topics": [
+        "research-candidate"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "public_excerpt_read_not_used",
+      "retrieval_method": "web_extract; browser/HTTP retry where recorded",
+      "used_for_synthesis": false,
+      "notes": "Initial read returned the complete short public excerpt by Liz Greene, not the full copyrighted horoscope. Browser retry refused. Not a primary source and not translated."
+    },
+    {
+      "url": "https://www.astro.com/astrology/in_planets1_e.htm",
+      "title": "A Brief Introduction to Astrology: the Planets",
+      "accessed_at": "2026-10-08T12:02:52.135757Z",
+      "topics": [
+        "research-candidate"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "partial_extraction_not_used",
+      "retrieval_method": "web_extract; browser/HTTP retry where recorded",
+      "used_for_synthesis": false,
+      "notes": "Initial HTTP 403; retry returned truncated article or index, not full individual texts. Replaced by full seven-planet introductions and Kepler source."
+    },
+    {
+      "url": "https://www.astro.com/astrology/in_planets_e.htm",
+      "title": "Planets",
+      "accessed_at": "2026-10-08T12:02:52.135757Z",
+      "topics": [
+        "research-candidate"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "partial_extraction_not_used",
+      "retrieval_method": "web_extract; browser/HTTP retry where recorded",
+      "used_for_synthesis": false,
+      "notes": "Initial HTTP 403; retry returned truncated article or index, not full individual texts. Replaced by full seven-planet introductions and Kepler source."
+    },
+    {
+      "url": "https://www.astro.com/astrowiki/en/Aspect",
+      "title": "Aspect - Astrodienst Astrowiki",
+      "accessed_at": "2026-10-08T12:02:52.135414Z",
+      "topics": [
+        "research-candidate"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "partial_extraction_then_blocked",
+      "retrieval_method": "web_extract; browser/HTTP retry where recorded",
+      "used_for_synthesis": false,
+      "notes": "Initial extraction contained omitted segments; full-page access failed with browser check, connection refusal or HTTP 403. Not used as a full-text source."
+    },
+    {
+      "url": "https://www.astro.com/astrowiki/en/Chiron",
+      "title": "Chiron - Astrodienst Astrowiki",
+      "accessed_at": "2026-10-08T12:02:52.135414Z",
+      "topics": [
+        "research-candidate"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "partial_extraction_then_blocked",
+      "retrieval_method": "web_extract; browser/HTTP retry where recorded",
+      "used_for_synthesis": false,
+      "notes": "Initial extraction contained omitted segments; full-page access failed with browser check, connection refusal or HTTP 403. Not used as a full-text source."
+    },
+    {
+      "url": "https://www.astro.com/astrowiki/en/House",
+      "title": "House - Astrodienst Astrowiki",
+      "accessed_at": "2026-10-08T12:02:52.135414Z",
+      "topics": [
+        "research-candidate"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "partial_extraction_then_blocked",
+      "retrieval_method": "web_extract; browser/HTTP retry where recorded",
+      "used_for_synthesis": false,
+      "notes": "Initial extraction contained omitted segments; full-page access failed with browser check, connection refusal or HTTP 403. Not used as a full-text source."
+    },
+    {
+      "url": "https://www.astro.com/astrowiki/en/Moon%27s_Nodes",
+      "title": "Moon's Nodes - Astrodienst Astrowiki",
+      "accessed_at": "2026-10-08T12:02:52.135414Z",
+      "topics": [
+        "research-candidate"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "partial_extraction_then_blocked",
+      "retrieval_method": "web_extract; browser/HTTP retry where recorded",
+      "used_for_synthesis": false,
+      "notes": "Initial extraction contained omitted segments; full-page access failed with browser check, connection refusal or HTTP 403. Not used as a full-text source."
+    },
+    {
+      "url": "https://www.astro.com/astrowiki/en/Planet",
+      "title": "Planet - Astrodienst Astrowiki",
+      "accessed_at": "2026-10-08T12:02:52.135757Z",
+      "topics": [
+        "research-candidate"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "partial_extraction_then_blocked",
+      "retrieval_method": "web_extract; browser/HTTP retry where recorded",
+      "used_for_synthesis": false,
+      "notes": "Initial extraction contained omitted segments; full-page access failed with browser check, connection refusal or HTTP 403. Not used as a full-text source."
+    },
+    {
+      "url": "https://www.astro.com/info/in_planets_e.htm",
+      "title": "One moment...",
+      "accessed_at": "2026-10-08T12:02:52.136034Z",
+      "topics": [
+        "research-candidate"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "browser_check_not_article",
+      "retrieval_method": "web_extract; browser/HTTP retry where recorded",
+      "used_for_synthesis": false,
+      "notes": "Returned checking-your-browser screen, not requested knowledge content. Not used."
+    },
+    {
+      "url": "https://www.astro.com/swisseph/sweph_ht_e.htm",
+      "title": "Tables of Houses for Astrology Free download",
+      "accessed_at": "2026-10-08T12:02:52.135757Z",
+      "topics": [
+        "research-candidate"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "partial_extraction_then_connection_refused",
+      "retrieval_method": "web_extract; browser/HTTP retry where recorded",
+      "used_for_synthesis": false,
+      "notes": "Extracted text stops before all house-system sections; full browser and HTTP access refused. Superseded by full Skyscript house-division source."
+    },
+    {
+      "url": "https://www.skyscript.co.uk/",
+      "title": "Skyscript Astrology",
+      "accessed_at": "2026-10-08T12:08:25.369179Z",
+      "topics": [
+        "source-discovery"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "index_navigation_read",
+      "retrieval_method": "web_extract then browser link DOM",
+      "used_for_synthesis": false,
+      "notes": "Read directory/navigation to discover actual article URLs; not cited as article evidence. Direct requests returned HTTP 403, browser worked."
+    },
+    {
+      "url": "https://www.skyscript.co.uk/1.html",
+      "title": "The 1st house",
+      "accessed_at": "2026-10-08T09:40:24.719513Z",
+      "topics": [
+        "twelve houses, house systems, house rulers, non-equivalence of symbols"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/1.html",
+      "body_characters_retrieved": 5032,
+      "used_for_synthesis": true,
+      "notes": "Historical medical, crime, sexuality, fatalistic and hierarchical judgments are not adopted. Article prose and artwork are not redistributed.",
+      "documents": [
+        "houses.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/10.html",
+      "title": "The 10th house",
+      "accessed_at": "2026-10-08T09:42:30.074385Z",
+      "topics": [
+        "twelve houses, house systems, house rulers, non-equivalence of symbols"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/10.html",
+      "body_characters_retrieved": 4805,
+      "used_for_synthesis": true,
+      "notes": "Historical medical, crime, sexuality, fatalistic and hierarchical judgments are not adopted. Article prose and artwork are not redistributed.",
+      "documents": [
+        "houses.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/11.html",
+      "title": "The 11th house",
+      "accessed_at": "2026-10-08T09:42:32.095532Z",
+      "topics": [
+        "twelve houses, house systems, house rulers, non-equivalence of symbols"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/11.html",
+      "body_characters_retrieved": 5536,
+      "used_for_synthesis": true,
+      "notes": "Historical medical, crime, sexuality, fatalistic and hierarchical judgments are not adopted. Article prose and artwork are not redistributed.",
+      "documents": [
+        "houses.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/12.html",
+      "title": "The 12th house",
+      "accessed_at": "2026-10-08T09:42:34.460588Z",
+      "topics": [
+        "twelve houses, house systems, house rulers, non-equivalence of symbols"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/12.html",
+      "body_characters_retrieved": 5465,
+      "used_for_synthesis": true,
+      "notes": "Historical medical, crime, sexuality, fatalistic and hierarchical judgments are not adopted. Article prose and artwork are not redistributed.",
+      "documents": [
+        "houses.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/2.html",
+      "title": "The 2nd house",
+      "accessed_at": "2026-10-08T09:41:23.211516Z",
+      "topics": [
+        "twelve houses, house systems, house rulers, non-equivalence of symbols"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/2.html",
+      "body_characters_retrieved": 4617,
+      "used_for_synthesis": true,
+      "notes": "Historical medical, crime, sexuality, fatalistic and hierarchical judgments are not adopted. Article prose and artwork are not redistributed.",
+      "documents": [
+        "houses.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/3.html",
+      "title": "The 3rd house",
+      "accessed_at": "2026-10-08T09:41:24.703961Z",
+      "topics": [
+        "twelve houses, house systems, house rulers, non-equivalence of symbols"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/3.html",
+      "body_characters_retrieved": 4398,
+      "used_for_synthesis": true,
+      "notes": "Historical medical, crime, sexuality, fatalistic and hierarchical judgments are not adopted. Article prose and artwork are not redistributed.",
+      "documents": [
+        "houses.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/4.html",
+      "title": "The 4th house",
+      "accessed_at": "2026-10-08T09:41:26.185653Z",
+      "topics": [
+        "twelve houses, house systems, house rulers, non-equivalence of symbols"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/4.html",
+      "body_characters_retrieved": 5609,
+      "used_for_synthesis": true,
+      "notes": "Historical medical, crime, sexuality, fatalistic and hierarchical judgments are not adopted. Article prose and artwork are not redistributed.",
+      "documents": [
+        "houses.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/5.html",
+      "title": "The 5th house",
+      "accessed_at": "2026-10-08T09:41:27.350790Z",
+      "topics": [
+        "twelve houses, house systems, house rulers, non-equivalence of symbols"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/5.html",
+      "body_characters_retrieved": 5228,
+      "used_for_synthesis": true,
+      "notes": "Historical medical, crime, sexuality, fatalistic and hierarchical judgments are not adopted. Article prose and artwork are not redistributed.",
+      "documents": [
+        "houses.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/6.html",
+      "title": "The 6th house",
+      "accessed_at": "2026-10-08T09:41:59.607336Z",
+      "topics": [
+        "twelve houses, house systems, house rulers, non-equivalence of symbols"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/6.html",
+      "body_characters_retrieved": 4848,
+      "used_for_synthesis": true,
+      "notes": "Historical medical, crime, sexuality, fatalistic and hierarchical judgments are not adopted. Article prose and artwork are not redistributed.",
+      "documents": [
+        "houses.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/7.html",
+      "title": "The 7th house",
+      "accessed_at": "2026-10-08T09:42:01.086951Z",
+      "topics": [
+        "twelve houses, house systems, house rulers, non-equivalence of symbols"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/7.html",
+      "body_characters_retrieved": 5054,
+      "used_for_synthesis": true,
+      "notes": "Historical medical, crime, sexuality, fatalistic and hierarchical judgments are not adopted. Article prose and artwork are not redistributed.",
+      "documents": [
+        "houses.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/8.html",
+      "title": "The 8th house",
+      "accessed_at": "2026-10-08T09:42:02.262800Z",
+      "topics": [
+        "twelve houses, house systems, house rulers, non-equivalence of symbols"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/8.html",
+      "body_characters_retrieved": 5137,
+      "used_for_synthesis": true,
+      "notes": "Historical medical, crime, sexuality, fatalistic and hierarchical judgments are not adopted. Article prose and artwork are not redistributed.",
+      "documents": [
+        "houses.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/9.html",
+      "title": "The 9th house",
+      "accessed_at": "2026-10-08T09:42:03.735059Z",
+      "topics": [
+        "twelve houses, house systems, house rulers, non-equivalence of symbols"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/9.html",
+      "body_characters_retrieved": 4923,
+      "used_for_synthesis": true,
+      "notes": "Historical medical, crime, sexuality, fatalistic and hierarchical judgments are not adopted. Article prose and artwork are not redistributed.",
+      "documents": [
+        "houses.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/aquarius.html",
+      "title": "Aquarius the Waterbearer | Zodiac Sign Symbolism",
+      "accessed_at": "2026-10-08T09:40:12.825676Z",
+      "topics": [
+        "zodiac signs, elements, modes, rulerships, differentiated placements, mythology"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/aquarius.html",
+      "body_characters_retrieved": 19372,
+      "used_for_synthesis": true,
+      "documents": [
+        "zodiac-signs.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/aries.html",
+      "title": "Aries the Ram | Zodiac Sign Symbolism",
+      "accessed_at": "2026-10-08T09:36:43.819643Z",
+      "topics": [
+        "zodiac signs, elements, modes, rulerships, differentiated placements, mythology"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/aries.html",
+      "body_characters_retrieved": 19228,
+      "used_for_synthesis": true,
+      "documents": [
+        "zodiac-signs.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/aspects2.html",
+      "title": "An Introduction to Aspects and Chart Shaping in Natal Astrology by Nicholas Campion",
+      "accessed_at": "2026-10-08T09:49:30.411775Z",
+      "topics": [
+        "aspect geometry, project orbs, patterns, applying and separating",
+        "chart-reading method, input uncertainty, synthesis, ethics"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/aspects2.html",
+      "body_characters_retrieved": 15038,
+      "used_for_synthesis": true,
+      "notes": "Source square/trine orbs and its four-point Yod wording differ from project conventions; project uses explicit own orb table and independently checked common Yod geometry.",
+      "documents": [
+        "aspects.md",
+        "chart-reading.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/cancer.html",
+      "title": "Cancer the Crab | Zodiac Sign Symbolism",
+      "accessed_at": "2026-10-08T09:37:38.095286Z",
+      "topics": [
+        "zodiac signs, elements, modes, rulerships, differentiated placements, mythology"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/cancer.html",
+      "body_characters_retrieved": 17057,
+      "used_for_synthesis": true,
+      "documents": [
+        "zodiac-signs.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/cancer_myth.html",
+      "title": "Skyscript: Star Lore of the Constellations - Cancer the Crab",
+      "accessed_at": "2026-10-08T09:46:03.902212Z",
+      "topics": [
+        "zodiac signs, elements, modes, rulerships, differentiated placements, mythology"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/cancer_myth.html",
+      "body_characters_retrieved": 6494,
+      "used_for_synthesis": true,
+      "notes": "Historical medical, crime, sexuality, fatalistic and hierarchical judgments are not adopted. Article prose and artwork are not redistributed.",
+      "documents": [
+        "zodiac-signs.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/capricorn.html",
+      "title": "Capricorn the Goatfish | Zodiac Sign Symbolism",
+      "accessed_at": "2026-10-08T09:39:18.115555Z",
+      "topics": [
+        "zodiac signs, elements, modes, rulerships, differentiated placements, mythology"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/capricorn.html",
+      "body_characters_retrieved": 22432,
+      "used_for_synthesis": true,
+      "documents": [
+        "zodiac-signs.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/dig2.html",
+      "title": "Skyscript: Understanding Planetary Dignity and Debility - Part 2: Understanding Ptolemys Table of Essential Dignities",
+      "accessed_at": "2026-10-08T09:47:06.985381Z",
+      "topics": [
+        "essential dignities, Egyptian bounds, Chaldean faces, triplicity, sect, reception"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/dig2.html",
+      "body_characters_retrieved": 6936,
+      "used_for_synthesis": true,
+      "documents": [
+        "dignities.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/dig4.html",
+      "title": "Skyscript: Understanding Planetary Dignity and Debility - Part 4: Essential Debilities",
+      "accessed_at": "2026-10-08T09:49:31.614444Z",
+      "topics": [
+        "essential dignities, Egyptian bounds, Chaldean faces, triplicity, sect, reception"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/dig4.html",
+      "body_characters_retrieved": 5538,
+      "used_for_synthesis": true,
+      "documents": [
+        "dignities.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/dig6.html",
+      "title": "Skyscript: Understanding Planetary Dignity and Debility - Part 6: Reception",
+      "accessed_at": "2026-10-08T09:49:33.120862Z",
+      "topics": [
+        "aspect geometry, project orbs, patterns, applying and separating",
+        "chart-reading method, input uncertainty, synthesis, ethics",
+        "essential dignities, Egyptian bounds, Chaldean faces, triplicity, sect, reception"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/dig6.html",
+      "body_characters_retrieved": 7850,
+      "used_for_synthesis": true,
+      "documents": [
+        "aspects.md",
+        "chart-reading.md",
+        "dignities.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/dignities.html",
+      "title": "Skyscript: Understanding Planetary Dignity and Debility - Part 1: Introducing Dignity",
+      "accessed_at": "2026-10-08T09:47:06.111709Z",
+      "topics": [
+        "aspect geometry, project orbs, patterns, applying and separating",
+        "chart-reading method, input uncertainty, synthesis, ethics",
+        "essential dignities, Egyptian bounds, Chaldean faces, triplicity, sect, reception"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/dignities.html",
+      "body_characters_retrieved": 6973,
+      "used_for_synthesis": true,
+      "documents": [
+        "aspects.md",
+        "chart-reading.md",
+        "dignities.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/essential_dignities.html",
+      "title": "Skyscript: Table of Essential Dignities",
+      "accessed_at": "2026-10-08T10:09:37.540452Z",
+      "topics": [
+        "dignity-table-candidate"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "image_table_not_read_as_text",
+      "retrieval_method": "web_extract error; browser DOM",
+      "used_for_synthesis": false,
+      "notes": "The table is an image; DOM contained navigation only. No claim to have read the image. Separate complete textual dignity, bounds and face sources used."
+    },
+    {
+      "url": "https://www.skyscript.co.uk/gemini.html",
+      "title": "Gemini the Twins | Zodiac Sign Symbolism",
+      "accessed_at": "2026-10-08T09:37:35.591704Z",
+      "topics": [
+        "zodiac signs, elements, modes, rulerships, differentiated placements, mythology"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/gemini.html",
+      "body_characters_retrieved": 18524,
+      "used_for_synthesis": true,
+      "documents": [
+        "zodiac-signs.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/glossary/ecliptic/",
+      "title": "Ecliptic - Skyscript Glossary",
+      "accessed_at": "2026-10-08T09:50:16.215699Z",
+      "topics": [
+        "foundations, coordinate systems, scientific and ethical limits"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/glossary/ecliptic/",
+      "body_characters_retrieved": 1497,
+      "used_for_synthesis": true,
+      "documents": [
+        "foundations.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/glossary/equal-house/",
+      "title": "Equal House (House System) - Skyscript Glossary",
+      "accessed_at": "2026-10-08T09:48:08.094050Z",
+      "topics": [
+        "chart-reading method, input uncertainty, synthesis, ethics",
+        "foundations, coordinate systems, scientific and ethical limits",
+        "twelve houses, house systems, house rulers, non-equivalence of symbols"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/glossary/equal-house/",
+      "body_characters_retrieved": 2556,
+      "used_for_synthesis": true,
+      "documents": [
+        "chart-reading.md",
+        "foundations.md",
+        "houses.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/glossary/exaltation/",
+      "title": "Exaltation (and Fall) - Skyscript Glossary",
+      "accessed_at": "2026-10-08T09:50:33.941223Z",
+      "topics": [
+        "essential dignities, Egyptian bounds, Chaldean faces, triplicity, sect, reception",
+        "ten main bodies, traditional seven, outer planets, lunar nodes, Chiron",
+        "zodiac signs, elements, modes, rulerships, differentiated placements, mythology"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/glossary/exaltation/",
+      "body_characters_retrieved": 3162,
+      "used_for_synthesis": true,
+      "documents": [
+        "dignities.md",
+        "planets.md",
+        "zodiac-signs.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/glossary/nodes",
+      "title": "Nodes (N or S) - Skyscript Glossary",
+      "accessed_at": "2026-10-08T09:45:00.563667Z",
+      "topics": [
+        "chart-reading method, input uncertainty, synthesis, ethics",
+        "lunar node geometry, mean and true models, interpretive traditions, point scope",
+        "ten main bodies, traditional seven, outer planets, lunar nodes, Chiron"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/glossary/nodes/",
+      "body_characters_retrieved": 2191,
+      "used_for_synthesis": true,
+      "documents": [
+        "chart-reading.md",
+        "moon-nodes.md",
+        "planets.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/glossary/nodes-n-or-s",
+      "title": "Skyscript Glossary of Astrological Terms",
+      "accessed_at": "2026-10-08T12:02:52.136034Z",
+      "topics": [
+        "research-candidate"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "navigation_only_no_entry",
+      "retrieval_method": "web_extract; browser/HTTP retry where recorded",
+      "used_for_synthesis": false,
+      "notes": "URL returned glossary navigation / footer without the requested entry. Correct discovered glossary URLs were used instead."
+    },
+    {
+      "url": "https://www.skyscript.co.uk/glossary/sect/",
+      "title": "Sect - Skyscript Glossary",
+      "accessed_at": "2026-10-08T09:50:18.512511Z",
+      "topics": [
+        "essential dignities, Egyptian bounds, Chaldean faces, triplicity, sect, reception",
+        "foundations, coordinate systems, scientific and ethical limits"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/glossary/sect/",
+      "body_characters_retrieved": 2434,
+      "used_for_synthesis": true,
+      "documents": [
+        "dignities.md",
+        "foundations.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/glossary/sidereal-zodiac/",
+      "title": "Skyscript Glossary of Astrological Terms",
+      "accessed_at": "2026-10-08T12:02:52.136230Z",
+      "topics": [
+        "research-candidate"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "navigation_only_no_entry",
+      "retrieval_method": "web_extract; browser/HTTP retry where recorded",
+      "used_for_synthesis": false,
+      "notes": "URL returned glossary navigation / footer without the requested entry. Correct discovered glossary URLs were used instead."
+    },
+    {
+      "url": "https://www.skyscript.co.uk/glossary/sidereal/",
+      "title": "Sidereal - Skyscript Glossary",
+      "accessed_at": "2026-10-08T09:53:51.655038Z",
+      "topics": [
+        "foundations, coordinate systems, scientific and ethical limits"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/glossary/sidereal/",
+      "body_characters_retrieved": 2978,
+      "used_for_synthesis": true,
+      "documents": [
+        "foundations.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/glossary/tropical-zodiac/",
+      "title": "Skyscript Glossary of Astrological Terms",
+      "accessed_at": "2026-10-08T12:02:52.136230Z",
+      "topics": [
+        "research-candidate"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "navigation_only_no_entry",
+      "retrieval_method": "web_extract; browser/HTTP retry where recorded",
+      "used_for_synthesis": false,
+      "notes": "URL returned glossary navigation / footer without the requested entry. Correct discovered glossary URLs were used instead."
+    },
+    {
+      "url": "https://www.skyscript.co.uk/glossary/whole-sign-houses/",
+      "title": "House Division Principles - Skyscript Glossary",
+      "accessed_at": "2026-10-08T09:50:45.763219Z",
+      "topics": [
+        "chart-reading method, input uncertainty, synthesis, ethics",
+        "foundations, coordinate systems, scientific and ethical limits",
+        "twelve houses, house systems, house rulers, non-equivalence of symbols"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/glossary/house-division/",
+      "body_characters_retrieved": 4870,
+      "used_for_synthesis": true,
+      "notes": "Requested URL redirects to /glossary/house-division/; full House Division Principles body read. Historiographical claims are not asserted as consensus.",
+      "documents": [
+        "chart-reading.md",
+        "foundations.md",
+        "houses.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/glossary/yod/",
+      "title": "Skyscript Glossary of Astrological Terms",
+      "accessed_at": "2026-10-08T12:02:52.136230Z",
+      "topics": [
+        "research-candidate"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "navigation_only_no_entry",
+      "retrieval_method": "web_extract; browser/HTTP retry where recorded",
+      "used_for_synthesis": false,
+      "notes": "URL returned glossary navigation / footer without the requested entry. Correct discovered glossary URLs were used instead."
+    },
+    {
+      "url": "https://www.skyscript.co.uk/glossary/zodiac-sign/",
+      "title": "Zodiac Sign - Skyscript Glossary",
+      "accessed_at": "2026-10-08T09:53:52.780448Z",
+      "topics": [
+        "foundations, coordinate systems, scientific and ethical limits",
+        "zodiac signs, elements, modes, rulerships, differentiated placements, mythology"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/glossary/zodiac-sign/",
+      "body_characters_retrieved": 1626,
+      "used_for_synthesis": true,
+      "documents": [
+        "foundations.md",
+        "zodiac-signs.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/glossary/zodiac/",
+      "title": "Zodiac - Skyscript Glossary",
+      "accessed_at": "2026-10-08T09:50:17.255397Z",
+      "topics": [
+        "foundations, coordinate systems, scientific and ethical limits"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/glossary/zodiac/",
+      "body_characters_retrieved": 1027,
+      "used_for_synthesis": true,
+      "documents": [
+        "foundations.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/house1.html",
+      "title": null,
+      "accessed_at": "2026-10-08T12:02:52.136034Z",
+      "topics": [
+        "research-candidate"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "http_error_not_found",
+      "retrieval_method": "web_extract; browser/HTTP retry where recorded",
+      "used_for_synthesis": false,
+      "notes": "Candidate returned 404 / HTTP error. Correct house URLs /1.html through /12.html were discovered and read instead."
+    },
+    {
+      "url": "https://www.skyscript.co.uk/jupiter1.html",
+      "title": "Skyscript: Jupiter",
+      "accessed_at": "2026-10-08T09:43:56.822359Z",
+      "topics": [
+        "ten main bodies, traditional seven, outer planets, lunar nodes, Chiron"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/jupiter1.html",
+      "body_characters_retrieved": 3717,
+      "used_for_synthesis": true,
+      "documents": [
+        "planets.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/leo.html",
+      "title": "Leo the Lion | Zodiac Sign Symbolism",
+      "accessed_at": "2026-10-08T09:38:07.416968Z",
+      "topics": [
+        "zodiac signs, elements, modes, rulerships, differentiated placements, mythology"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/leo.html",
+      "body_characters_retrieved": 18380,
+      "used_for_synthesis": true,
+      "documents": [
+        "zodiac-signs.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/libra.html",
+      "title": "Libra the Scales | Zodiac Sign Symbolism",
+      "accessed_at": "2026-10-08T09:38:13.366554Z",
+      "topics": [
+        "zodiac signs, elements, modes, rulerships, differentiated placements, mythology"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/libra.html",
+      "body_characters_retrieved": 20030,
+      "used_for_synthesis": true,
+      "notes": "An association-list line labels Venus as exaltation ruler in Libra, conflicting with the separate traditional dignity reference. Not adopted; Saturn is exalted in Libra and Venus in Pisces.",
+      "documents": [
+        "zodiac-signs.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/lunar_nodes.html",
+      "title": "Lunar Nodes, Bendings, and the Moon’s Planets",
+      "accessed_at": "2026-10-08T09:45:05.548038Z",
+      "topics": [
+        "lunar node geometry, mean and true models, interpretive traditions, point scope"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/lunar_nodes.html",
+      "body_characters_retrieved": 13929,
+      "used_for_synthesis": true,
+      "documents": [
+        "moon-nodes.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/mars1a.html",
+      "title": "Skyscript: Introducing Mars",
+      "accessed_at": "2026-10-08T09:43:53.685905Z",
+      "topics": [
+        "ten main bodies, traditional seven, outer planets, lunar nodes, Chiron"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/mars1a.html",
+      "body_characters_retrieved": 3322,
+      "used_for_synthesis": true,
+      "documents": [
+        "planets.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/mercury1.html",
+      "title": "Skyscript: Introducing Mercury",
+      "accessed_at": "2026-10-08T09:43:51.040253Z",
+      "topics": [
+        "ten main bodies, traditional seven, outer planets, lunar nodes, Chiron"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/mercury1.html",
+      "body_characters_retrieved": 3326,
+      "used_for_synthesis": true,
+      "documents": [
+        "planets.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/moon1.html",
+      "title": "Skyscript: Introducing the Moon",
+      "accessed_at": "2026-10-08T09:43:46.247690Z",
+      "topics": [
+        "ten main bodies, traditional seven, outer planets, lunar nodes, Chiron"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/moon1.html",
+      "body_characters_retrieved": 2937,
+      "used_for_synthesis": true,
+      "documents": [
+        "planets.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/pisces.html",
+      "title": "Pisces the Fish | Zodiac Sign Symbolism",
+      "accessed_at": "2026-10-08T09:40:21.087728Z",
+      "topics": [
+        "zodiac signs, elements, modes, rulerships, differentiated placements, mythology"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/pisces.html",
+      "body_characters_retrieved": 19992,
+      "used_for_synthesis": true,
+      "documents": [
+        "zodiac-signs.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/pisces_myth.html",
+      "title": "Skyscript: Star Lore of the Constellations - Pisces the Fish",
+      "accessed_at": "2026-10-08T09:46:05.885106Z",
+      "topics": [
+        "zodiac signs, elements, modes, rulerships, differentiated placements, mythology"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/pisces_myth.html",
+      "body_characters_retrieved": 7443,
+      "used_for_synthesis": true,
+      "notes": "Historical medical, crime, sexuality, fatalistic and hierarchical judgments are not adopted. Article prose and artwork are not redistributed.",
+      "documents": [
+        "zodiac-signs.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/sagittarius.html",
+      "title": "Sagittarius the Centaur | Zodiac Sign Symbolism",
+      "accessed_at": "2026-10-08T09:39:15.418250Z",
+      "topics": [
+        "zodiac signs, elements, modes, rulerships, differentiated placements, mythology"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/sagittarius.html",
+      "body_characters_retrieved": 20384,
+      "used_for_synthesis": true,
+      "documents": [
+        "zodiac-signs.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/saturn1.html",
+      "title": "Skyscript: Introducing Saturn",
+      "accessed_at": "2026-10-08T09:43:58.324118Z",
+      "topics": [
+        "ten main bodies, traditional seven, outer planets, lunar nodes, Chiron"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/saturn1.html",
+      "body_characters_retrieved": 3348,
+      "used_for_synthesis": true,
+      "documents": [
+        "planets.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/scorpio.html",
+      "title": "Scorpio the Scorpion | Zodiac Sign Symbolism",
+      "accessed_at": "2026-10-08T09:39:12.251343Z",
+      "topics": [
+        "zodiac signs, elements, modes, rulerships, differentiated placements, mythology"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/scorpio.html",
+      "body_characters_retrieved": 25191,
+      "used_for_synthesis": true,
+      "documents": [
+        "zodiac-signs.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/scorpio_myth.html",
+      "title": "Skyscript: Star Lore of the Constellations - Scorpio the Scorpion",
+      "accessed_at": "2026-10-08T09:46:04.786561Z",
+      "topics": [
+        "zodiac signs, elements, modes, rulerships, differentiated placements, mythology"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/scorpio_myth.html",
+      "body_characters_retrieved": 11843,
+      "used_for_synthesis": true,
+      "notes": "Historical medical, crime, sexuality, fatalistic and hierarchical judgments are not adopted. Article prose and artwork are not redistributed.",
+      "documents": [
+        "zodiac-signs.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/sun1.html",
+      "title": "Skyscript: Introducing the Sun",
+      "accessed_at": "2026-10-08T09:43:44.770122Z",
+      "topics": [
+        "ten main bodies, traditional seven, outer planets, lunar nodes, Chiron"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/sun1.html",
+      "body_characters_retrieved": 3225,
+      "used_for_synthesis": true,
+      "documents": [
+        "planets.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/taurus.html",
+      "title": "Taurus the Bull | Zodiac Sign Symbolism",
+      "accessed_at": "2026-10-08T09:37:31.857495Z",
+      "topics": [
+        "zodiac signs, elements, modes, rulerships, differentiated placements, mythology"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/taurus.html",
+      "body_characters_retrieved": 20121,
+      "used_for_synthesis": true,
+      "documents": [
+        "zodiac-signs.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/taurus_myth.html",
+      "title": "Skyscript: Star Lore of the Constellations - Taurus the Bull",
+      "accessed_at": "2026-10-08T09:48:10.227747Z",
+      "topics": [
+        "zodiac signs, elements, modes, rulerships, differentiated placements, mythology"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/taurus_myth.html",
+      "body_characters_retrieved": 18672,
+      "used_for_synthesis": true,
+      "notes": "Historical medical, crime, sexuality, fatalistic and hierarchical judgments are not adopted. Article prose and artwork are not redistributed.",
+      "documents": [
+        "zodiac-signs.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/triplicities.html",
+      "title": "Skyscript: The Classical Use of Triplicities",
+      "accessed_at": "2026-10-08T09:49:36.115780Z",
+      "topics": [
+        "essential dignities, Egyptian bounds, Chaldean faces, triplicity, sect, reception"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/triplicities.html",
+      "body_characters_retrieved": 13989,
+      "used_for_synthesis": true,
+      "documents": [
+        "dignities.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/venus1.html",
+      "title": "Skyscript: Introducing Venus",
+      "accessed_at": "2026-10-08T09:43:52.520818Z",
+      "topics": [
+        "ten main bodies, traditional seven, outer planets, lunar nodes, Chiron"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/venus1.html",
+      "body_characters_retrieved": 3295,
+      "used_for_synthesis": true,
+      "documents": [
+        "planets.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/virgo.html",
+      "title": "Virgo the Maiden | Zodiac Sign Symbolism",
+      "accessed_at": "2026-10-08T09:38:09.809966Z",
+      "topics": [
+        "zodiac signs, elements, modes, rulerships, differentiated placements, mythology"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/virgo.html",
+      "body_characters_retrieved": 22492,
+      "used_for_synthesis": true,
+      "documents": [
+        "zodiac-signs.md"
+      ]
+    },
+    {
+      "url": "https://www.skyscript.co.uk/virgo_myth.html",
+      "title": "Skyscript: Star Lore of the Constellations - Virgo the Maiden",
+      "accessed_at": "2026-10-08T09:48:11.411305Z",
+      "topics": [
+        "zodiac signs, elements, modes, rulerships, differentiated placements, mythology"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": "full_main_article_read",
+      "retrieval_method": "browser DOM text",
+      "final_url": "https://www.skyscript.co.uk/virgo_myth.html",
+      "body_characters_retrieved": 19913,
+      "used_for_synthesis": true,
+      "notes": "Historical medical, crime, sexuality, fatalistic and hierarchical judgments are not adopted. Article prose and artwork are not redistributed.",
+      "documents": [
+        "zodiac-signs.md"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "system": "bazi",
+  "input": {
+    "solar": "1990-05-15 12:00",
+    "lunar": "1990年四月廿一",
+    "hour": "午 / 12:00",
+    "sex_convention": "男",
+    "place": null
+  },
+  "conventions": {
+    "timezone": "UTC+08:00",
+    "year_boundary": "lichun",
+    "month_boundary": "twelve-jie",
+    "day_boundary": "23:00-next-day",
+    "true_solar_time": false,
+    "calendar_precision": "approximate; boundary cross-check required"
+  },
+  "pillars": {
+    "year": {
+      "gan": "庚",
+      "zhi": "午",
+      "ten_god": "比肩",
+      "hidden_stems": "丁火、己土"
+    },
+    "month": {
+      "gan": "辛",
+      "zhi": "巳",
+      "ten_god": "劫财",
+      "hidden_stems": "丙火、庚金、戊土"
+    },
+    "day": {
+      "gan": "庚",
+      "zhi": "辰",
+      "ten_god": "—",
+      "hidden_stems": "戊土、乙木、癸水"
+    },
+    "hour": {
+      "gan": "壬",
+      "zhi": "午",
+      "ten_god": "食神",
+      "hidden_stems": "丁火、己土"
+    }
+  },
+  "dayun": {
+    "direction": "forward",
+    "start_age": {
+      "years": 7,
+      "months": 3
+    },
+    "rows": [
+      [
+        "起运前",
+        "0岁-7岁3个月",
+        "辛巳（小运）"
+      ],
+      [
+        "1",
+        "7-16岁",
+        "壬午"
+      ],
+      [
+        "2",
+        "17-26岁",
+        "癸未"
+      ],
+      [
+        "3",
+        "27-36岁",
+        "甲申"
+      ],
+      [
+        "4",
+        "37-46岁",
+        "乙酉"
+      ],
+      [
+        "5",
+        "47-56岁",
+        "丙戌"
+      ],
+      [
+        "6",
+        "57-66岁",
+        "丁亥"
+      ],
+      [
+        "7",
+        "67-76岁",
+        "戊子"
+      ],
+      [
+        "8",
+        "77-86岁",
+        "己丑"
+      ]
+    ]
+  },
+  "current_year": 2026,
+  "current_ganzhi": "丙午",
+  "shensha": [
+    "- 天乙贵人 — 见于年支、时支 — 年干/日干查地支",
+    "- 天德 — 见于月干 — 月支查天干",
+    "- 月德 — 见于年干、日干 — 月支三合",
+    "- 学堂 — 见于月支 — 日干长生",
+    "- 将星 — 见于年支、时支 — 年支/日支三合",
+    "- 华盖 — 见于日支 — 年支/日支",
+    "- 天医 — 见于日支 — 月支前一位",
+    "- 劫煞 — 见于月支 — 年支/日支",
+    "- 灾煞 — 见于年支、时支 — 年支/日支",
+    "- 亡神 — 见于月支 — 年支/日支",
+    "- 寡宿 — 见于日支 — 年支"
+  ],
+  "warnings": [
+    "公农历换算采用 lunar-python；四柱与起运使用的节气时刻仍为简式近似，交界请用独立历书交叉核验。",
+    "固定北京时间；未做历史夏令时、海外时区或真太阳时校正。"
+  ]
+}

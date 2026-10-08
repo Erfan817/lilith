@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "brand": "莉莉丝 Lilith",
+  "module_content": "原创中文文化、娱乐与反思参考；无独立 SKILL 入口",
+  "source_policy": "只使用已检索并实际读取的知识资料；不把搜索摘要当正文，未读尾部明确标注；不转载来源表达或媒体；公开资料不等于获再分发授权；预测及超自然主张不获科学背书",
+  "personal_chart_data_included": false,
+  "module": "tarot",
+  "files": [
+    "cards.md",
+    "spreads.md",
+    "relations.md",
+    "reading.md"
+  ],
+  "knowledge_sources": [
+    {
+      "id": "TAR-WAITE-2",
+      "title": "The Pictorial Key to the Tarot, Part II",
+      "url": "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_2",
+      "publisher_or_author": "A. E. Waite；图像 Pamela Colman Smith；Wikisource 转录",
+      "accessed_on": "2026-10-08",
+      "retrieval_method": "web_extract + read_file 缓存",
+      "read_scope": "读取第二部分大牌图像说明、RWS 编号及内在象征段落；长页读取了提取缓存，提取器自身在长度上有截断",
+      "used_for": "RWS 名称、力量 VIII 与正义 XI、大牌构图线索",
+      "limitations": "作为历史文化资料；其秘传和超自然主张不视为事实；不是七十八张现代反思牌义的逐句翻译",
+      "reuse_boundary": "历史原著在部分司法辖区属于公有领域；网站转录及媒体另有条款，本项目不打包原文或牌图",
+      "copied_text_or_media": false
+    },
+    {
+      "id": "TAR-WAITE-3",
+      "title": "The Pictorial Key to the Tarot, Part III",
+      "url": "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot/Part_3",
+      "publisher_or_author": "A. E. Waite；图像 Pamela Colman Smith；Wikisource 转录",
+      "accessed_on": "2026-10-08",
+      "retrieval_method": "web_extract + read_file 缓存",
+      "read_scope": "读取小阿卡纳四花色情境图像与宫廷阶级；长页提取缓存已读取，提取器在大牌断语之后截断，未用该尾部作为完整阅读证据",
+      "used_for": "四花色各十四张的图像及牌表组织",
+      "limitations": "旧时代外貌、性别、阶级、疾病、生死与确定性断语不移植；不声称读到了未提取的全部书页",
+      "reuse_boundary": "历史原著许可因司法辖区而异；只采用知识事实并新写中文，不分发转录或图像",
+      "copied_text_or_media": false
+    },
+    {
+      "id": "TAR-WAITE-CELTIC",
+      "title": "The Pictorial Key to the Tarot, Part III, Section 7: An Ancient Celtic Method of Divination",
+      "url": "https://sacred-texts.com/tarot/pkt/pkt0307.htm",
+      "publisher_or_author": "A. E. Waite；Internet Sacred Text Archive",
+      "accessed_on": "2026-10-08",
+      "retrieval_method": "web_extract",
+      "read_scope": "实际提取了标题、代表牌说明及前两个牌位；浏览器后续访问遇 Cloudflare 验证，未绕过",
+      "used_for": "核对凯尔特十字的历史存在与核心/交叉结构；六牌阵位置是本项目明确接口约定",
+      "limitations": "本次未完整读取十位置尾部，不能宣称本项目十位置名称逐项来自该页；不沿用性别年龄或外貌选代表牌",
+      "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
+      "copied_text_or_media": false
+    },
+    {
+      "id": "TAR-BUNNING-8",
+      "title": "Learning the Tarot, Lesson 8: A Question Reading",
+      "url": "https://www.learntarot.com/less8.htm",
+      "publisher_or_author": "Joan Bunning；Learning the Tarot",
+      "accessed_on": "2026-10-08",
+      "retrieval_method": "web_extract",
+      "read_scope": "读取提问、记录牌位、逐牌与关系阅读、行动及后续复盘步骤",
+      "used_for": "从记录走向反思与具体行动的普通知识；本项目流程独立编排",
+      "limitations": "其 Inner Guide、能量与直觉认知主张不作科学事实，不照搬原流程或仪式",
+      "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
+      "copied_text_or_media": false
+    },
+    {
+      "id": "TAR-BUNNING-17",
+      "title": "Learning the Tarot, Lesson 17: Reversed Cards",
+      "url": "https://www.learntarot.com/less17.htm",
+      "publisher_or_author": "Joan Bunning；Learning the Tarot",
+      "accessed_on": "2026-10-08",
+      "retrieval_method": "web_extract",
+      "read_scope": "实际读取逆位非必然负面、受限或未展开及太阳例子等开篇内容，提取内容中途结束",
+      "used_for": "逆位不是单一灾祸的文化读法线索",
+      "limitations": "页面中的能量与怀孕命中例子未获本项目认可；不声称完整读取本页尾部",
+      "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
+      "copied_text_or_media": false
+    },
+    {
+      "id": "TAR-BUNNING-18",
+      "title": "Learning the Tarot, Lesson 18: Creating the Story",
+      "url": "https://www.learntarot.com/less18.htm",
+      "publisher_or_author": "Joan Bunning；Learning the Tarot",
+      "accessed_on": "2026-10-08",
+      "retrieval_method": "web_extract",
+      "read_scope": "实际读取从单牌到整体叙事的开篇讨论，提取内容中途结束",
+      "used_for": "整体阅读作为一种解释活动的参考",
+      "limitations": "本项目不采取绕过核实、内在感觉等于事实的做法；保留可否认性和现实证据",
+      "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
+      "copied_text_or_media": false
+    }
+  ],
+  "provenance_review_only": [
+    {
+      "repository": "https://github.com/daman-ovo-0404/tarot-skill",
+      "revision": "a9f59f02b3df8a539e9ec618fb4757d481443803",
+      "review_scope": [
+        "README.md",
+        "references/cards.md",
+        "references/spreads.md",
+        "references/card-relations.md",
+        "references/combinations.md",
+        "scripts/draw.py"
+      ],
+      "role": "只读来源尽调与功能概念比较，不是运行依赖；最终十文档采用原创表达和独立知识来源",
+      "license_observation": "本地给定快照 README 宣称 MIT，但未发现 LICENSE 文件，不能仅凭公开或 README 声明假定所有文件可复用",
+      "code_copied": false,
+      "reference_text_copied": false,
+      "assets_copied": false,
+      "important_difference": "本项目 RWS 牌名、六阵接口按统一规范；不用其时间或问题加权，也不混入托特体系"
+    }
+  ],
+  "excluded_or_failed_reads": [
+    {
+      "url": "https://www.gutenberg.org/files/43548/43548-h/43548-h.htm",
+      "reason": "实际标题为 L. W. de Laurence 的 The Illustrated Key，不误写成 Waite 著作，也未将该书列为本项目知识依据"
+    },
+    {
+      "url": "https://sacred-texts.com/tarot/pkt/pkt0307.htm",
+      "reason": "浏览器遇 Cloudflare 验证即停止，只有此前真实提取的片段可作为已读范围"
+    }
+  ]
+}

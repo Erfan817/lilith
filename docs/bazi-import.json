@@ -1,0 +1,40 @@
+{
+  "repository": "https://github.com/jinchenma94/bazi-skill",
+  "revision": "112a5d84cd1a001a0038cafca3be68d93e4c0cc9",
+  "license": "MIT",
+  "imported_at": "2026-10-08T09:37:59.821714+00:00",
+  "files": {
+    "scripts/vendor/bazi/pai_pan.py": {
+      "upstream_path": "scripts/pai_pan.py",
+      "sha256": "ee6d50e7933142c04c240fc2e03e38faf3a1b486330348eac131843aa33d0839"
+    },
+    "scripts/vendor/bazi/test_pai_pan.py": {
+      "upstream_path": "scripts/test_pai_pan.py",
+      "sha256": "73db8995346b192c5f83eb20490f7d29a71686d1b82b70dbad6a80ae60e510be"
+    },
+    "references/bazi/dayun-rules.md": {
+      "upstream_path": "references/dayun-rules.md",
+      "sha256": "70e35df806e7d6ede9e3ab6524bd2088d3ce9ac8a8e8d6177c84abe0e2b03562"
+    },
+    "references/bazi/wuxing-tables.md": {
+      "upstream_path": "references/wuxing-tables.md",
+      "sha256": "167982bb7fd5ddc0f3dcfafe6ec377c92fa2d4bd90153b72c89d65888a7d419f"
+    },
+    "references/bazi/shensha-table.md": {
+      "upstream_path": "references/shensha-table.md",
+      "sha256": "832da1c02ee67e804e6f15aae1fbdc047564d8222b703e8e8982f533652a9e4c"
+    },
+    "references/bazi/classical-texts.md": {
+      "upstream_path": "references/classical-texts.md",
+      "sha256": "c62267d5a7c8c252dcf07544397be144c8d1b5475241b050701b0a2b27ec59d3"
+    },
+    "references/bazi/shichen-table.md": {
+      "upstream_path": "references/shichen-table.md",
+      "sha256": "bcddb4c87d179d52ea15740c75edcfa2f99f89aef23bc5068fc88c87b4068768"
+    },
+    "LICENSES/bazi-skill-MIT.txt": {
+      "upstream_path": "LICENSE",
+      "sha256": "28ce6f2a50b8e8aba67c0b3837152d7aa9389cd677ed34acc624a7aff81dacf4"
+    }
+  }
+}

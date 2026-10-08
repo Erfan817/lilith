@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "module": "bazi",
+  "source_policy": "Calendar facts cross-checked against the Hong Kong Observatory; source article/table bodies are not bundled. Cultural interpretation is separate from astronomy.",
+  "sources": [
+    {
+      "url": "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2020c.txt",
+      "title": "2020公历与农历日期对照表",
+      "accessed_at": "2026-10-08T12:20:23.184901+00:00",
+      "retrieval_outcome": "full_text_fetched; specified civil-date rows checked",
+      "topics": [
+        "civil-date lunar/solar conversion",
+        "leap month regression"
+      ],
+      "reuse": "calendar facts used for regression; original table not redistributed"
+    },
+    {
+      "url": "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2025c.txt",
+      "title": "2025公历与农历日期对照表",
+      "accessed_at": "2026-10-08T12:20:23.491912+00:00",
+      "retrieval_outcome": "full_text_fetched; specified civil-date rows checked",
+      "topics": [
+        "civil-date lunar/solar conversion",
+        "leap month regression"
+      ],
+      "reuse": "calendar facts used for regression; original table not redistributed"
+    },
+    {
+      "url": "https://github.com/6tail/lunar-python",
+      "title": "lunar-python",
+      "version": "1.4.8",
+      "license": "MIT",
+      "role": "production lunar/solar conversion dependency",
+      "retrieval_outcome": "GitHub API metadata and MIT license read; installed 1.4.8 inspected and executed"
+    },
+    {
+      "url": "https://github.com/jinchenma94/bazi-skill",
+      "revision": "112a5d84cd1a001a0038cafca3be68d93e4c0cc9",
+      "license": "MIT",
+      "role": "licensed calendar/stems and reference tables integrated through validated wrapper",
+      "retrieval_outcome": "full source snapshot, license, script and regression read; legacy lunar conversion not used by Lilith entry"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+# MIT astronomical engine for astrology.
+astronomy-engine==2.1.19
+# MIT Chinese civil-calendar conversion for the unified BaZi CLI.
+lunar-python==1.4.8
+# Time zone database for Windows and systems without an IANA tzdb.
+tzdata==2025.2

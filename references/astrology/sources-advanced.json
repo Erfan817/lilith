@@ -1,0 +1,753 @@
+{
+  "schema_version": "1.0",
+  "scope": "original Chinese advanced astrology references for Lilith; only successful or explicitly partial bodies support citations",
+  "source_text_in_repository": false,
+  "notes": [
+    "accessed_at is a recorded UTC retrieval time, not a publication date",
+    "partial/section statuses describe only what was actually read",
+    "search-result snippets and failed candidates are not used as article evidence",
+    "numerical examples use synthetic angles; no user birth data",
+    "code dependency license is separate from source-article copyright"
+  ],
+  "sources": [
+    {
+      "url": "https://astro.com/faq/fq_fh_partner_e.htm",
+      "title": "Partner horoscopes",
+      "accessed_at": "2026-10-08T09:37:55Z",
+      "topics": [
+        "synastry",
+        "Davison variants",
+        "relationship chart data"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "success_body_read",
+        "method": "browser DOM",
+        "detail": "Extract first returned browser-check stub; browser DOM then returned relationship FAQ正文，包含比较盘与四种戴维森变体。"
+      }
+    },
+    {
+      "url": "https://www.astro.com/astrology/in_composit_e.htm?",
+      "title": "The Composite Chart — Liz Greene",
+      "accessed_at": "2026-10-08T09:40:28Z",
+      "topics": [
+        "composite chart",
+        "psychological astrology",
+        "synastry distinction"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "success_relevant_sections_read",
+        "method": "browser DOM",
+        "detail": "浏览器读取正文，已阅读关系作为第三对象、与比较盘区别、组合结构及相关边界章节；未声称完整研读长篇讲座。"
+      }
+    },
+    {
+      "url": "https://www.astro.com/astrowiki/en/Secondary_Progression",
+      "title": "Secondary Progression — Astrodienst AstroWiki",
+      "accessed_at": "2026-10-08T09:37:57Z",
+      "topics": [
+        "day for year",
+        "secondary progression",
+        "progressed angles"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "success_body_read",
+        "method": "browser DOM",
+        "detail": "初次提取为检查浏览器页；浏览器DOM后取得并阅读正文，涵盖一日一年、运动、角点方案和生时敏感性。"
+      }
+    },
+    {
+      "url": "https://www.astro.com/astrowiki/en/Solar_Return_Chart",
+      "title": "Solar Return Chart — Astrodienst AstroWiki",
+      "accessed_at": "2026-10-08T09:37:59Z",
+      "topics": [
+        "solar return",
+        "location choices",
+        "return interpretation"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "success_body_read",
+        "method": "browser DOM",
+        "detail": "初次提取检查页；浏览器DOM取得日返定义、计算、地点及阅读正文。"
+      }
+    },
+    {
+      "url": "https://www.astro.com/astrowiki/en/Profection",
+      "title": "Profection — Astrodienst AstroWiki",
+      "accessed_at": "2026-10-08T09:38:00Z",
+      "topics": [
+        "profections",
+        "annual counting",
+        "historical variants"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "success_body_read",
+        "method": "browser DOM",
+        "detail": "初次提取检查页；浏览器DOM读取正文，区分整座年度推进与其他变体。"
+      }
+    },
+    {
+      "url": "https://www.astro.com/astrowiki/en/Solar_Arc",
+      "title": "Solar Arc — Astrodienst AstroWiki",
+      "accessed_at": "2026-10-08T09:38:02Z",
+      "topics": [
+        "solar arc",
+        "mean and true arcs",
+        "angle sensitivity"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "success_body_read",
+        "method": "browser DOM",
+        "detail": "浏览器取得正文；已读实际与平均弧、共同推进及角点敏感性。"
+      }
+    },
+    {
+      "url": "https://www.astro.com/astrowiki/en/Nakshatra",
+      "title": "Nakshatra — Astrodienst AstroWiki",
+      "accessed_at": "2026-10-08T09:39:10Z",
+      "topics": [
+        "27 nakshatras",
+        "sidereal lunar mansions",
+        "Jyotish"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "success_body_read",
+        "method": "browser DOM",
+        "detail": "浏览器取得正文与宿表，采用均分概念与术语；不转载宿表或沿用其吉凶判词。"
+      }
+    },
+    {
+      "url": "https://www.astro.com/astrology/tma_article190314_e.htm",
+      "title": "Annual Profections, Lots, and Zodiacal Releasing — Chris Brennan",
+      "accessed_at": "2026-10-08T09:39:20Z",
+      "topics": [
+        "annual profections",
+        "lots formulas",
+        "time-lords",
+        "Hellenistic philosophy"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "success_body_read",
+        "method": "browser DOM",
+        "detail": "浏览器取得长篇正文，已读哲学、时主、年度岁限、福点精神点及黄道释放章节；人物资料与高风险应验案例未写入项目。"
+      }
+    },
+    {
+      "url": "https://www.astro.com/astrowiki/en/Lunar_Return_Chart",
+      "title": "Lunar Return Chart — Astrodienst AstroWiki",
+      "accessed_at": "2026-10-08T09:43:31Z",
+      "topics": [
+        "lunar return",
+        "return location",
+        "natal Moon"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "success_body_read",
+        "method": "web_extract",
+        "detail": "提取取得月返定义、计算、地点和阅读正文；浏览器途径另有连接错误，未作依据。"
+      }
+    },
+    {
+      "url": "https://www.astro.com/astrowiki/en/Modern_Astrology",
+      "title": "Modern Astrology — Astrodienst AstroWiki",
+      "accessed_at": "2026-10-08T09:43:31Z",
+      "topics": [
+        "modern astrology",
+        "psychological orientation",
+        "traditional contrast",
+        "modern rulers"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "partial_body_read",
+        "method": "web_extract",
+        "detail": "取得相关正文节选，含人格取向、传统技术简化、外行星守护与自然宫位观点；不是全篇。后续尝试403/连接拒绝不抹去先前局部成功。"
+      }
+    },
+    {
+      "url": "https://www.astro.com/astrowiki/en/Mundane_Astrology",
+      "title": "Mundane Astrology — Astrodienst AstroWiki",
+      "accessed_at": "2026-10-08T11:58:44Z",
+      "topics": [
+        "mundane astrology",
+        "public events",
+        "multiple national chart origins"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "partial_body_read",
+        "method": "web_extract",
+        "detail": "本次重新读取相关正文节选；此前工具结果已读取公共对象、历史、多个候选起点及技术原则，不采用民族性格或灾难断语。"
+      }
+    },
+    {
+      "url": "https://www.astro.com/astrology/in_ayanamsha_e.htm",
+      "title": "Ayanamshas in Sidereal Astrology — Dieter Koch",
+      "accessed_at": "2026-10-08T09:36:12Z",
+      "topics": [
+        "tropical and sidereal",
+        "ayanamsa",
+        "Lahiri",
+        "Fagan/Bradley",
+        "precession"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "partial_body_read",
+        "method": "web_extract",
+        "detail": "长文头尾提取；已读起点定义、岁差差值、多方案及Lahiri等相关部分；未冒称读过省略的全部方案。"
+      }
+    },
+    {
+      "url": "https://www.astro.com/astrology/in_vedic3_e.htm",
+      "title": "Vedic Astrology? What It Is and What It's Not — Vic DiCara",
+      "accessed_at": "2026-10-08T09:45:18Z",
+      "topics": [
+        "Jyotish terminology",
+        "historical layers",
+        "Vedic label"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "partial_body_read",
+        "method": "web_extract",
+        "detail": "取得正文节选，读取名称与早期历法／后来出生盘差别的作者论证；把它标为观点而非唯一历史定论。"
+      }
+    },
+    {
+      "url": "https://www.skyscript.co.uk/glossary/sect/",
+      "title": "Sect — Skyscript Glossary",
+      "accessed_at": "2026-10-08T09:43:31Z",
+      "topics": [
+        "sect",
+        "traditional seven planets",
+        "day and night"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "success_body_read",
+        "method": "web_extract",
+        "detail": "取得词条正文：昼星、夜星、水星可变及细层条件。"
+      }
+    },
+    {
+      "url": "https://www.skyscript.co.uk/glossary/part-of-fortune/",
+      "title": "Part of Fortune (Fortuna) — Skyscript Glossary",
+      "accessed_at": "2026-10-08T09:43:31Z",
+      "topics": [
+        "Lot of Fortune",
+        "absolute longitude",
+        "day-night reversal"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "success_body_read",
+        "method": "web_extract",
+        "detail": "取得福点公式及夜盘反转正文；文内示例改用自编虚构坐标。"
+      }
+    },
+    {
+      "url": "https://www.skyscript.co.uk/fortuna.html",
+      "title": "Finding Fortuna: Should the Lot of Fortune calculation be reversed? — Wade Caves",
+      "accessed_at": "2026-10-08T09:42:48Z",
+      "topics": [
+        "Fortune reversal controversy",
+        "Ptolemy",
+        "historical interpretation"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "success_body_read",
+        "method": "web_extract",
+        "detail": "第二次提取取得完整相关论证正文。与反转方案并列，作者关于起源的推测不写成定案。"
+      }
+    },
+    {
+      "url": "https://www.skyscript.co.uk/glossary/planetary-hours/",
+      "title": "Planetary Hours (and Days) — Skyscript Glossary",
+      "accessed_at": "2026-10-08T09:46:13Z",
+      "topics": [
+        "planetary hours",
+        "planetary days",
+        "sunrise",
+        "horary distinction"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "success_body_read",
+        "method": "web_extract",
+        "detail": "第二次取得较完整正文，含昼夜十二段、日出起日、顺序及卜卦用法；仅自行概括，不转载人物时间表。"
+      }
+    },
+    {
+      "url": "https://www.skyscript.co.uk/gl/glossary.html",
+      "title": "Skyscript Glossary of Astrological Terms",
+      "accessed_at": "2026-10-08T09:38:14Z",
+      "topics": [
+        "terminology",
+        "absolute longitude",
+        "accidental dignity",
+        "glossary navigation"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "partial_body_read",
+        "method": "web_extract",
+        "detail": "取得A栏正文节选与目录；浏览器也读到绝对黄经、偶然条件等正文。不会把目录当作全部词条已读。"
+      }
+    },
+    {
+      "url": "https://skyscript.co.uk/glossary/C",
+      "title": "Skyscript Glossary of Astrological Terms — C",
+      "accessed_at": "2026-10-08T09:46:13Z",
+      "topics": [
+        "ecliptic latitude",
+        "ecliptic longitude",
+        "Chaldean order"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "success_relevant_sections_read",
+        "method": "web_extract",
+        "detail": "取得C栏正文，已读黄纬、黄经及迦勒底顺序部分；其余词条未冒称全读。"
+      }
+    },
+    {
+      "url": "https://skyscript.co.uk/glossary/declination/",
+      "title": "Declination — Skyscript Glossary",
+      "accessed_at": "2026-10-08T09:47:02Z",
+      "topics": [
+        "declination",
+        "equatorial latitude",
+        "ecliptic latitude distinction"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "success_body_read",
+        "method": "web_extract",
+        "detail": "取得赤纬词条正文，明确赤道与黄道不同基准。"
+      }
+    },
+    {
+      "url": "https://www.skyscript.co.uk/glossary/paran/",
+      "title": "Paran — Skyscript Glossary",
+      "accessed_at": "2026-10-08T09:45:18Z",
+      "topics": [
+        "parans",
+        "angular simultaneity",
+        "fixed stars"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "success_body_read",
+        "method": "web_extract",
+        "detail": "取得同升／角点同时关系的正文定义，明确不等于黄经相位。"
+      }
+    },
+    {
+      "url": "https://skyscript.co.uk/frawley.html",
+      "title": "Horary Astrology — John Frawley (extract from The Real Astrology)",
+      "accessed_at": "2026-10-08T09:38:14Z",
+      "topics": [
+        "horary",
+        "specific questions",
+        "method distinction"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "partial_body_read",
+        "method": "web_extract",
+        "detail": "取得正文节选，阅读卜卦对具体问题的定位；未称完整阅读书籍或第二页。"
+      }
+    },
+    {
+      "url": "https://www.astrocepheus.com/knowledgebase/articles/parallels-contra-parallels-declination-aspects-in-astrology",
+      "title": "Parallels / Contra-Parallels (Declination Aspects in Astrology) — AstroCepheus",
+      "accessed_at": "2026-10-08T09:49:12Z",
+      "topics": [
+        "parallel",
+        "contra-parallel",
+        "declination geometry"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "success_body_read",
+        "method": "web_extract",
+        "detail": "取得正文；只采用同侧近赤纬与异侧近绝对值的定义及现代类比，不采用无独立证据的历史或人格断语。"
+      }
+    },
+    {
+      "url": "https://astro.com/swisseph/swephinfo_e.htm",
+      "title": "Swiss Ephemeris — General Information",
+      "accessed_at": "2026-10-08T09:36:12Z",
+      "topics": [
+        "ephemeris",
+        "coordinate accuracy",
+        "data backends",
+        "licensing"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "success_body_read",
+        "method": "web_extract",
+        "detail": "取得正文，包括不同星历后端、坐标修正与AGPL／专业许可区别；不把其精度或许可证套给本项目。"
+      }
+    },
+    {
+      "url": "https://astro.com/swisseph/swephprg.htm?lang=e",
+      "title": "Swiss Ephemeris — Programming Interface",
+      "accessed_at": "2026-10-08T09:46:13Z",
+      "topics": [
+        "UT and TT",
+        "coordinate flags",
+        "geocentric/topocentric",
+        "body identifiers",
+        "hypothetical bodies"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "partial_body_read",
+        "method": "web_extract",
+        "detail": "取得前约50000字符正文，已读编程步骤、UT/TT、坐标旗标、天体和假想因素；后部日历等章节未全部取得。"
+      }
+    },
+    {
+      "url": "https://github.com/cosinekitty/astronomy/tree/master",
+      "title": "Astronomy Engine — project overview",
+      "accessed_at": "2026-10-08T09:47:02Z",
+      "topics": [
+        "astronomy engine",
+        "precision target",
+        "supported bodies",
+        "reference frames"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "success_body_read",
+        "method": "web_extract",
+        "detail": "取得项目说明正文，读到约一角分工程目标、天体与坐标范围；不将底层功能清单冒充本项目CLI支持。"
+      }
+    },
+    {
+      "url": "https://raw.githubusercontent.com/cosinekitty/astronomy/master/LICENSE",
+      "title": "Astronomy Engine — MIT License",
+      "accessed_at": "2026-10-08T11:58:44Z",
+      "topics": [
+        "MIT license",
+        "dependency attribution"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "success_body_read",
+        "method": "web_extract",
+        "detail": "真实读取LICENSE正文；代码许可与网页文章版权分别处理。"
+      }
+    },
+    {
+      "url": "https://iana.org/time-zones/tz-link",
+      "title": "Time zone and daylight saving time data — IANA",
+      "accessed_at": "2026-10-08T09:39:40Z",
+      "topics": [
+        "time zones",
+        "DST",
+        "historical offsets",
+        "tzdb"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "partial_body_read",
+        "method": "web_extract",
+        "detail": "取得相关正文节选，含政府规则变更、历史偏移与主条目1970年以来一致性的说明。"
+      }
+    },
+    {
+      "url": "https://iau.org/Iau/Iau/Science/What-we-do/The-Constellations.aspx",
+      "title": "The Constellations — International Astronomical Union",
+      "accessed_at": "2026-10-08T09:41:47Z",
+      "topics": [
+        "88 constellations",
+        "constellation regions",
+        "boundaries",
+        "asterisms"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "success_relevant_sections_read",
+        "method": "web_extract",
+        "detail": "取得头尾正文；已读八十八星座的采用、边界历史及天区定义，未声称遍读全部星座坐标表。"
+      }
+    },
+    {
+      "url": "https://starchild.gsfc.nasa.gov/docs/StarChild/questions/88constellations.html",
+      "title": "88 Officially Recognized Constellations — NASA StarChild",
+      "accessed_at": "2026-10-08T09:41:47Z",
+      "topics": [
+        "88 constellations",
+        "Ophiuchus"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "success_body_read",
+        "method": "web_extract",
+        "detail": "取得八十八星座名称表正文，含Ophiuchus；用于天文对象名单，不支持占星解释。"
+      }
+    },
+    {
+      "url": "https://science.nasa.gov/earth/earth-observatory/earths-orbital-precession-541/",
+      "title": "Earth's Orbital Precession — NASA Earth Observatory",
+      "accessed_at": "2026-10-08T11:59:41Z",
+      "topics": [
+        "axial precession",
+        "reference orientation"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "partial_body_read",
+        "method": "web_extract",
+        "detail": "取得短文实际文字，读取转轴方向变化说明；没有读取或转载动画内容。"
+      }
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Gregorian_calendar",
+      "title": "Gregorian calendar — Wikipedia",
+      "accessed_at": "2026-10-08T11:58:44Z",
+      "topics": [
+        "Gregorian calendar",
+        "Julian calendar",
+        "calendar reform"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "partial_body_read",
+        "method": "web_extract",
+        "detail": "取得正文开头节选，含公历与儒略历、闰年规则及改历背景；不使用网页动态今日日期为时间证据。"
+      }
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Julian_day",
+      "title": "Julian day — Wikipedia",
+      "accessed_at": "2026-10-08T11:58:44Z",
+      "topics": [
+        "Julian day",
+        "Julian date",
+        "noon origin"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "partial_body_read",
+        "method": "web_extract",
+        "detail": "取得正文开头节选，读取连续日数、JD/JDN与正午起算定义；不将JD与儒略历混同。"
+      }
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Chinese_calendar",
+      "title": "Chinese calendar — Wikipedia",
+      "accessed_at": "2026-10-08T11:58:44Z",
+      "topics": [
+        "Chinese calendar",
+        "lunisolar calendar",
+        "intercalary month"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "partial_body_read",
+        "method": "web_extract",
+        "detail": "取得正文相关节选，读取阴阳合历、月与闰月基础，不声称已实现历法转换。"
+      }
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Ophiuchus_(astrology)",
+      "title": "Ophiuchus (astrology) — Wikipedia",
+      "accessed_at": "2026-10-08T09:45:18Z",
+      "topics": [
+        "Ophiuchus",
+        "12 equal signs",
+        "constellation/sign distinction"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "partial_body_read",
+        "method": "web_extract",
+        "detail": "取得定义与历史开头正文，采用十二等分与天文星座区域的区别；不把十三星座提案写成官方改制。"
+      }
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Dasha_(astrology)",
+      "title": "Dasha (astrology) — Wikipedia",
+      "accessed_at": "2026-10-08T09:42:48Z",
+      "topics": [
+        "dasha",
+        "Vimshottari",
+        "lunar mansion",
+        "period balance"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "success_relevant_sections_read",
+        "method": "web_extract",
+        "detail": "取得正文，已读周期顺序、月亮宿与起始余额；不采用疾病、寿命、道德或吉凶判词。"
+      }
+    },
+    {
+      "url": "https://www.britannica.com/topic/astrology/Astrology-in-the-Hellenistic-period-3rd-century-bce-to-3rd-century-ce",
+      "title": "Astrology in the Hellenistic period — Encyclopaedia Britannica",
+      "accessed_at": "2026-10-08T09:44:16Z",
+      "topics": [
+        "Hellenistic history",
+        "seven bodies",
+        "horoscopic framework"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "partial_body_read",
+        "method": "web_extract",
+        "detail": "取得有限正文节选；仅作为历史框架的补充，不声称阅读全文。"
+      }
+    },
+    {
+      "url": "https://www.britannica.com/topic/astrology/Astrology-after-the-Hellenistic-period",
+      "title": "Astrology after the Hellenistic period — Encyclopaedia Britannica",
+      "accessed_at": "2026-10-08T09:44:16Z",
+      "topics": [
+        "Arabic transmission",
+        "Hellenistic/Indian/Sasanian streams",
+        "early modern separation"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "partial_body_read",
+        "method": "web_extract",
+        "detail": "取得伊斯兰文明多路线传播与欧洲分化的正文节选；没有复制全文。"
+      }
+    },
+    {
+      "url": "https://www.britannica.com/topic/astrology/Astrology-in-modern-times",
+      "title": "Astrology in modern times — Encyclopaedia Britannica",
+      "accessed_at": "2026-10-08T09:44:16Z",
+      "topics": [
+        "modern popularity",
+        "evidence limits",
+        "astronomy separation"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "partial_body_read",
+        "method": "web_extract",
+        "detail": "取得现代传播与理论及证据边界的正文节选。"
+      }
+    },
+    {
+      "url": "https://www.astro.com/astrowiki/en/Parallel",
+      "title": "Parallel — AstroWiki (search-result title)",
+      "accessed_at": "2026-10-08T09:48:18Z",
+      "topics": [
+        "parallel",
+        "unused candidate"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "failed_timeout_not_used",
+        "method": "web_extract",
+        "detail": "提取服务超时；后续直接HTTP连接拒绝。未读取正文，未作为文末依据。"
+      }
+    },
+    {
+      "url": "https://www.astro.com/astrowiki/en/Contraparallel",
+      "title": "Contraparallel — AstroWiki (search-result title)",
+      "accessed_at": "2026-10-08T09:48:18Z",
+      "topics": [
+        "contra-parallel",
+        "unused candidate"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "failed_timeout_not_used",
+        "method": "web_extract",
+        "detail": "提取服务超时；后续直接HTTP连接拒绝。未读取正文，改用实际成功的赤纬定义来源。"
+      }
+    },
+    {
+      "url": "https://www.astro.com/astrology/in_fixed_e.htm",
+      "title": "Fixed stars page (navigation label; body not retrieved)",
+      "accessed_at": "2026-10-08T09:41:47Z",
+      "topics": [
+        "fixed stars",
+        "unused candidate"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "failed_http_403_not_used",
+        "method": "web_extract",
+        "detail": "提取返回403，正文未读；不引用它为事实依据。"
+      }
+    },
+    {
+      "url": "https://www.skyscript.co.uk/glossary/contra-parallel/",
+      "title": "Skyscript Glossary of Astrological Terms (generic shell)",
+      "accessed_at": "2026-10-08T09:47:02Z",
+      "topics": [
+        "contra-parallel",
+        "unused candidate"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "empty_topic_shell_not_used",
+        "method": "web_extract",
+        "detail": "返回一般导航与版权文字，没有反平行词条正文；不冒称主题读取成功。"
+      }
+    },
+    {
+      "url": "https://astro.com/swisseph/swisseph.htm",
+      "title": "Swiss Ephemeris — General Documentation",
+      "accessed_at": "2026-10-08T09:39:40Z",
+      "topics": [
+        "ephemeris",
+        "unused manual candidate"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "table_of_contents_only_not_used",
+        "method": "web_extract",
+        "detail": "仅取得目录前部，无相关正文段落；后续浏览器连接拒绝。不把目录视为通读。"
+      }
+    },
+    {
+      "url": "https://www.astro.com/astrowiki/en/Main_Page",
+      "title": "Astrodienst AstroWiki — Main Page",
+      "accessed_at": "2026-10-08T09:36:12Z",
+      "topics": [
+        "source discovery",
+        "navigation"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "navigation_only_not_used_as_article",
+        "method": "web_extract",
+        "detail": "提取为检查浏览器页；浏览器实际打开后得到分类导航。仅发现真正文章，不作为正文主题来源。"
+      }
+    },
+    {
+      "url": "https://www.skyscript.co.uk/",
+      "title": "Skyscript Astrology — Home",
+      "accessed_at": "2026-10-08T09:36:12Z",
+      "topics": [
+        "source discovery",
+        "navigation"
+      ],
+      "reuse": "original synthesis; source text not redistributed",
+      "retrieval_outcome": {
+        "status": "navigation_read_not_used_as_article",
+        "method": "web_extract",
+        "detail": "实际取得导航页，用于发现术语与文章链接；不把首页当全部文章已读。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "modules": {
+    "tarot": {
+      "documents": 4,
+      "characters": 30179,
+      "han_characters": 21576
+    },
+    "common": {
+      "documents": 2,
+      "characters": 3306,
+      "han_characters": 1913
+    },
+    "qimen": {
+      "documents": 3,
+      "characters": 12975,
+      "han_characters": 8834
+    },
+    "astrology": {
+      "documents": 15,
+      "characters": 92757,
+      "han_characters": 62153
+    },
+    "ziwei": {
+      "documents": 3,
+      "characters": 13820,
+      "han_characters": 9674
+    },
+    "bazi": {
+      "documents": 6,
+      "characters": 14366,
+      "han_characters": 7280
+    }
+  },
+  "tarot_independent_entries": 78,
+  "tarot_all_fields": true,
+  "source_manifests": [
+    {
+      "file": "references/astrology/sources-advanced.json",
+      "entries": 46,
+      "unique_urls": 46
+    },
+    {
+      "file": "references/astrology/sources-basic.json",
+      "entries": 79,
+      "unique_urls": 79
+    },
+    {
+      "file": "references/bazi/sources.json",
+      "entries": 4,
+      "unique_urls": 4
+    },
+    {
+      "file": "references/qimen/sources.json",
+      "entries": 7,
+      "unique_urls": 7
+    },
+    {
+      "file": "references/tarot/sources.json",
+      "entries": 6,
+      "unique_urls": 6
+    },
+    {
+      "file": "references/ziwei/sources.json",
+      "entries": 12,
+      "unique_urls": 12
+    }
+  ],
+  "imported_license_integrity": true,
+  "flags": [],
+  "total_reference_documents": 33,
+  "total_reference_characters": 167403
+}

@@ -1,0 +1,234 @@
+{
+  "schema_version": "1.0",
+  "datetime_utc": "2000-01-01T12:00:00+00:00",
+  "zodiac": "tropical",
+  "frame": "geocentric-apparent-ecliptic-of-date",
+  "engine": {
+    "name": "astronomy-engine",
+    "version": "2.1.19"
+  },
+  "bodies": {
+    "Sun": {
+      "name": "太阳",
+      "longitude": 280.3687386398185,
+      "latitude": 1.1205040933117653e-06,
+      "sign": "摩羯座",
+      "sign_degree": 10.368738639818503,
+      "house": 6,
+      "longitude_speed_deg_per_day": 1.0194320979331906,
+      "motion": "direct"
+    },
+    "Moon": {
+      "name": "月亮",
+      "longitude": 223.32389112747416,
+      "latitude": 5.170789330457821,
+      "sign": "天蝎座",
+      "sign_degree": 13.323891127474155,
+      "house": 4,
+      "longitude_speed_deg_per_day": 12.02144044623708,
+      "motion": "direct"
+    },
+    "Mercury": {
+      "name": "水星",
+      "longitude": 271.8889120664631,
+      "latitude": -0.9950666269255495,
+      "sign": "摩羯座",
+      "sign_degree": 1.8889120664630923,
+      "house": 6,
+      "longitude_speed_deg_per_day": 1.5562876757576305,
+      "motion": "direct"
+    },
+    "Venus": {
+      "name": "金星",
+      "longitude": 241.56523294036205,
+      "latitude": 2.0659966042455618,
+      "sign": "射手座",
+      "sign_degree": 1.5652329403620513,
+      "house": 5,
+      "longitude_speed_deg_per_day": 1.209043362254647,
+      "motion": "direct"
+    },
+    "Mars": {
+      "name": "火星",
+      "longitude": 327.96389907790274,
+      "latitude": -1.0680820296312346,
+      "sign": "水瓶座",
+      "sign_degree": 27.963899077902738,
+      "house": 7,
+      "longitude_speed_deg_per_day": 0.7756789611391923,
+      "motion": "direct"
+    },
+    "Jupiter": {
+      "name": "木星",
+      "longitude": 25.25419984487423,
+      "latitude": -1.2604530079556935,
+      "sign": "白羊座",
+      "sign_degree": 25.25419984487423,
+      "house": 9,
+      "longitude_speed_deg_per_day": 0.04075534796498914,
+      "motion": "direct"
+    },
+    "Saturn": {
+      "name": "土星",
+      "longitude": 40.39612413717841,
+      "latitude": -2.444809723353516,
+      "sign": "金牛座",
+      "sign_degree": 10.396124137178411,
+      "house": 10,
+      "longitude_speed_deg_per_day": -0.01993908108886444,
+      "motion": "retrograde"
+    },
+    "Uranus": {
+      "name": "天王星",
+      "longitude": 314.8061046271607,
+      "latitude": -0.6596606636031208,
+      "sign": "水瓶座",
+      "sign_degree": 14.806104627160721,
+      "house": 7,
+      "longitude_speed_deg_per_day": 0.050345772481250606,
+      "motion": "direct"
+    },
+    "Neptune": {
+      "name": "海王星",
+      "longitude": 303.19544205947335,
+      "latitude": 0.23714822429111246,
+      "sign": "水瓶座",
+      "sign_degree": 3.1954420594733506,
+      "house": 7,
+      "longitude_speed_deg_per_day": 0.035571272060224146,
+      "motion": "direct"
+    },
+    "Pluto": {
+      "name": "冥王星",
+      "longitude": 251.45473515991364,
+      "latitude": 10.8552107048869,
+      "sign": "射手座",
+      "sign_degree": 11.454735159913639,
+      "house": 5,
+      "longitude_speed_deg_per_day": 0.03515379854093226,
+      "motion": "direct"
+    }
+  },
+  "angles": {
+    "ASC": 137.81542470937404,
+    "DSC": 317.81542470937404,
+    "MC": 39.25097813538848,
+    "IC": 219.2509781353885
+  },
+  "houses": {
+    "system": "whole-sign",
+    "cusps": [
+      120,
+      150,
+      180,
+      210,
+      240,
+      270,
+      300,
+      330,
+      0,
+      30,
+      60,
+      90
+    ]
+  },
+  "location": {
+    "latitude": 39.9,
+    "longitude": 116.4
+  },
+  "aspects": [
+    {
+      "a": "Sun",
+      "b": "Moon",
+      "name": "六合",
+      "angle": 60,
+      "separation": 57.04484751234435,
+      "orb": 2.9551524876556527,
+      "allowed_orb": 4
+    },
+    {
+      "a": "Sun",
+      "b": "Saturn",
+      "name": "拱相",
+      "angle": 120,
+      "separation": 120.02738549735989,
+      "orb": 0.027385497359887268,
+      "allowed_orb": 6
+    },
+    {
+      "a": "Moon",
+      "b": "Saturn",
+      "name": "对冲",
+      "angle": 180,
+      "separation": 177.0722330097043,
+      "orb": 2.9277669902957086,
+      "allowed_orb": 8
+    },
+    {
+      "a": "Moon",
+      "b": "Uranus",
+      "name": "刑相",
+      "angle": 90,
+      "separation": 91.48221349968657,
+      "orb": 1.4822134996865657,
+      "allowed_orb": 6
+    },
+    {
+      "a": "Mercury",
+      "b": "Mars",
+      "name": "六合",
+      "angle": 60,
+      "separation": 56.074987011439646,
+      "orb": 3.925012988560354,
+      "allowed_orb": 4
+    },
+    {
+      "a": "Venus",
+      "b": "Mars",
+      "name": "刑相",
+      "angle": 90,
+      "separation": 86.39866613754069,
+      "orb": 3.601333862459313,
+      "allowed_orb": 6
+    },
+    {
+      "a": "Venus",
+      "b": "Neptune",
+      "name": "六合",
+      "angle": 60,
+      "separation": 61.6302091191113,
+      "orb": 1.6302091191112993,
+      "allowed_orb": 4
+    },
+    {
+      "a": "Mars",
+      "b": "Jupiter",
+      "name": "六合",
+      "angle": 60,
+      "separation": 57.290300766971484,
+      "orb": 2.709699233028516,
+      "allowed_orb": 4
+    },
+    {
+      "a": "Saturn",
+      "b": "Uranus",
+      "name": "刑相",
+      "angle": 90,
+      "separation": 85.59001951001767,
+      "orb": 4.409980489982331,
+      "allowed_orb": 6
+    },
+    {
+      "a": "Uranus",
+      "b": "Pluto",
+      "name": "六合",
+      "angle": 60,
+      "separation": 63.35136946724708,
+      "orb": 3.351369467247082,
+      "allowed_orb": 4
+    }
+  ],
+  "warnings": [
+    "占星解释仅供文化研究、娱乐与自我反思；天体位置的可计算性不证明命运预测有效。"
+  ]
+}

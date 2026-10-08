@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "spread": "three",
+  "question": "合成示例：复习习惯",
+  "deck": "Rider-Waite-Smith; Strength VIII; Justice XI",
+  "algorithm": "uniform-without-replacement",
+  "randomness": "seeded-pseudorandom",
+  "seed": 42,
+  "reversed_probability": 0.5,
+  "cards": [
+    {
+      "position": "过去",
+      "card": "节制",
+      "orientation": "逆位",
+      "is_major": true
+    },
+    {
+      "position": "现在",
+      "card": "女皇",
+      "orientation": "逆位",
+      "is_major": true
+    },
+    {
+      "position": "可能走向",
+      "card": "权杖国王",
+      "orientation": "逆位",
+      "is_major": false
+    }
+  ]
+}
