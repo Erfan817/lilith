@@ -1,0 +1,46 @@
+{
+  "synthetic_data": true,
+  "turn": 3,
+  "scope": "Actual Hermes CLI events, not mocked LLM or precomputed interpretation",
+  "sanitization": "Machine-local paths replaced with role labels; tool-result text retains original host 5000-char truncation.",
+  "events": [
+    {
+      "type": "system",
+      "subtype": "init",
+      "model": "glm-5.3-flash",
+      "session_id": "20261009_175709_ce9ca7",
+      "timestamp": 1791540113607
+    },
+    {
+      "type": "tool_use",
+      "name": "terminal",
+      "input": {
+        "command": "<skill-venv>/bin/python <skill-root>/scripts/lilith.py bazi --solar 1990-05-15 --hour 12:00 --sex 男 --as-of 2024-01-15"
+      },
+      "timestamp": 1791540127359
+    },
+    {
+      "type": "tool_result",
+      "name": "terminal",
+      "output": "{\"output\": \"{\\n  \\\"schema_version\\\": \\\"1.1\\\",\\n  \\\"system\\\": \\\"bazi\\\",\\n  \\\"engine\\\": {\\n    \\\"name\\\": \\\"lunar-python\\\",\\n    \\\"version\\\": \\\"1.4.8\\\",\\n    \\\"eight_char_sect\\\": 1,\\n    \\\"yun_sect\\\": 2,\\n    \\\"official_almanac\\\": false\\n  },\\n  \\\"uncertainty\\\": {\\n    \\\"time_known\\\": true,\\n    \\\"pillars\\\": {},\\n    \\\"candidates\\\": [],\\n    \\\"candidate_limit\\\": 8,\\n    \\\"dayun\\\": null\\n  },\\n  \\\"input\\\": {\\n    \\\"solar\\\": \\\"1990-05-15 12:00\\\",\\n    \\\"lunar\\\": \\\"1990年四月廿一\\\",\\n    \\\"hour\\\": \\\"午 / 12:00\\\",\\n    \\\"sex_convention\\\": \\\"男\\\",\\n    \\\"place\\\": null,\\n    \\\"civil_time\\\": \\\"1990-05-15T12:00:00+08:00\\\",\\n    \\\"calendar_time\\\": \\\"1990-05-15T12:00:00+08:00\\\",\\n    \\\"fold\\\": null,\\n    \\\"pillar_time\\\": \\\"1990-05-15T12:00:00+08:00\\\"\\n  },\\n  \\\"conventions\\\": {\\n    \\\"timezone\\\": \\\"UTC+08:00\\\",\\n    \\\"year_boundary\\\": \\\"lichun\\\",\\n    \\\"month_boundary\\\": \\\"twelve-jie\\\",\\n    \\\"day_boundary\\\": \\\"23:00-next-day\\\",\\n    \\\"true_solar_time\\\": false,\\n    \\\"calendar_precision\\\": \\\"lunar-python-1.4.8-full-jieqi\\\",\\n    \\\"solar_correction\\\": null,\\n    \\\"term_basis\\\": \\\"absolute-instant\\\",\\n    \\\"day_hour_basis\\\": \\\"local-civil\\\",\\n    \\\"calendar_timezone\\\": \\\"UTC+08:00\\\"\\n  },\\n  \\\"pillars\\\": {\\n    \\\"year\\\": {\\n      \\\"gan\\\": \\\"庚\\\",\\n      \\\"zhi\\\": \\\"午\\\",\\n      \\\"ten_god\\\": \\\"比肩\\\",\\n      \\\"hidden_stems\\\": \\\"丁火、己土\\\"\\n    },\\n    \\\"month\\\": {\\n      \\\"gan\\\": \\\"辛\\\",\\n      \\\"zhi\\\": \\\"巳\\\",\\n      \\\"ten_god\\\": \\\"劫财\\\",\\n      \\\"hidden_stems\\\": \\\"丙火、庚金、戊土\\\"\\n    },\\n    \\\"day\\\": {\\n      \\\"gan\\\": \\\"庚\\\",\\n      \\\"zhi\\\": \\\"辰\\\",\\n      \\\"ten_god\\\": \\\"—\\\",\\n      \\\"hidden_stems\\\": \\\"戊土、乙木、癸水\\\"\\n    },\\n    \\\"hour\\\": {\\n      \\\"gan\\\": \\\"壬\\\",\\n      \\\"zhi\\\": \\\"午\\\",\\n      \\\"ten_god\\\": \\\"食神\\\",\\n      \\\"hidden_stems\\\": \\\"丁火、己土\\\"\\n    }\\n  },\\n  \\\"dayun\\\": {\\n    \\\"direction\\\": \\\"forward\\\",\\n    \\\"start_age\\\": {\\n      \\\"years\\\": 7,\\n      \\\"months\\\": 3,\\n      \\\"days\\\": 3,\\n      \\\"hours\\\": 20\\n    },\\n    \\\"start_solar\\\": \\\"1997-08-19T08:00:00+08:00\\\",\\n    \\\"start_solar_timezone\\\": \\\"UTC+08:00\\\",\\n    \\\"rows\\\": [\\n      [\\n        \\\"1\\\",\\n        \\\"8-17岁\\\",\\n        \\\"壬午\\\"\\n      ],\\n      [\\n        \\\"2\\\",\\n        \\\"18-27岁\\\",\\n        \\\"癸未\\\"\\n      ],\\n      [\\n        \\\"3\\\",\\n        \\\"28-37岁\\\",\\n        \\\"甲申\\\"\\n      ],\\n      [\\n        \\\"4\\\",\\n        \\\"38-47岁\\\",\\n        \\\"乙酉\\\"\\n      ],\\n      [\\n        \\\"5\\\",\\n        \\\"48-57岁\\\",\\n        \\\"丙戌\\\"\\n      ],\\n      [\\n        \\\"6\\\",\\n        \\\"58-67岁\\\",\\n        \\\"丁亥\\\"\\n      ],\\n      [\\n        \\\"7\\\",\\n        \\\"68-77岁\\\",\\n        \\\"戊子\\\"\\n      ],\\n      [\\n        \\\"8\\\",\\n        \\\"78-87岁\\\",\\n        \\\"己丑\\\"\\n      ]\\n    ],\\n    \\\"periods\\\": [\\n      {\\n        \\\"index\\\": 0,\\n        \\\"ganzhi\\\": \\\"\\\",\\n        \\\"start_year\\\": 1990,\\n        \\\"end_year\\\": 1996,\\n        \\\"start_age\\\": 1,\\n        \\\"end_age\\\": 7\\n      },\\n      {\\n        \\\"index\\\": 1,\\n        \\\"ganzhi\\\": \\\"壬午\\\",\\n        \\\"start_year\\\": 1997,\\n        \\\"end_year\\\": 2006,\\n        \\\"start_age\\\": 8,\\n        \\\"end_age\\\": 17\\n      },\\n      {\\n        \\\"index\\\": 2,\\n        \\\"ganzhi\\\": \\\"癸未\\\",\\n        \\\"start_year\\\": 2007,\\n        \\\"end_year\\\": 2016,\\n        \\\"start_age\\\": 18,\\n        \\\"end_age\\\": 27\\n      },\\n      {\\n        \\\"index\\\": 3,\\n        \\\"ganzhi\\\": \\\"甲申\\\",\\n        \\\"start_year\\\": 2017,\\n        \\\"end_year\\\": 2026,\\n        \\\"start_age\\\": 28,\\n        \\\"end_age\\\": 37\\n      },\\n      {\\n        \\\"index\\\": 4,\\n        \\\"ganzhi\\\": \\\"乙酉\\\",\\n        \\\"start_year\\\": 2027,\\n        \\\"end_year\\\": 2036,\\n        \\\"start_age\\\": 38,\\n        \\\"end_age\\\": 47\\n      },\\n      {\\n        \\\"index\\\": 5,\\n        \\\"ganzhi\\\": \\\"丙戌\\\",\\n        \\\"start_year\\\": 2037,\\n        \\\"end_year\\\": 2046,\\n        \\\"start_age\\\": 48,\\n        \\\"end_age\\\": 57\\n      },\\n      {\\n        \\\"index\\\": 6,\\n        \\\"ganzhi\\\": \\\"丁亥\\\",\\n        \\\"start_year\\\": 2047,\\n        \\\"end_year\\\": 2056,\\n        \\\"start_age\\\": 58,\\n        \\\"end_age\\\": 67\\n      },\\n      {\\n        \\\"index\\\": 7,\\n        \\\"ganzhi\\\": \\\"戊子\\\",\\n        \\\"start_year\\\": 2057,\\n        \\\"end_year\\\": 2066,\\n        \\\"start_age\\\": 68,\\n        \\\"end_age\\\": 77\\n      },\\n      {\\n        \\\"index\\\": 8,\\n        \\\"ganzhi\\\": \\\"己丑\\\",\\n        \\\"start_year\\\": 2067,\\n        \\\"end_year\\\": 2076,\\n        \\\"start_age\\\": 78,\\n        \\\"end_age\\\": 87\\n      }\\n    ],\\n    \\\"period_age_convention\\\": \\\"nominal-year-age\\\"\\n  },\\n  \\\"current_year\\\": 2024,\\n  \\\"current_ganzhi\\\": \\\"癸卯\\\",\\n  \\\"flow_year\\\": {\\n    \\\"boundary\\\": \\\"lichun\\\",\\n    \\\"timezone\\\": \\\"UTC+08:00\\\",\\n    \\\"as_of\\\": \\\"2024-01-15\\\",\\n    \\\"as_of_precision\\\": \\\"date\\\",\\n    \\\"ganzhi_candidates\\\": [\\n      \\\"癸卯\\\"\\n    ],\\n    \\\"interval\\\": {\\n      \\\"start\\\": \\\"2024-01-15T00:00:00+08:00\\\",\\n      \\\"end_exclusive\\\": \\\"2024-01-16T00:00:00+08:00\\\"\\n    }\\n  },\\n  \\\"shensha\\\": [\\n    \\\"- 天乙贵人 — 见于年支、时支 — 年干/日干查地支\\\",\\n    \\\"- 天德 — 见于月干 — 月支查天干\\\",\\n    \\\"- 月德 — 见于年干、日干 — 月支三合\\\",\\n    \\\"- 学堂 — 见于月支 — 日干长生\\\",\\n    \\\"- 将星 — 见于年支、时支 — 年支/日支三合\\\",\\n    \\\"- 华盖 — 见于日支 — 年支/日支\\\",\\n    \\\"- 天医 — 见于日支 — 月支前一位\\\",\\n    \\\"-...",
+      "duration_ms": 386,
+      "is_error": false,
+      "timestamp": 1791540127749
+    },
+    {
+      "type": "result",
+      "session_id": "20261009_175709_ce9ca7",
+      "exit_code": 0,
+      "text": "重排完成。这次是用确认的 12:00 全新起盘，不是在旧结果上补——12:00 落在午时、且在 23:00 日界之前，所以此前的“辛巳日”候选被排除，日柱确定为庚辰，与上一轮的第一候选吻合。\n\n一、四柱（日主：庚金）\n\n```\n      年柱    月柱    日柱    时柱\n天干  庚(比肩)  辛(劫财)  庚      壬(食神)\n地支  午(火)   巳(火)   辰(土)   午(火)\n藏干  丁己     丙庚戊    戊乙癸   丁己\n```\n\n日干确定后，十神全部有效。粗看配置：金三透（庚辛庚）、火三见（午巳午）、时干壬水食神吐秀——但旺衰强弱按规矩不能数个数下结论，需要的话我再按月令、通根细拆。\n\n二、大运（阳年男，顺行；起运 1997-08-19，约 7 岁 3 月）\n\n```\n壬午 1997-2006（8-17岁）\n癸未 2007-2016（18-27岁）\n甲申 2017-2026（28-37岁）← 当前所在\n乙酉 2027-2036（38-47岁）\n丙戌 2037-2046（48-57岁）\n```\n\n截至 2024-01-15，你正走甲申大运：甲木偏财、申金比肩。\n\n三、流年（截至 2024-01-15，立春分年）\n\n仍是癸卯年（2023 流年）；癸水伤官、卯木正财。甲辰流年从 2024-02-04 立春起才切换，届时与甲申大运形成岁运并临的天干同气。\n\n四、神煞（日干确定后引擎方才输出）\n\n天乙贵人（年支、时支午）、天德（月干辛）、月德（年干、日干庚）、学堂（月支）、将星（年支、时支）、华盖、天医（日支辰）、劫煞、灾煞、亡神、寡宿（日支）。神煞只是传统标签，不宣吉凶定论。\n\n说明一点口径：以上全部按固定北京时间 UTC+8 的民用钟标，12:00 未做真太阳时校正。想深入哪一块——旺衰五行、格局调候，还是甲申大运配癸卯/甲辰流年的具体分析——说一声，我按对应规则展开。",
+      "tokens": {
+        "input": 3927,
+        "output": 2392,
+        "total": 31535,
+        "cache_read": 25216,
+        "cache_write": 0
+      },
+      "duration_ms": 70517,
+      "timestamp": 1791540184125
+    }
+  ]
+}

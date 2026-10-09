@@ -44,3 +44,42 @@ def test_doctor_all_runtime_dependencies_are_ready_in_project_environment():
         "lunar-python", "astronomy-engine", "tzdata"
     }
     assert payload["repair_argv"] == []
+
+
+def test_bazi_doctor_defaults_to_all_features_and_checks_solar_dependency():
+    result = subprocess.run([sys.executable, str(CLI), "doctor", "--module", "bazi"],
+                            text=True, capture_output=True, timeout=10)
+    assert result.returncode == 0, result.stderr
+    data = json.loads(result.stdout)
+    assert {check["package"] for check in data["dependencies"]} == {
+        "lunar-python", "tzdata", "astronomy-engine"
+    }
+    assert data["features"]["civil"]["ready"] is True
+    assert data["features"]["apparent-solar"]["ready"] is True
+
+
+def test_missing_solar_engine_fails_only_requested_solar_feature(monkeypatch, capsys):
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("doctor_feature_test", ROOT / "scripts/doctor.py")
+    doctor = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(doctor)
+    real_find = doctor.importlib.util.find_spec
+    monkeypatch.setattr(doctor.importlib.util, "find_spec", lambda name: None if name == "astronomy" else real_find(name))
+    monkeypatch.setattr(sys, "argv", ["doctor.py", "--module", "bazi", "--feature", "apparent-solar"])
+    assert doctor.main() == 1
+    solar = json.loads(capsys.readouterr().out)
+    assert solar["ready"] is False
+    assert solar["features"]["apparent-solar"]["ready"] is False
+    monkeypatch.setattr(sys, "argv", ["doctor.py", "--module", "bazi", "--feature", "civil"])
+    assert doctor.main() == 0
+    civil = json.loads(capsys.readouterr().out)
+    assert civil["ready"] is True
+    assert {item["package"] for item in civil["dependencies"]} == {"lunar-python", "tzdata"}
+
+
+def test_feature_is_not_accepted_for_an_unrelated_module():
+    result = subprocess.run([sys.executable, str(CLI), "doctor", "--module", "tarot", "--feature", "apparent-solar"],
+                            text=True, capture_output=True, timeout=10)
+    assert result.returncode == 2
+    assert not result.stdout
+    assert "bazi" in result.stderr

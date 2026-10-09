@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "skill_version": "0.2.1",
+  "baseline_commit": "a2e6c5e759e53e0ccd7a5755788f3ae2ad2bdbac",
+  "recorded_at": "2026-10-09T10:29:31.493466+00:00",
+  "host": "Hermes CLI (Linux)",
+  "model": "glm-5.3-flash",
+  "provider": "tokenrhythm",
+  "forced_skill_preload": false,
+  "configured_external_skill_discovery": true,
+  "synthetic_data_only": true,
+  "turns": 10,
+  "sessions": 2,
+  "tested_skill_sha256": "55812bf1d93fded3f30ffdf5b08d0372e6cea87371b9796b72802b926561218d",
+  "workflow_assertions": {
+    "natural_language_auto_load": true,
+    "asks_missing_data_before_calculation": true,
+    "unknown_time_uses_date_range_mode": true,
+    "confirmed_time_recalculates": true,
+    "multi_turn_correction_recalculates": true,
+    "saved_corrected_json_matches_independent_real_cli": true,
+    "report_uses_saved_latest_chart_without_new_calculation": true,
+    "default_export_hides_original_datetime_and_location": true,
+    "posix_report_mode_0600": true
+  },
+  "approval_evidence": {
+    "mode": "manual",
+    "single_query_mode": "deny",
+    "yolo_used": false,
+    "first_run_blocked_command_results": 2,
+    "scope": "Actual headless deny guard observed. No interactive approval click and no Claude allowed-tools matching was tested."
+  },
+  "not_fully_passed": [
+    "First run used only skills+terminal toolsets: missing file tools caused failed deferred write calls before recovery. Second run supplied skills+terminal+file.",
+    "First run model incorrectly suggested a confirmed branch alone can complete Dayun; SKILL now explicitly forbids this, but that exact interpretation was not re-rated in the second astrology run.",
+    "Astrology multi-turn model gave an unsupported numerical time-to-next-sign estimate; actual chart computation and files matched, interpretation quality is not certified."
+  ],
+  "untested_hosts": [
+    "Claude Code",
+    "Cursor"
+  ],
+  "interpretation_quality_passed": false,
+  "workflow_passed": true,
+  "notes": "This is selected live-host evidence, not cross-host completeness or a prediction accuracy benchmark. Full original events remain in private scratch; public events are path-sanitized without hiding failures.",
+  "artifact_hashes": {
+    "corrected_chart_json_sha256": "d00912aa9049de7748a7eb180e5df0c9a46a0703a1e057a634f72e7a1deca476",
+    "share_html_sha256": "f12e6dcb0d350926de6a3b4866b73048c7e5f06ab373b09eaa9ba02eb13a226e"
+  }
+}

@@ -2,7 +2,7 @@
 import copy
 import importlib.util
 import json
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
 import subprocess
 import sys
 
@@ -202,6 +202,22 @@ def test_sources_cli_default_is_bounded_and_reads_real_files(tmp_path):
     assert data['sources'][0]['url'] == 'https://example.com/source/0'
     assert data['sources'][0]['manifest'] == 'references/tarot/sources.json'
     assert data['sources'][0]['retrieval']['status'] == 'body_read'
+
+
+def test_sources_main_serializes_windows_manifest_as_posix(monkeypatch, capsys):
+    monkeypatch.syspath_prepend(str(ROOT / 'scripts'))
+    spec = importlib.util.spec_from_file_location('source_lookup_test', ROOT / 'scripts/sources.py')
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    root = PureWindowsPath('C:/synthetic-skill')
+    path = root / 'references' / 'tarot' / 'sources.json'
+    assert str(path.relative_to(root)) == r'references\tarot\sources.json'
+    monkeypatch.setattr(module, 'load_source_manifests', lambda root: [(path, manifest())])
+
+    assert module.main(['--root', root.as_posix()]) == 0
+    data = json.loads(capsys.readouterr().out)
+    assert data['returned'] == data['total_matches'] == 1
+    assert data['sources'][0]['manifest'] == 'references/tarot/sources.json'
 
 
 def test_sources_cli_filters_module_and_casefolded_query_before_limit(tmp_path):

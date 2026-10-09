@@ -1,32 +1,32 @@
 {
   "accessed_precisions": {
-    "date": 25,
-    "instant": 129,
+    "date": 58,
+    "instant": 145,
     "unknown": 8
   },
-  "astrology_topics": 15,
-  "markdown_files": 43,
+  "astrology_topics": 16,
+  "markdown_files": 50,
   "modules": {
     "astrology": {
-      "han_characters": 62236,
-      "reference_characters": 92873,
-      "reference_files": 15,
-      "source_records": 125,
-      "source_unique_urls": 123,
-      "synthesis_source_records": 100
+      "han_characters": 63267,
+      "reference_characters": 95769,
+      "reference_files": 16,
+      "source_records": 143,
+      "source_unique_urls": 141,
+      "synthesis_source_records": 107
     },
     "bazi": {
-      "han_characters": 7138,
-      "reference_characters": 14464,
-      "reference_files": 6,
-      "source_records": 6,
-      "source_unique_urls": 6,
-      "synthesis_source_records": 4
+      "han_characters": 10224,
+      "reference_characters": 19180,
+      "reference_files": 7,
+      "source_records": 20,
+      "source_unique_urls": 20,
+      "synthesis_source_records": 14
     },
     "common": {
-      "han_characters": 3185,
-      "reference_characters": 5158,
-      "reference_files": 3
+      "han_characters": 5513,
+      "reference_characters": 9551,
+      "reference_files": 5
     },
     "qimen": {
       "han_characters": 8834,
@@ -37,12 +37,12 @@
       "synthesis_source_records": 7
     },
     "tarot": {
-      "han_characters": 21576,
-      "reference_characters": 30179,
-      "reference_files": 4,
-      "source_records": 9,
-      "source_unique_urls": 8,
-      "synthesis_source_records": 6
+      "han_characters": 22542,
+      "reference_characters": 32796,
+      "reference_files": 5,
+      "source_records": 26,
+      "source_unique_urls": 25,
+      "synthesis_source_records": 15
     },
     "ziwei": {
       "han_characters": 9674,
@@ -53,8 +53,8 @@
       "synthesis_source_records": 12
     }
   },
-  "reference_characters": 169469,
-  "reference_files": 34,
+  "reference_characters": 184091,
+  "reference_files": 39,
   "required_core_astrology_topics": 15,
   "required_core_reference_files": 33,
   "schema_version": 1,
@@ -63,17 +63,18 @@
     {
       "file": "references/astrology/sources-advanced.json",
       "module": "astrology",
-      "records": 46,
+      "records": 64,
       "retrieval_statuses": {
         "blocked": 1,
         "body_read": 19,
         "failed": 2,
         "index_only": 4,
-        "partial_body_read": 16,
-        "sections_read": 4
+        "metadata_only": 11,
+        "partial_body_read": 17,
+        "sections_read": 10
       },
-      "synthesis_records": 39,
-      "unique_urls": 46
+      "synthesis_records": 46,
+      "unique_urls": 64
     },
     {
       "file": "references/astrology/sources-basic.json",
@@ -93,13 +94,17 @@
     {
       "file": "references/bazi/sources.json",
       "module": "bazi",
-      "records": 6,
+      "records": 20,
       "retrieval_statuses": {
-        "code_read": 2,
-        "sections_read": 4
+        "blocked": 1,
+        "code_read": 4,
+        "excluded": 1,
+        "metadata_only": 2,
+        "partial_body_read": 2,
+        "sections_read": 10
       },
-      "synthesis_records": 4,
-      "unique_urls": 6
+      "synthesis_records": 14,
+      "unique_urls": 20
     },
     {
       "file": "references/qimen/sources.json",
@@ -115,16 +120,19 @@
     {
       "file": "references/tarot/sources.json",
       "module": "tarot",
-      "records": 9,
+      "records": 26,
       "retrieval_statuses": {
-        "blocked": 1,
+        "blocked": 3,
+        "body_read": 3,
         "excluded": 1,
-        "partial_body_read": 5,
+        "failed": 2,
+        "metadata_only": 4,
+        "partial_body_read": 8,
         "provenance_review": 1,
-        "sections_read": 1
+        "sections_read": 4
       },
-      "synthesis_records": 6,
-      "unique_urls": 8
+      "synthesis_records": 15,
+      "unique_urls": 25
     },
     {
       "file": "references/ziwei/sources.json",
@@ -141,20 +149,21 @@
     }
   ],
   "source_manifests": 6,
-  "source_records": 162,
+  "source_records": 211,
   "source_statuses": {
-    "blocked": 3,
-    "body_read": 80,
-    "code_read": 2,
-    "excluded": 1,
-    "failed": 4,
+    "blocked": 6,
+    "body_read": 83,
+    "code_read": 4,
+    "excluded": 2,
+    "failed": 6,
     "image_only": 1,
     "index_only": 9,
-    "partial_body_read": 33,
+    "metadata_only": 17,
+    "partial_body_read": 39,
     "provenance_review": 3,
-    "sections_read": 26
+    "sections_read": 41
   },
-  "source_unique_urls": 155,
-  "synthesis_source_records": 129,
-  "synthesis_source_unique_urls": 125
+  "source_unique_urls": 203,
+  "synthesis_source_records": 155,
+  "synthesis_source_unique_urls": 150
 }

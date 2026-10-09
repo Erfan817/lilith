@@ -8,12 +8,13 @@
 
 ## 八字
 
-`bazi.py`校验公历/农历闰月与有界年份，`bazi_engine.py`使用lunar-python1.4.8完整交节、四柱和起运。原vendor只供规则辅助，不运行其近似compute。JSON保留 `input/conventions/pillars/dayun/current_year/shensha/warnings`，新增 `engine/uncertainty`。
+`bazi.py`校验公历/农历闰月与有界年份，`bazi_engine.py`使用lunar-python1.4.8完整交节、四柱和起运。原vendor只供规则辅助，不运行其近似compute。JSON schema1.1保留 `input/conventions/pillars/dayun/current_year/shensha/warnings` 和 `engine/uncertainty`，增加 `flow_year`；`current_ganzhi`允许null，不能把null换成公历年干支。
 
 - 默认固定UTC+8；显式IANA时区解析民用时，DST缺口拒绝，歧义要求fold。
 - 年/月、起运用绝对瞬间；日/时默认当地民用钟标，23点换日、sect1；起运sect2，运段虚岁。不是所有流派通用口径。
 - 显式 `--time-basis apparent-solar --longitude`以太阳视赤经/恒星时算均时差和经度/UTC偏移修正，仅影响日/时柱。`pillar_time`是无时区钟标，不是新瞬间；原 `civil_time/calendar_time`不变，`solar_correction`记方法与版本。
 - 未知钟点/只有时辰输出稳定字段和最多8个相关候选，起运null。日干不唯一时不编十神、神煞。太阳时未知钟点暂拒绝。
+- 流年按立春实际交节。截止日期代表北京时间整日范围，立春当日没有截止钟点时保留前后干支；带UTC偏移的ISO截止时刻可确定一侧。默认实际当前瞬间；仅知逝世年份保留该年内且不晚于分析截止的候选，不伪造日期。`current_year`仍是公历年份标签。`flow_year.as_of_precision`只记录截止输入date/instant，`deceased_precision`记录可选逝世资料year，`domain_precision`记录最终范围精度。范围不得早于真实出生瞬间；仅时辰/未知时刻使用其真实域最早端，不代入中点；精确截止早于出生瞬间明确拒绝。
 - `--place`只展示；年份1900–2100有界，逝世不早于出生、不越分析截止。输出引擎版本和来源独立校验，不承诺官方认证或所有时刻穷举。
 
 细节见[八字口径](../bazi/workflow.md)。

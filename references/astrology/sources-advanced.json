@@ -8,7 +8,8 @@
     "schools-and-history.md",
     "astronomy-and-calculation.md",
     "glossary.md",
-    "coverage.md"
+    "coverage.md",
+    "books-and-cases.md"
   ],
   "source_policy": "original Chinese advanced astrology references for Lilith; only successful or explicitly partial bodies support citations",
   "sources": [
@@ -1719,6 +1720,407 @@
         "detail": "实际取得导航页，用于发现术语与文章链接；不把首页当全部文章已读。"
       },
       "use_for_synthesis": false
+    },
+    {
+      "url": "https://www.loebclassics.com/abstract/LCL435/1940/volume.xml",
+      "title": "Ptolemy, Tetrabiblos — Loeb Classical Library (LCL 435)",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "accessed_reason": "Research-session date record (2026-10-09); exact per-request instant not retained",
+      "retrieval": {
+        "status": "metadata_only",
+        "method": "web_extract/web_search documented in research ledger",
+        "detail": "direct web_extract timeout; official abstract page contents confirmed via search snapshot (work of astrology, tr. F. E. Robbins, LCL 435)"
+      },
+      "topics": [
+        "Tetrabiblos Loeb 435, Robbins 1940, Harvard UP"
+      ],
+      "role": "book_evidence",
+      "use_for_synthesis": false,
+      "extensions": {},
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Ptolemy/Tetrabiblos/Introduction*.html",
+      "title": "Robbins's Introduction to Tetrabiblos (public domain, LacusCurtius)",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "accessed_reason": "Research-session date record (2026-10-09); exact per-request instant not retained",
+      "retrieval": {
+        "status": "sections_read",
+        "method": "web_extract/web_search documented in research ledger",
+        "detail": "Selected introduction passages read, not the whole book or all notes. Extraction contains an internal truncation marker; direct HTML re-read confirms III printing-history paragraphs. The only-three-printings claim is Robbins’ 1940 statement, not a current count."
+      },
+      "topics": [
+        "Ptolemy life c.100-178 CE, Ptolemais, Alexandria; Greek text printed only 3x since 16th c. (Camerarius 1535/1553); authorship defense"
+      ],
+      "role": "book_evidence",
+      "use_for_synthesis": true,
+      "extensions": {
+        "sections_read": [
+          "Introduction I/II selected passages",
+          "III printing history"
+        ]
+      },
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "http://projecthindsight.com/archives/hellenistic.html",
+      "title": "Project Hindsight — Hellenistic Track Translations (official)",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "accessed_reason": "Research-session date record (2026-10-09); exact per-request instant not retained",
+      "retrieval": {
+        "status": "metadata_only",
+        "method": "public publisher page read; publication descriptions only",
+        "detail": "Hellenistic Track volume list and publication descriptions read. No Anthology translation text read; longevity, directions and time-lords wording identifies advertised topics, not a technical method source."
+      },
+      "topics": [
+        "Valens Bk II many sample charts; Bk III length-of-life & primary directions examples; Bk IV time-lords/aphesis; Ptolemy Tetrabiblos Bks I/III/IV also in track"
+      ],
+      "role": "bibliography",
+      "use_for_synthesis": false,
+      "extensions": {
+        "reading_scope": "publication-list/description; translation body unread"
+      },
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "https://onlinebooks.library.upenn.edu/webbin/book/lookupid?key=olbp91519",
+      "title": "UPenn Online Books Page — Anthologies, tr. Mark T. Riley",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "accessed_reason": "Research-session date record (2026-10-09); exact per-request instant not retained",
+      "retrieval": {
+        "status": "metadata_only",
+        "method": "web_extract/web_search documented in research ledger",
+        "detail": "UPenn catalog entry read; author/translator and linked PDF only. No Anthology translation text read."
+      },
+      "topics": [
+        "Riley translation catalog record"
+      ],
+      "role": "bibliography",
+      "use_for_synthesis": false,
+      "extensions": {},
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "https://www.abebooks.com/9780998588919/Anthology-Valens-Vettius-0998588911/plp",
+      "title": "AbeBooks record — The Anthology (Amor Fati Publications, 2022, ISBN 978-0-9985889-1-9)",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "accessed_reason": "Research-session date record (2026-10-09); exact per-request instant not retained",
+      "retrieval": {
+        "status": "metadata_only",
+        "method": "web_extract/web_search documented in research ledger",
+        "detail": "catalog record + synopsis read (all 9 surviving books first complete English translation; >100 chart examples; foreword by Chris Brennan; Riley retired Classics professor, CSUS Sacramento)"
+      },
+      "topics": [
+        "Valens print edition, 2022, complete translation"
+      ],
+      "role": "book_evidence",
+      "use_for_synthesis": false,
+      "extensions": {},
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "https://books.google.com/books/about/Greek_Horoscopes.html?id=kEgnLpm06zQC",
+      "title": "Google Books — Neugebauer & Van Hoesen, Greek Horoscopes (APS Memoirs 48, 1959/1987 POD)",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "accessed_reason": "Research-session date record (2026-10-09); exact per-request instant not retained",
+      "retrieval": {
+        "status": "metadata_only",
+        "method": "web_extract/web_search documented in research ledger",
+        "detail": "publisher description + full TOC read (Introduction, Original Documents, Literary Sources, General Comments incl. astronomical/astrological data, glossary, concordances)"
+      },
+      "topics": [
+        "~60 horoscopes 1st-5th c. CE; papyrological corpus; per-item astronomical data"
+      ],
+      "role": "case_evidence",
+      "use_for_synthesis": false,
+      "extensions": {},
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "https://catalog.hathitrust.org/Record/001632457",
+      "title": "HathiTrust record — Greek horoscopes (Philadelphia, 1959)",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "accessed_reason": "Research-session date record (2026-10-09); exact per-request instant not retained",
+      "retrieval": {
+        "status": "metadata_only",
+        "method": "web_extract/web_search documented in research ledger",
+        "detail": "catalog description via search snapshot (publisher, year)"
+      },
+      "topics": [
+        "APS Memoirs 48 bibliographic fix"
+      ],
+      "role": "case_evidence",
+      "use_for_synthesis": false,
+      "extensions": {},
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "https://www.cambridge.org/core/journals/journal-of-roman-studies/article/abs/augustus-and-capricorn-astrological-polyvalency-and-imperial-rhetoric/70FAE8BC72C8F217DCA55EACB952862F",
+      "title": "Tamsyn Barton, \"Augustus and Capricorn: Astrological Polyvalency and Imperial Rhetoric\", JRS (copyright 1995)",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "accessed_reason": "Research-session date record (2026-10-09); exact per-request instant not retained",
+      "retrieval": {
+        "status": "partial_body_read",
+        "method": "web_extract/web_search documented in research ledger",
+        "detail": "Publisher abstract/extract and associated references read; not the full scholarly paper. Kepler reconstruction account attributed to Barton, not independently verified."
+      },
+      "topics": [
+        "Kepler failed to reconstruct Augustus nativity; imperial rhetoric reading; author = Tamsyn Barton (not UVA)"
+      ],
+      "role": "case_evidence",
+      "use_for_synthesis": true,
+      "extensions": {},
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0132%3Alife%3Daug.%3Achapter%3D92",
+      "title": "Suetonius, Life of Augustus ch. 92-94 (Theogenes anecdote, Capricorn coin)",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "accessed_reason": "Research-session date record (2026-10-09); exact per-request instant not retained",
+      "retrieval": {
+        "status": "metadata_only",
+        "method": "web_search snapshot only",
+        "detail": "Search discovery only, not an independently read primary-source passage. Body assertions now use the separately registered LacusCurtius reads. Original URL retained without rewriting its chapter/path."
+      },
+      "topics": [
+        "2nd c. CE primary text layer for Augustus case"
+      ],
+      "role": "case_evidence",
+      "use_for_synthesis": false,
+      "extensions": {
+        "prior_retrieval_classification": {
+          "status": "sections_read",
+          "method": "web_extract/web_search documented in research ledger",
+          "detail": "translation passage read via search snapshot (Theogenes adoration; Augustus published his horoscope and struck silver coin with Capricorn sign)"
+        }
+      },
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0132%3Alife%3Daug.%3Achapter%3D5",
+      "title": "Suetonius, Life of Augustus ch. 5 (birth: 23 Sep, consulship of Cicero and C. Antonius, just before sunrise, Palatine)",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "accessed_reason": "Research-session date record (2026-10-09); exact per-request instant not retained",
+      "retrieval": {
+        "status": "metadata_only",
+        "method": "web_search snapshot only",
+        "detail": "Search discovery only, not an independently read primary-source passage. Body assertions now use the separately registered LacusCurtius reads. Original URL retained without rewriting its chapter/path."
+      },
+      "topics": [
+        "23 Sep 63 BCE; pre-sunrise birth"
+      ],
+      "role": "case_evidence",
+      "use_for_synthesis": false,
+      "extensions": {
+        "prior_retrieval_classification": {
+          "status": "sections_read",
+          "method": "web_extract/web_search documented in research ledger",
+          "detail": "translation passage read via search snapshot"
+        }
+      },
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "https://penelope.uchicago.edu/thayer/e/roman/texts/cassius_dio/56*.html",
+      "title": "Cassius Dio, Roman History 56 (edict publishing his birth stars; born 23 Sep)",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "accessed_reason": "Research-session date record (2026-10-09); exact per-request instant not retained",
+      "retrieval": {
+        "status": "metadata_only",
+        "method": "web_search snapshot only",
+        "detail": "Search discovery only, not an independently read primary-source passage. Body assertions now use the separately registered LacusCurtius reads. Original URL retained without rewriting its chapter/path."
+      },
+      "topics": [
+        "2nd-3rd c. CE primary text layer"
+      ],
+      "role": "case_evidence",
+      "use_for_synthesis": false,
+      "extensions": {
+        "prior_retrieval_classification": {
+          "status": "sections_read",
+          "method": "web_extract/web_search documented in research ledger",
+          "detail": "translation passage read via search snapshot (56.25.5 edict about stars at his own birth; 56.30.5 born 23 Sep)"
+        }
+      },
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "https://content.www.wellcomecollection.org/works/aaybg52m",
+      "title": "Wellcome Collection catalog — Barton, Ancient Astrology (Routledge 1994)",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "accessed_reason": "Research-session date record (2026-10-09); exact per-request instant not retained",
+      "retrieval": {
+        "status": "metadata_only",
+        "method": "web_extract/web_search documented in research ledger",
+        "detail": "library catalog record read (publisher, series Sciences of Antiquity, xxv+245 pp.)"
+      },
+      "topics": [
+        "Barton 1994 bibliographic fix"
+      ],
+      "role": "book_evidence",
+      "use_for_synthesis": false,
+      "extensions": {},
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "https://encyclopedia.com/arts/culture-magazines/barton-tamsyn-s",
+      "title": "Encyclopedia.com — Barton, Tamsyn (S.), b. 1962",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "accessed_reason": "Research-session date record (2026-10-09); exact per-request instant not retained",
+      "retrieval": {
+        "status": "sections_read",
+        "method": "web_extract/web_search documented in research ledger",
+        "detail": "bio record read (research fellow Newnham College Cambridge 1989-92; later development work in India; publications Power and Knowledge 1994, Ancient Astrology 1994)"
+      },
+      "topics": [
+        "Barton affiliation verified: Cambridge/Newnham, not University of Virginia (task hint mismatch flagged)"
+      ],
+      "role": "case_evidence",
+      "use_for_synthesis": true,
+      "extensions": {},
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "https://www.astronomy.com/wp-content/uploads/2024/01/Forer-fallacy-of-personal-validation-1949.pdf",
+      "title": "Bertram R. Forer, The Fallacy of Personal Validation: A Classroom Demonstration of Gullibility (scanned pp. 118–123)",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "accessed_on": "2026-10-09",
+      "accessed_reason": "Research-session date record; exact per-request instant not retained.",
+      "retrieval": {
+        "status": "sections_read",
+        "method": "vision_analyze of downloaded scan",
+        "detail": "All three scanned page images read; classroom procedure, 39-person tables, 13-item response distribution and 32-person recall table recorded; missing statistics remain unfilled."
+      },
+      "topics": [
+        "personal validation",
+        "generic personality descriptions",
+        "Barnum/Forer effect",
+        "evidence boundary"
+      ],
+      "role": "evidence",
+      "use_for_synthesis": true,
+      "extensions": {
+        "research_scope": "original classroom demonstration",
+        "copyright_boundary": "Original source is not bundled; only concise Chinese synthesis is published.",
+        "independent_review": {
+          "status": "partial",
+          "verified_sections": [
+            "journal 120–121; Table 1; Table 2; initial classroom procedure"
+          ],
+          "not_independently_reverified": [
+            "journal 122–123; Table 3; 1% t-test; author interpretation of recall"
+          ],
+          "reason": "image service errors persisted after permitted retries and JPEG conversion; PDF text layer empty",
+          "original_reading_record_retained": true
+        }
+      }
+    },
+    {
+      "url": "https://muller.lbl.gov/papers/Astrology-Carlson.pdf",
+      "title": "Shawn Carlson, A double-blind test of astrology (Nature 318, pp. 419–425)",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "accessed_on": "2026-10-09",
+      "accessed_reason": "Research-session date record; exact per-request instant not retained.",
+      "retrieval": {
+        "status": "sections_read",
+        "method": "vision_analyze of downloaded scan",
+        "detail": "All seven scanned pages read; Part 1/Part 2 design, sample attrition, tables, matching rates, standard-deviation thresholds and author conclusion recorded."
+      },
+      "topics": [
+        "double-blind astrology test",
+        "natal chart",
+        "CPI matching",
+        "experimental controls"
+      ],
+      "role": "evidence",
+      "use_for_synthesis": true,
+      "extensions": {
+        "research_scope": "original Nature article scan",
+        "copyright_boundary": "Original source is not bundled; only concise Chinese synthesis is published."
+      }
+    },
+    {
+      "url": "https://www.nature.com/articles/318419a0",
+      "title": "Nature bibliographic page for Carlson 1985",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "accessed_on": "2026-10-09",
+      "accessed_reason": "Research-session date record; exact per-request instant not retained.",
+      "retrieval": {
+        "status": "metadata_only",
+        "method": "web_search metadata cross-check",
+        "detail": "Publisher metadata cross-check only: Nature 318, 419–425 (1985), title, author and DOI 10.1038/318419a0; article-body synthesis uses the scanned pages."
+      },
+      "topics": [
+        "bibliographic verification"
+      ],
+      "role": "bibliography",
+      "use_for_synthesis": false,
+      "extensions": {
+        "research_scope": "publisher metadata",
+        "copyright_boundary": "Original source is not bundled; only concise Chinese synthesis is published."
+      }
+    },
+    {
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Suetonius/12Caesars/Augustus*.html",
+      "title": "Suetonius, Life of Augustus (Rolfe translation; LacusCurtius)",
+      "accessed_at": "2026-10-09T14:40:37.224894+00:00",
+      "accessed_precision": "instant",
+      "retrieval": {
+        "status": "sections_read",
+        "method": "public body retrieval; original Chinese synthesis only",
+        "detail": "Untruncated direct HTML fetched and targeted chapters 5 and 94 read. Verifies what Suetonius narrates, not the events or a reconstructed natal chart."
+      },
+      "topics": [
+        "5.1",
+        "94.12"
+      ],
+      "role": "historical_text",
+      "use_for_synthesis": true,
+      "extensions": {
+        "sections_read": [
+          "5.1",
+          "94.12"
+        ],
+        "copyright_boundary": "Only bibliography and original concise synthesis published; no source body bundled."
+      }
+    },
+    {
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cassius_Dio/56*.html",
+      "title": "Cassius Dio, Roman History 56 (Cary translation; LacusCurtius)",
+      "accessed_at": "2026-10-09T14:42:46.002900+00:00",
+      "accessed_precision": "instant",
+      "retrieval": {
+        "status": "sections_read",
+        "method": "public body retrieval; original Chinese synthesis only",
+        "detail": "Direct HTML read of 56.25.5; edict account retained as historian narration, not independent birth record."
+      },
+      "topics": [
+        "56.25.5"
+      ],
+      "role": "historical_text",
+      "use_for_synthesis": true,
+      "extensions": {
+        "sections_read": [
+          "56.25.5"
+        ],
+        "copyright_boundary": "Only bibliography and original concise synthesis published; no source body bundled."
+      }
     }
   ],
   "extensions": {

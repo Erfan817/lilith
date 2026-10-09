@@ -33,4 +33,6 @@
 
 实际调用 `scripts/lilith.py bazi`，依次读盘面与警告、日主/月令、[五行十神](wuxing-tables.md)、格局调候、[大运](dayun-rules.md)与[神煞](shensha-table.md)，最后落到用户现实问题。传统旺衰不按五行次数直接定论，神煞不宣判灾祸。
 
-[classical-texts.md](classical-texts.md) 是九本经典规则摘要，不是全文；没核验具体原典时不编页码或引文。`--as-of` / 已主动声明的 `--deceased-year` 都1900–2100有界，不能早于出生或越过分析截止。不主动询问死亡状态，不由命盘证明健康、投资、考试或他人忠诚。
+流年与出生年柱都按实际立春交节，而不是公历1月1日。`--as-of YYYY-MM-DD` 是北京时间整日范围；交节日没有截止钟点时，`current_ganzhi=null`、`flow_year.ganzhi_candidates`保留前后两个干支。可传带UTC偏移的ISO时刻精确选择交节侧；省略则用实际当前瞬间。仅声明逝世年份时，不推定逝世日期，保留该年份与分析截止交集的候选。`current_year`是公历截止年份标签，不是立春年号。截止精度、逝世资料精度分别记录在 `as_of_precision`、`deceased_precision`；已知钟点按出生绝对瞬间裁剪范围并拒绝出生前截止，未知时刻按真实域最早端保留可能范围。
+
+[classical-texts.md](classical-texts.md) 区分已核短引、流派约定和未核阅读线索，不是全文；没核验具体原典时不编页码或引文。`--as-of` / 已主动声明的 `--deceased-year` 都1900–2100有界，不能早于出生或越过分析截止。不主动询问死亡状态，不由命盘证明健康、投资、考试或他人忠诚。

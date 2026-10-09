@@ -1,0 +1,81 @@
+{
+  "synthetic_data": true,
+  "turn": 5,
+  "scope": "Actual Hermes CLI events, not mocked LLM or precomputed interpretation",
+  "sanitization": "Machine-local paths replaced with role labels; tool-result text retains original host 5000-char truncation.",
+  "events": [
+    {
+      "type": "system",
+      "subtype": "init",
+      "model": "glm-5.3-flash",
+      "session_id": "20261009_181621_478a03",
+      "timestamp": 1791541509191
+    },
+    {
+      "type": "tool_use",
+      "name": "terminal",
+      "input": {
+        "command": ".venv/bin/python scripts/lilith.py report --input <workspace>/private/chart.json --output <workspace>/private/reading.html && ls -l <workspace>/private/reading.html",
+        "workdir": "<skill-root>"
+      },
+      "timestamp": 1791541538990
+    },
+    {
+      "type": "tool_result",
+      "name": "terminal",
+      "output": "{\"output\": \"已写入本地 HTML 报告。\\n-rw------- 1 ubuntu ubuntu 11429 10月  9 18:25 <workspace>/private/reading.html\", \"exit_code\": 0, \"error\": null}",
+      "duration_ms": 282,
+      "is_error": false,
+      "timestamp": 1791541539275
+    },
+    {
+      "type": "tool_use",
+      "name": "terminal",
+      "input": {
+        "command": "grep -o 'datetime_utc[^,]*\\|2000-01-01T2[01][:0]*\\|39\\.9\\|116\\.4' <workspace>/private/reading.html | sort -u",
+        "workdir": "<workspace>"
+      },
+      "timestamp": 1791541547458
+    },
+    {
+      "type": "tool_result",
+      "name": "terminal",
+      "output": "{\"output\": \"\", \"exit_code\": 0, \"error\": null}",
+      "duration_ms": 39,
+      "is_error": false,
+      "timestamp": 1791541547503
+    },
+    {
+      "type": "tool_use",
+      "name": "terminal",
+      "input": {
+        "command": "grep -o '狮子\\|摩羯\\|天蝎\\|金牛\\|水瓶座\\|whole\\|整宫\\|上升\\|ASC' <workspace>/private/reading.html | sort | uniq -c",
+        "workdir": "<workspace>"
+      },
+      "timestamp": 1791541558796
+    },
+    {
+      "type": "tool_result",
+      "name": "terminal",
+      "output": "{\"output\": \"2 金牛\\n      3 摩羯\\n      1 狮子\\n      4 水瓶座\\n      2 天蝎\\n      4 ASC\\n      1 whole\", \"exit_code\": 0, \"error\": null}",
+      "duration_ms": 45,
+      "is_error": false,
+      "timestamp": 1791541558846
+    },
+    {
+      "type": "result",
+      "session_id": "20261009_181621_478a03",
+      "exit_code": 0,
+      "text": "已导出。文件路径：\n\n<workspace>/private/reading.html\n\n验证结果：基于 private/chart.json（21:00 那次计算，未重新排盘）生成，未使用 --private，即默认分享模式。文件 11429 字节，权限 0600。内容核验：报告含完整盘面（狮子/摩羯/天蝎/金牛等星座、ASC、whole-sign 整宫标记均在内），但未检出任何出生时刻（20:00/21:00）、纬度 39.9、经度 116.4 的明文——这些已被默认分享模式隐藏。\n\n一句提醒：盘面数据本身（如日土精确拱、行星组合）仍可能被熟悉占星的人反推出大致日期，分享给不熟的人前建议先自己预览一眼。",
+      "tokens": {
+        "input": 35830,
+        "output": 1042,
+        "total": 103240,
+        "cache_read": 66368,
+        "cache_write": 0
+      },
+      "duration_ms": 121959,
+      "timestamp": 1791541631151
+    }
+  ]
+}

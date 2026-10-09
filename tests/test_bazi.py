@@ -151,9 +151,15 @@ def test_valid_deceased_year_sets_consistent_cutoff(deceased_year, as_of, curren
     assert result.returncode == 0, result.stderr
     data = json.loads(result.stdout)
     assert data["current_year"] == current_year
-    assert data["current_ganzhi"] == {
-        1990: "庚午", 2010: "庚寅", 2026: "丙午", 2100: "庚申",
+    expected = {
+        1990: ["庚午"], 2010: ["己丑", "庚寅"],
+        2026: ["乙巳", "丙午"], 2100: ["己未", "庚申"],
     }[current_year]
+    assert data["flow_year"]["ganzhi_candidates"] == expected
+    assert data["current_ganzhi"] == (expected[0] if len(expected) == 1 else None)
+    assert data["flow_year"]["as_of_precision"] == "date"
+    assert data["flow_year"]["deceased_precision"] == "year"
+    assert data["flow_year"]["domain_precision"] == "year"
 
 
 def test_default_analysis_date_cannot_precede_birth():

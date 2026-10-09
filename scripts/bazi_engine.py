@@ -139,6 +139,57 @@ def jie_instants(calendar_dt):
             for i in range(0, len(lunar.JIE_QI_IN_USE), 2)]
 
 
+def flow_year_at(cutoff, deceased_year=None, earliest_birth=None):
+    """Resolve the Lichun year for an instant or a full, bounded cutoff date.
+
+    A date/year input is an uncertainty domain, never an invented noon/death
+    date. Adjacent Lichun years are retained when that domain crosses Lichun.
+    """
+    if isinstance(cutoff, datetime):
+        if cutoff.tzinfo is None or cutoff.utcoffset() is None:
+            raise ValueError("截止时刻必须有明确 UTC 偏移")
+        cutoff = cutoff.astimezone(BJ)
+        left = right = cutoff
+        precision = "instant"
+    else:
+        left = datetime(cutoff.year, cutoff.month, cutoff.day, tzinfo=BJ)
+        right = left + timedelta(days=1)
+        precision = "date"
+    if earliest_birth is not None:
+        if earliest_birth.tzinfo is None or earliest_birth.utcoffset() is None:
+            raise ValueError("出生下界必须有明确 UTC 偏移")
+        earliest_birth = earliest_birth.astimezone(BJ)
+        if (precision == "instant" and cutoff < earliest_birth) or (precision == "date" and right <= earliest_birth):
+            raise ValueError("分析日期不能早于出生日期；精确截止时刻不能早于实际出生时刻")
+    cutoff_precision = precision
+    current_year = deceased_year if deceased_year is not None else cutoff.year
+    if deceased_year is not None:
+        left = datetime(deceased_year, 1, 1, tzinfo=BJ)
+        if earliest_birth is not None:
+            left = max(left, earliest_birth)
+        year_end = datetime(deceased_year + 1, 1, 1, tzinfo=BJ)
+        right = min(year_end, right + timedelta(microseconds=1) if precision == "instant" else right)
+        precision = "year"
+        if left >= right:
+            raise ValueError("逝世年份与实际出生/分析截止范围没有交集")
+    elif precision == "date" and earliest_birth is not None:
+        left = max(left, earliest_birth)
+    points = [left] if precision == "instant" else [left, right - timedelta(microseconds=1)]
+    candidates = list(dict.fromkeys(eight_char_of(point).getYear() for point in points))
+    ganzhi = candidates[0] if len(candidates) == 1 else None
+    metadata = {"boundary": "lichun", "timezone": "UTC+08:00", "as_of": cutoff.isoformat(),
+                "as_of_precision": cutoff_precision, "deceased_precision": "year" if deceased_year is not None else None,
+                "domain_precision": precision, "ganzhi_candidates": candidates,
+                "interval": None if precision == "instant" else {
+                    "start": left.isoformat(), "end_exclusive": right.isoformat()}}
+    warnings = []
+    if len(candidates) > 1:
+        warnings.append("流年截止范围跨立春；截止钟点/日期未确认，保留换年前后干支候选，不以正午代替。")
+    if deceased_year is not None:
+        warnings.append("仅声明逝世年份，未推定逝世日期；流年保留该年且不超过分析截止的候选。")
+    return current_year, ganzhi, metadata, warnings
+
+
 def unknown_clock(solar_date, shichen, sex, place, deceased_year, lunar_display, now,
                   zone_name=None):
     """Partition the entire real domain; output only invariant cells and candidates."""
@@ -178,16 +229,17 @@ def unknown_clock(solar_date, shichen, sex, place, deceased_year, lunar_display,
                                           if c["pillars"][n] is not None)) for n in NAMES}
     merged = {n: tuple(values[0] if len(set(values)) == 1 else "未知"
                        for values in zip(*(c[n] for c in cells))) for n in NAMES}
-    current_year = deceased_year if deceased_year is not None else now.year
+    current_year, current_gz, flow_year, flow_warnings = flow_year_at(now, deceased_year, domains[0][0])
     warnings = ["未知出生时间或仅知时辰；仅输出稳定字段与受限候选，不以正午或时辰中点代替真实出生时刻。",
                 "起运需要具体钟点，dayun 保持 null；不输出未经唯一日干核验的神煞。"]
+    warnings.extend(flow_warnings)
     if shichen == "子":
         warnings.append("子时包含当日早子及当日晚子，保留23点换日的两个候选。")
     return {"solar_text": solar_date.isoformat(), "lunar_text": lunar_display,
             "shichen_text": shichen or "未知", "sex": sex, "place": place,
             "pillars": merged, "dayun": None, "shensha_lines": [],
             "current_year": current_year,
-            "current_gz": LunarUtil.JIA_ZI[(current_year - 4) % 60], "hour_unknown": shichen is None,
+            "current_gz": current_gz, "flow_year": flow_year, "hour_unknown": shichen is None,
             "warnings": warnings, "engine": engine_metadata(), "time": time_metadata(zone_name),
             "uncertainty": {"time_known": False, "pillars": possibilities,
                             "candidates": candidates, "candidate_limit": 8,
@@ -268,7 +320,8 @@ def compute(solar_date, hour, minute, shichen, sex, place, deceased_year,
     if place:
         warnings.append("--place 仅展示，不自动查找时区或经度。")
     shensha = rules.compute_shensha(*(v for n in NAMES for v in pillars[n][:2]), sex)
-    current_year = deceased_year if deceased_year is not None else now.year
+    current_year, current_gz, flow_year, flow_warnings = flow_year_at(now, deceased_year, birth_dt)
+    warnings.extend(flow_warnings)
     time = time_metadata(zone_name, civil, birth_dt, fold)
     time.update(pillar_time=clock.isoformat(), day_hour_basis="local-apparent-solar" if correction else "local-civil",
                 solar_correction=correction)
@@ -278,7 +331,7 @@ def compute(solar_date, hour, minute, shichen, sex, place, deceased_year,
         "solar_text": solar_date.isoformat() + " %02d:%02d" % (hour, minute),
         "lunar_text": lunar_display, "shichen_text": "%s / %02d:%02d" % (shichen, hour, minute),
         "sex": sex, "place": place, "pillars": pillars, "dayun": dayun,
-        "current_year": current_year, "current_gz": LunarUtil.JIA_ZI[(current_year - 4) % 60],
+        "current_year": current_year, "current_gz": current_gz, "flow_year": flow_year,
         "warnings": warnings, "hour_unknown": False, "shensha_lines": shensha,
         "engine": engine_metadata(), "time": time,
     }

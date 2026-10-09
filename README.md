@@ -6,7 +6,7 @@
 
 仅供文化学习、娱乐与自我反思。可计算天体和历法，不意味着能预测命运；不替代医疗、法律、投资或重大现实决定。
 
-## v0.2 能做什么
+## v0.2.1 能做什么
 
 | 模块 | 实际能力 |
 |---|---|
@@ -16,7 +16,9 @@
 | 奇门、紫微 | 解读可信外部盘，**尚无本地自动起局/排盘** |
 | 使用与分享 | 环境自检，来源小批检索，塔罗/基础星盘离线HTML与SVG报告 |
 
-[占星覆盖](references/astrology/coverage.md)区分知识和计算。合盘、行运等有知识资料，但没有双盘比较/组合盘、次限/返照接口；也不计算Placidus、恒星黄道、交点/凯龙。知识无法穷尽，不宣传“扒完全部星座知识”。
+[占星覆盖](references/astrology/coverage.md)区分知识和计算。
+
+全球真实书目与历史/教学案例见[阅读规则](references/common/research-reading-guide.md)、[实验证据](references/common/experiments-and-evidence.md)与[索引](docs/library-index.json)：先分清作品存在、内容已读、事实主张三层，再讨论“可教规则”和“不能推出的结论”。合盘、行运等有知识资料，但没有双盘比较/组合盘、次限/返照接口；也不计算Placidus、恒星黄道、交点/凯龙。知识无法穷尽，不宣传“扒完全部星座知识”。
 
 ## 安装
 
@@ -47,7 +49,7 @@ python -m venv .venv
 .venv\Scripts\python.exe scripts/lilith.py doctor
 ```
 
-Debian/Ubuntu缺venv可安装对应python3-venv或使用uv。doctor只检查当前解释器、给建议，不擅自安装或修改宿主环境；单独塔罗只需标准库，可 `doctor --module tarot`。以下 `python` 指已选择的环境解释器。
+Debian/Ubuntu缺venv可安装对应python3-venv或使用uv。doctor只检查当前解释器、给建议，不擅自安装或修改宿主环境；单独塔罗只需标准库，可 `doctor --module tarot`。`doctor --module bazi` 默认检查全部功能；只需民用时可 `--feature civil`，视太阳时用 `--feature apparent-solar`（另需astronomy-engine）。以下 `python` 指已选择的环境解释器。
 
 ## 开始使用
 
@@ -65,6 +67,8 @@ python scripts/lilith.py astrology --datetime 2000-01-01T20:00:00 --timezone Asi
 python scripts/lilith.py astrology --date 2000-01-01 --timezone Asia/Shanghai
 ```
 
+v0.2.1修正流年立春换年、功能依赖自检、八字参考口径与跨平台路径；新增Windows CI。流年`--as-of`接受日期或带UTC偏移的ISO时刻；立春日只给日期时保留前后候选，不擅自选正午。
+
 八字默认固定UTC+8，显式IANA才处理当地历史规则；年/月交节按绝对瞬间，日/时柱按所选钟标。未知时间/仅时辰不算确定起运，23点日界保留候选。详见[八字口径](references/bazi/workflow.md)。**不要直接运行内部 vendor CLI 处理用户输入。**
 
 塔罗通常不需要传问题。确需传入时，以宿主文件工具写私密UTF-8文件或用标准输入，再 `tarot --question-file <路径>`；不要把原问题插进shell单引号。默认不回显，`--echo-question`须明确允许。文件需用后清理；宿主日志仍可能保留输入，不能承诺零留痕。
@@ -80,7 +84,7 @@ python scripts/lilith.py report --input examples/tarot-seeded.json --output priv
 python scripts/lilith.py report --input examples/astrology-j2000.json --output private/astrology.html
 ```
 
-默认分享版隐藏原问题和生日时地；派生星盘仍可能反推个人信息，分享前预览。`--private`含原始JSON，不可公开。报告不自动写解读，八字和未知生时范围报告暂不支持。见[报告说明](docs/reporting.md)。
+POSIX输出文件使用0600；Windows隐私依赖所选目录与文件ACL，不承诺mode-0600，导出前确认只有本人可访问。默认分享版隐藏原问题和生日时地；派生星盘仍可能反推个人信息，分享前预览。`--private`含原始JSON，不可公开。报告不自动写解读，八字和未知生时范围报告暂不支持。见[报告说明](docs/reporting.md)。
 
 ## 校验与评测
 
@@ -94,7 +98,9 @@ python scripts/update_stats.py --check
 python scripts/lilith.py sources --module astrology --query houses --limit 5
 ```
 
-[实时统计](docs/stats.json)由扫描生成，不手改；[v0.2验证记录](docs/verification-v0.2.json)记录本机与全新环境实际结果；[来源契约](docs/validation-spec.md)保留真实阅读范围和访问精度。[评测案例](evals/evals.json)包括中文正负触发和解读断言；离线检查不证明宿主自动加载，模型新旧对照结果另存证据，不包装成占卜准确率。历史docs/verification.json与content-audit.json只代表旧版本。
+[v0.2.1修复清单](docs/v0.2.1-acceptance.md)、[验证记录](docs/verification-v0.2.1.json)与[八字来源核查](docs/bazi-reference-audit.md)说明本轮范围。
+
+[实时统计](docs/stats.json)由扫描生成，不手改；[v0.2验证记录](docs/verification-v0.2.json)记录本机与全新环境实际结果；[来源契约](docs/validation-spec.md)保留真实阅读范围和访问精度。[评测案例](evals/evals.json)包括中文正负触发和解读断言；离线检查不证明宿主自动加载，模型新旧对照结果另存证据，不包装成占卜准确率。[真实Hermes多轮流程](evals/results/host-v0.2.1/summary.json)已运行并核对文件，解读仍有记录在案的措辞/估计问题，不能把流程通过当解释质量认证。历史docs/verification.json与content-audit.json只代表旧版本。
 
 ## 隐私与许可
 

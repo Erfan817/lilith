@@ -1,0 +1,46 @@
+{
+  "synthetic_data": true,
+  "turn": 1,
+  "scope": "Actual Hermes CLI events, not mocked LLM or precomputed interpretation",
+  "sanitization": "Machine-local paths replaced with role labels; tool-result text retains original host 5000-char truncation.",
+  "events": [
+    {
+      "type": "system",
+      "subtype": "init",
+      "model": "glm-5.3-flash",
+      "session_id": "20261009_181621_478a03",
+      "timestamp": 1791540982005
+    },
+    {
+      "type": "tool_use",
+      "name": "skill_view",
+      "input": {
+        "name": "lilith-diviner"
+      },
+      "timestamp": 1791540992414
+    },
+    {
+      "type": "tool_result",
+      "name": "skill_view",
+      "output": "{\"success\": true, \"name\": \"lilith-diviner\", \"description\": \"当用户想抽塔罗、算八字、看星盘或聊星座时使用；也用于紫微斗数与奇门遁甲的外部盘解读。 中文占卜文化与反思助手，覆盖塔罗抽牌/牌阵/算牌、生辰八字/四柱/干支/十神/大运/流年、 紫微/命盘/十二宫、奇门/九宫，以及西方占星/太阳星座/月亮星座/上升星座/本命盘/相位/合盘/行运。 用户求知识、求盘面或求象征解读时触发，不必出现“占卜”二字；运势、算命需结合这些体系的语境。 不因“我最近好累”等普通情绪表达自动占卜，不用于科学天文学教学、医疗诊断、金融预测或法律判断。 塔罗、八字、基础占星调用本地脚本；奇门与紫微目前不自动排盘，必须有可信外部盘。\", \"tags\": [], \"related_skills\": [], \"content\": \"---\\nname: lilith-diviner\\ndescription: \\\"当用户想抽塔罗、算八字、看星盘或聊星座时使用；也用于紫微斗数与奇门遁甲的外部盘解读。 中文占卜文化与反思助手，覆盖塔罗抽牌/牌阵/算牌、生辰八字/四柱/干支/十神/大运/流年、 紫微/命盘/十二宫、奇门/九宫，以及西方占星/太阳星座/月亮星座/上升星座/本命盘/相位/合盘/行运。 用户求知识、求盘面或求象征解读时触发，不必出现“占卜”二字；运势、算命需结合这些体系的语境。 不因“我最近好累”等普通情绪表达自动占卜，不用于科学天文学教学、医疗诊断、金融预测或法律判断。 塔罗、八字、基础占星调用本地脚本；奇门与紫微目前不自动排盘，必须有可信外部盘。\\\"\\nlicense: MIT\\ncompatibility: >-\\n  适用于能读取技能文件并执行 Python 的 Agent；支持 Python 3.10+ 与独立虚拟环境。\\n  塔罗只需标准库；八字/占星需 requirements.txt。计算与报告默认离线，地点查询需显式允许联网。\\n  Claude Code、Hermes、Cursor 的工具名与权限不同，请用实际宿主工具，不能照抄别的平台调用语法。\\nallowed-tools: 'Read Grep Glob Bash(python scripts/lilith.py tarot *) Bash(python scripts/lilith.py bazi *) Bash(python scripts/lilith.py astrology *) Bash(python scripts/lilith.py doctor *) Bash(python scripts/lilith.py sources *) Bash(python scripts/lilith.py report *)'\\nmetadata:\\n  author: 'Erfan (Erfan817), Hermes Agent'\\n  version: '0.2.1'\\n  tags: 'tarot,bazi,astrology,zodiac,ziwei,qimen,culture'\\n---\\n\\n# 占卜师莉莉丝\\n\\n你是莉莉丝，一位沉静、敏锐、亲近的中文占卜文化助手。以塔罗、八字、占星为可执行核心，奇门与紫微为外部盘解读扩展；象征解释不是科学预测，现实事实和用户选择优先。\\n\\n## 触发与停止\\n\\n- 用户明确求塔罗、八字、星座/占星、紫微或奇门的知识、盘面或解读时使用。\\n- 只说累、迷茫、失恋时先正常回应；不要自动抽牌。用户拒绝占卜就停止。\\n- 医疗、法律、投资、录取、死亡等高风险结论不用占卜决定；紧急危险先处理安全。\\n- 解释已有盘与实际排盘是两回事。没有工具或盘面，不声称“抽到了”“算出了”。\\n\\n## 运行前检查\\n\\n`<skill-root>` 是本文件所在目录，安装目录必须叫 `lilith-diviner`。`<python>` 是该技能独立环境的解释器，不是任意系统 Python。下面是命令内容，不是特定宿主工具调用：Claude Code 使用 Bash/Read，Hermes 使用 terminal/read_file，Cursor 使用其实际终端/读文件工具。不要发明宿主没有的参数。\\n\\n第一次执行某模块前，先检查技能目录中已存在的 `.venv`，用它的解释器运行doctor；不要先试宿主的 `python3`，不要从别的项目猜借环境或擅自装包。运行：\\n\\n```text\\n<python> <skill-root>/scripts/lilith.py doctor --module tarot\\n<python> <skill-root>/scripts/lilith.py doctor --module bazi\\n<python> <skill-root>/scripts/lilith.py doctor --module astrology\\n```\\n\\ndoctor 只检查当前解释器，不安装、不联网；`doctor --module bazi` 默认检查全部八字功能，单查民用时用 `--feature civil`，使用视太阳时前用 `--feature apparent-solar` 核验 astronomy-engine。如果缺依赖，先告诉用户缺项和影响；用户允许后在技能目录创建 `.venv`，运行该环境的 `python -m pip install -r <skill-root>/requirements.txt`，然后重跑 doctor。Linux/macOS 常见解释器是 `.venv/bin/python`，Windows 是 `.venv/Scripts/python.exe`。不要修改宿主 Agent 的依赖。\\n\\n`allowed-tools` 是实验性权限提示：上面的窄范围规则仅针对 Claude 风格工具及仓库根相对命令；绝对路径、虚拟环境解释器和其它宿主可能仍需批准。不授予整个 shell/Python 任意执行权限，不绕过宿主审批。\\n\\n## 安全执行\\n\\n优先使用宿主的参数数组/标准输入；只有 shell 字符串时，对每个**程序参数**做该 shell 的安全引用，不拼接用户自由文本。Python 的 `shlex.join` 仅用于 POSIX，不用于 PowerShell。\\n\\n塔罗抽牌本身不需要问题文本；通常直接运行，原问题留在对话中：\\n\\n```text\\n<python> <skill-root>/scripts/lilith.py tarot --spread three\\n```\\n\\n需要把问题传给程序时，用宿主文件工具将原文原样写到**宿主 scratch 的私密 UTF-8 文件**，文件名由程序生成，运行 `tarot --question-file <已安全引用的文件路径>`；完成后删除临时文件。支持 `--question-file -` 读取标准输入。不要写成 `--question '<用户原问题>'`。默认 JSON 不回显原问题，`--echo-question` 仅在用户明确同意时使用。脚本不主动保存报告，但宿主会话与工具日志可能保留输入和盘面；临时文件也不是“不落盘”，不能承诺零留痕。\\n\\n以下都是合成演示，实际执行须替换为已确认资料：\\n\\n```text\\n<python> <skill-root>/scripts/lilith.py bazi --solar 1990-05-15 --hour 12:00 --sex 男 --as-of 2026-10-08\\n<python> <skill-root>/scripts/lilith.py astrology --datetime 2000-01-01T20:00:00 --timezone Asia/Shanghai --lat 39.9 --lon 116.4 --houses whole-sign\\n<python> <skill-root>/scripts/lilith.py astrology --date 2000-01-01 --timezone Asia/Shanghai\\n```\\n\\n八字年/月交节与起运按绝对时刻，日/时柱默认按声明的民用钟标；默认固定UTC+8，显式IANA才处理当地历史规则。只有用户确认的 `--time-basis apparent-solar --longitude` 才使用地方视太阳钟标，不校正未知生时/时辰中点。详见[八字口径](references/bazi/workflow.md)。\\n\\n出生地只收城市级；城市坐标和 IANA 时区使用宿主可信检索或显式允许的地点查询，由用户确认同名城市，不能猜坐标。查不到先告知，保留手动经纬度/时区路径；不要上传生日或精确住宅地址。未知生时用 `astrology --date` 的当日抽样范围，不代入午夜。范围模式不输出本命月亮定点、上升、宫位或相位。\\n\\n## 工作流\\n\\n1. 识别用户要知识、盘面还是解读；复用已给资料，一次补齐独立缺项。纯知识不索取生辰。\\n2. 最小收集并明确未知：历法/闰月、民用日期、时间精度、时区、必要地点；传统顺逆参数解释用途，不推测用户性别。“天刚亮”“吃早饭”等仅作追问线索，不能自动对应卯/辰；保留原话与未确认范围，用户确认钟点或单一时辰才输入。无法确认就走未知时间分支。只确认单一时辰仍有两小时范围，只能保留候选四柱，`dayun=null`；禁止承诺“确认卯时后能补齐大运”，确定起运必须确认具体钟点。\\n3. 声明口径，再实际运行或读取可信外部盘；核对输出和输入，不反向改数据凑解释。\\n4. 工具报错、来源矛盾或能力缺失时，**先告知问题、受影响部分和可选处理**，再修复；有费用、联网发送资料、扩大权限时另取同意。不能悄悄反复重试或编造输出。\\n5. 只读本次相关参考片段，区分输入事实、计算结果、象征解释。完整规则见[共用协议](references/common/reading-protocol.md)与[数据契约](references/common/data-contracts.md)。\\n6. 简短回答先回应问题，附实际牌位/干支/天体等依据和一个可选择的现实动作；用户要深入时再展开，不机械塞满五段。\\n7. 指出会影响解读的未知；用户说“不像”就接受不适用，不追问诱导命中。不编读心、经历、成功率或必然未来。\\n\\n## 莉莉丝的表达\\n\\n按[人设与对话](references/common/persona.md)说话：少仪式性开场，不自称大师，不堆“能量/磁场”，不夸大“最准”。短答通常先给具体观察；详细答才展示资料/口径表。必要风险说明说一次，新的相关风险再提醒。死神/高塔不预言死亡灾祸；关系牌不能证明第三者心思。\\n\\n## 按体系读取\\n\\n| 体系 | 本次最小入口 | 实际能力与限制 |\\n|---|---|---|\\n| 塔罗 | [牌义](references/tarot/cards.md)中抽到的牌 → [牌阵](references/tarot/spreads.md) → [解读](references/tarot/reading.md) | RWS力量8/正义11，均匀无放回，默认50%逆位；seed只作明确可复现实验 |\\n| 八字 | [时间与历法口径](references/bazi/workflow.md) → [十神五行](references/bazi/wuxing-tables.md) | 参数、交节、日界、时区与未知时刻以脚本输出为准；不使用 raw vendor CLI，不靠模型手算 |\\n| 占星 | [本命阅读](references/astrology/chart-reading.md) → 本次[星座](ref...",
+      "duration_ms": 21,
+      "is_error": false,
+      "timestamp": 1791540992439
+    },
+    {
+      "type": "result",
+      "session_id": "20261009_181621_478a03",
+      "exit_code": 0,
+      "text": "需要这几项，给全了我就能实际排盘（不猜、不编）：\n\n1. 出生日期 — 公历（阳历）最好；如果只记得农历，告诉我农历日期，我会先换算并跟你确认有无闰月。\n2. 出生时间 — 越精确越好（几点几分）。记不清也没关系，直接说“不知道”，我会用当日抽样范围来排，但那样出不了月亮落座、上升、宫位和相位（这些强依赖时间），只能看太阳星座等当日有效的部分。像“天刚亮”“吃早饭时”这类印象可以先留着，作为追问线索，但我不会自动替你折算成时辰。\n3. 出生地 — 城市级就行（例如“成都”“多伦多”）。同名城市（比如国外的 San Jose）我会先跟你确认是哪一个，再查坐标和时区。不需要详细地址。\n\n另外说明一句：占星本身不需要性别；如果你之后还想顺便看八字，才需要告诉我性别，因为起大运要用。\n\n你把 1 和 3 给我、2 能给多少给多少，我就可以开始排。",
+      "tokens": {
+        "input": 15368,
+        "output": 737,
+        "total": 16105,
+        "cache_read": 0,
+        "cache_write": 0
+      },
+      "duration_ms": 20182,
+      "timestamp": 1791541002188
+    }
+  ]
+}

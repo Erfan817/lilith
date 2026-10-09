@@ -1,0 +1,66 @@
+{
+  "skill_version": "0.2.1",
+  "baseline_commit": "a2e6c5e759e53e0ccd7a5755788f3ae2ad2bdbac",
+  "test_environment": "Linux, Python 3.12.3",
+  "main_suite": {
+    "status": "passed",
+    "summary": "506 passed, 2 subtests passed",
+    "junit_tests": 508,
+    "failures": 0,
+    "errors": 0
+  },
+  "clean_install": {
+    "status": "passed",
+    "summary": "506 passed, 2 subtests passed",
+    "fresh_venv": true,
+    "dependency_source": "requirements-dev.txt resolved from uv offline cache into new environment; no ambient host packages",
+    "junit_tests": 508,
+    "skill_directory_name": "lilith-diviner"
+  },
+  "official_skill_validator": "passed with absolute directory path",
+  "structure_validator": "passed",
+  "eval_data_integrity": "11 cases, passed; not a model-execution claim",
+  "host_e2e": {
+    "evidence": "evals/results/host-v0.2.1/summary.json",
+    "host": "Hermes CLI Linux",
+    "sessions": 2,
+    "synthetic_turns": 10,
+    "workflow_passed": true,
+    "interpretation_quality_passed": false,
+    "limits": "Claude/Cursor and interactive approval clicks not tested; isolated headless deny guard observed; interpretation issues and failed calls retained."
+  },
+  "windows": {
+    "execution_target": "GitHub Actions windows-latest with Python 3.10/3.12/3.13",
+    "local_host_is_windows": false,
+    "publication_verification": "Read the exact published revision's Actions run and per-job result after upload; no Windows result is inferred from Linux tests.",
+    "status": "pending_native_ci"
+  },
+  "vendor_unchanged": true,
+  "secret_scan": "passed",
+  "known_limitations": [
+    "Classical sources are electronic transcriptions, not facsimile collation; unverified material is explicitly labeled or withdrawn.",
+    "Branch-only birth times still cannot produce a precise Dayun start.",
+    "Date-only cutoffs crossing Lichun have current_ganzhi=null plus candidates in schema 1.1.",
+    "Windows report privacy depends on directory/file ACL, not numeric POSIX permission bits.",
+    "Preexisting: deceased-year precheck uses local civil birth year; cross-year time zone interpretation remains limited.",
+    "Forer Table 3, its 1% test and recalled-rating interpretation have an original reading record but the final independent reread is unavailable.",
+    "Live-host workflow evidence predates the final knowledge expansion; interpretation quality is not certified and the current entry document was not fully rerated."
+  ],
+  "last_review_fix": "Birth lower bound uses aware instant/earliest real domain; prebirth precise cutoffs rejected; cutoff and deceased information precision separated.",
+  "recorded_at": "2026-10-09T15:32:11.985931+00:00",
+  "code_review": {
+    "passed": true,
+    "scope": "relative to baseline commit; actual targeted and complete regression, security scan, allocation/time boundary probes",
+    "independent_review_suite": "501 passed, 2 subtests passed before knowledge-index tests were added",
+    "known_preexisting_issue": "Cross-year time zones: deceased-year is still prechecked against local civil birth year; not a newly introduced regression."
+  },
+  "library_review": {
+    "index_entries": 26,
+    "books": 13,
+    "cases": 13,
+    "independent_review": "four fixable source-scope issues reported; remedied and covered by targeted regression; fresh correction review pending",
+    "original_reading": "Forer 118–123 and Carlson 419–425 documented",
+    "independent_reread": "Forer 120–121 and Carlson relevant tables verified; Forer 122–123 reread blocked by image service errors",
+    "modern_book_bodies": "not acquired; metadata-only books remain labeled"
+  }
+}

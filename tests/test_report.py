@@ -1,8 +1,10 @@
 """Local report behavior and subprocess acceptance tests (synthetic fixtures only)."""
 import copy
+import errno
 import importlib.util
 import json
 import math
+import os
 from pathlib import Path
 import re
 import subprocess
@@ -40,6 +42,26 @@ def run_report(input_path, output_path, *flags):
         [sys.executable, str(SCRIPT), "--input", str(input_path), "--output", str(output_path), *flags],
         capture_output=True, text=True, timeout=15,
     )
+
+
+@pytest.fixture
+def symlink_factory():
+    def create(link, target, *, target_is_directory=False):
+        try:
+            link.symlink_to(target, target_is_directory=target_is_directory)
+        except NotImplementedError as error:
+            pytest.skip(f"symlink creation is unavailable: {error}")
+        except OSError as error:
+            unsupported_errno = error.errno in (errno.EPERM, errno.EACCES, errno.ENOSYS, errno.ENOTSUP)
+            unsupported_windows_error = getattr(error, "winerror", None) in (1, 50, 1314)
+            if not (unsupported_errno or unsupported_windows_error):
+                raise
+            pytest.skip(f"symlink creation is unsupported or not permitted: {error}")
+        if not link.is_symlink():
+            pytest.skip("symlink creation returned without creating a symlink")
+        return link
+
+    return create
 
 
 def test_three_card_report_draws_actual_cards_at_distinct_slots():
@@ -323,7 +345,6 @@ def test_standalone_cli_exports_self_contained_report_without_saving_json(tmp_pa
     nodes = svg.findall("s:g[@class='tarot-card']", NS) if kind == "tarot" else svg.findall("s:circle[@class='body-marker']", NS)
     assert len(nodes) == count
     assert "分享版" in document
-    assert output.stat().st_mode & 0o777 == 0o600
     assert set(tmp_path.iterdir()) - before == {output}
     assert "question" not in document and "datetime_utc" not in document
     assert "<script" not in document
@@ -518,11 +539,45 @@ def test_cli_refuses_project_tracked_directories_without_writing_them():
     assert not output.exists()
 
 
-def test_output_symlink_cannot_modify_another_file(tmp_path):
+@pytest.mark.parametrize("error", [
+    NotImplementedError("symlinks unavailable"),
+    OSError(errno.EPERM, "symlink privilege unavailable"),
+    OSError(errno.EACCES, "symlink permission unavailable"),
+    OSError(errno.ENOSYS, "symlink syscall unavailable"),
+    OSError(errno.ENOTSUP, "symlinks unsupported on this filesystem"),
+])
+def test_symlink_fixture_skips_unsupported_creation(tmp_path, monkeypatch, symlink_factory, error):
+    def unavailable(self, target, target_is_directory=False):
+        raise error
+
+    monkeypatch.setattr(Path, "symlink_to", unavailable)
+    with pytest.raises(pytest.skip.Exception, match="symlink"):
+        symlink_factory(tmp_path / "link.html", tmp_path / "target.html")
+
+
+def test_symlink_fixture_skips_successful_call_without_a_symlink(tmp_path, monkeypatch, symlink_factory):
+    def not_a_link(self, target, target_is_directory=False):
+        self.write_text("SYNTHETIC_REGULAR_FILE", encoding="utf-8")
+
+    monkeypatch.setattr(Path, "symlink_to", not_a_link)
+    with pytest.raises(pytest.skip.Exception, match="symlink"):
+        symlink_factory(tmp_path / "link.html", tmp_path / "target.html")
+
+
+def test_symlink_fixture_does_not_hide_unexpected_os_errors(tmp_path, monkeypatch, symlink_factory):
+    def unexpected(self, target, target_is_directory=False):
+        raise OSError(errno.EIO, "SYNTHETIC_IO_ERROR")
+
+    monkeypatch.setattr(Path, "symlink_to", unexpected)
+    with pytest.raises(OSError, match="SYNTHETIC_IO_ERROR"):
+        symlink_factory(tmp_path / "link.html", tmp_path / "target.html")
+
+
+def test_output_symlink_cannot_modify_another_file(tmp_path, symlink_factory):
     target = tmp_path / "original.html"
     target.write_text("SYNTHETIC_UNTOUCHED", encoding="utf-8")
     output = tmp_path / "link.html"
-    output.symlink_to(target)
+    symlink_factory(output, target)
     result = run_report(ROOT / "examples" / "tarot-seeded.json", output, "--overwrite")
     assert result.returncode == 2
     assert target.read_text(encoding="utf-8") == "SYNTHETIC_UNTOUCHED"
@@ -530,7 +585,6 @@ def test_output_symlink_cannot_modify_another_file(tmp_path):
 
 
 def test_atomic_writer_does_not_change_hardlinked_original(tmp_path):
-    import os
     module = report_module()
     original = tmp_path / "original.html"
     original.write_text("SYNTHETIC_UNTOUCHED", encoding="utf-8")
@@ -539,8 +593,23 @@ def test_atomic_writer_does_not_change_hardlinked_original(tmp_path):
     module.write_report(output, "<html>new report</html>", overwrite=True)
     assert original.read_text(encoding="utf-8") == "SYNTHETIC_UNTOUCHED"
     assert output.read_text(encoding="utf-8") == "<html>new report</html>"
-    assert output.stat().st_mode & 0o777 == 0o600
     assert {path.name for path in tmp_path.iterdir()} == {"original.html", "report.html"}
+
+
+@pytest.mark.skipif(os.name == "nt", reason="POSIX mode bits do not verify Windows ACL privacy")
+@pytest.mark.parametrize("scenario", ["tarot", "astrology", "hardlink-overwrite"])
+def test_report_output_has_posix_private_permissions(tmp_path, scenario):
+    output = tmp_path / "report.html"
+    if scenario == "hardlink-overwrite":
+        original = tmp_path / "original.html"
+        original.write_text("SYNTHETIC_UNTOUCHED", encoding="utf-8")
+        os.link(original, output)
+        report_module().write_report(output, "<html>new report</html>", overwrite=True)
+    else:
+        input_path = ROOT / "examples" / {"tarot": "tarot-seeded.json", "astrology": "astrology-j2000.json"}[scenario]
+        result = run_report(input_path, output)
+        assert result.returncode == 0, result.stderr
+    assert output.stat().st_mode & 0o777 == 0o600
 
 
 def test_atomic_writer_requires_overwrite_and_removes_partial_files(tmp_path):
@@ -662,9 +731,9 @@ def test_warning_mapping_rejects_nondictionary_input_without_traceback():
         report_module().safe_warnings(None, "tarot")
 
 
-def test_cyclic_output_parent_symlink_is_a_clean_cli_error(tmp_path):
+def test_cyclic_output_parent_symlink_is_a_clean_cli_error(tmp_path, symlink_factory):
     parent = tmp_path / "loop"
-    parent.symlink_to(parent)
+    symlink_factory(parent, parent, target_is_directory=True)
     result = run_report(ROOT / "examples" / "tarot-seeded.json", parent / "report.html")
     assert result.returncode == 2 and "Traceback" not in result.stderr
 
@@ -685,7 +754,7 @@ def test_escaped_unpaired_surrogate_is_cleanly_rejected_before_output(tmp_path):
 
 def test_json_reader_rejects_special_device_instead_of_reading_it():
     with pytest.raises(ValueError, match="普通文件"):
-        report_module().load_payload(Path("/dev/null"))
+        report_module().load_payload(Path(os.devnull))
 
 
 def test_share_svg_numeric_attributes_reject_url_and_filename_injection(tmp_path):

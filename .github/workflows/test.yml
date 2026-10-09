@@ -6,9 +6,14 @@ permissions:
   contents: read
 jobs:
   offline-tests:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    env:
+      PYTHONUTF8: '1'
+      PYTHONIOENCODING: utf-8
     strategy:
+      fail-fast: false
       matrix:
+        os: [ubuntu-latest, windows-latest]
         python-version: ['3.10', '3.12', '3.13']
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4

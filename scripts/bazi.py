@@ -31,7 +31,7 @@ def main():
     parser.add_argument("--sex", choices=("男", "女"), help="传统大运顺逆参数；省略则不输出大运")
     parser.add_argument("--place", help="出生城市；仅展示与风险提示")
     parser.add_argument("--deceased-year", type=int, help="用户已声明的逝世年份，流年截止该年")
-    parser.add_argument("--as-of", help="流年截止公历日期 YYYY-MM-DD；省略则用实际当前日期")
+    parser.add_argument("--as-of", help="流年截止：YYYY-MM-DD 为北京时间整日范围，或带 UTC 偏移的 ISO 时刻；省略用实际当前时刻")
     args = parser.parse_args()
     try:
         from lunar_python import Lunar, Solar
@@ -72,12 +72,19 @@ def main():
         if args.deceased_year is not None and args.deceased_year < solar_date.year:
             raise ValueError("逝世年份不能早于出生年份")
         hour, minute = engine.parse_hour(args.hour) if args.hour else (None, None)
-        as_of = date.fromisoformat(args.as_of) if args.as_of else datetime.now(engine.BJ).date()
+        if args.as_of and "T" in args.as_of:
+            cutoff = datetime.fromisoformat(args.as_of.replace("Z", "+00:00"))
+            if cutoff.tzinfo is None or cutoff.utcoffset() is None:
+                raise ValueError("截止时刻必须包含明确 UTC 偏移，不猜时区")
+            cutoff = cutoff.astimezone(engine.BJ)
+        else:
+            cutoff = date.fromisoformat(args.as_of) if args.as_of else datetime.now(engine.BJ)
+        as_of = cutoff.date() if isinstance(cutoff, datetime) else cutoff
         if not 1900 <= as_of.year <= 2100:
             raise ValueError("分析年份需 1900–2100")
-        if as_of < solar_date:
-            raise ValueError("分析日期不能早于出生日期")
-        now = datetime(as_of.year, as_of.month, as_of.day, 12, tzinfo=engine.BJ)
+        # Compare against the resolved absolute birth instant/domain in the engine;
+        # local civil dates cannot be compared directly with the Beijing cutoff.
+        now = cutoff
         if args.deceased_year is not None and args.deceased_year > as_of.year:
             raise ValueError("逝世年份不能超过分析年份")
         result = compute(solar_date, hour, minute, args.shichen, args.sex, args.place,
@@ -92,13 +99,13 @@ def main():
     if args.sex is None:
         warnings.append("未提供传统顺逆参数；仅输出四柱，不输出大运和依赖该参数的神煞。")
     payload = {
-        "schema_version": "1.0", "system": "bazi", "engine": result["engine"],
+        "schema_version": "1.1", "system": "bazi", "engine": result["engine"],
         "uncertainty": result.get("uncertainty", {"time_known": True, "pillars": {}, "candidates": [], "candidate_limit": 8, "dayun": None}),
         "input": {"solar": result["solar_text"], "lunar": result["lunar_text"], "hour": result["shichen_text"], "sex_convention": result["sex"], "place": result["place"], **{k: result["time"].get(k) for k in ("civil_time", "calendar_time", "fold", "pillar_time")}},
         "conventions": {"timezone": result["time"]["timezone"], "year_boundary": "lichun", "month_boundary": "twelve-jie", "day_boundary": "23:00-next-day", "true_solar_time": args.time_basis == "apparent-solar", "calendar_precision": "lunar-python-1.4.8-full-jieqi", "solar_correction": result["time"].get("solar_correction"), **{k: result["time"][k] for k in ("term_basis", "day_hour_basis", "calendar_timezone")}},
         "pillars": {name: {"gan": cells[0], "zhi": cells[1], "ten_god": cells[2], "hidden_stems": cells[3]} for name, cells in result["pillars"].items()},
         "dayun": result["dayun"],
-        "current_year": result["current_year"], "current_ganzhi": result["current_gz"],
+        "current_year": result["current_year"], "current_ganzhi": result["current_gz"], "flow_year": result["flow_year"],
         "shensha": [entry for entry in result["shensha_lines"] if args.sex is not None or "元辰" not in entry], "warnings": list(dict.fromkeys(warnings)),
     }
     print(json.dumps(payload, ensure_ascii=False, indent=2, allow_nan=False))

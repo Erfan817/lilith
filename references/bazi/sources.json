@@ -7,7 +7,8 @@
     "shichen-table.md",
     "dayun-rules.md",
     "shensha-table.md",
-    "classical-texts.md"
+    "classical-texts.md",
+    "books-and-cases.md"
   ],
   "source_policy": "Calendar facts cross-checked against the Hong Kong Observatory; source article/table bodies are not bundled. Cultural interpretation is separate from astronomy.",
   "sources": [
@@ -200,6 +201,338 @@
       "use_for_synthesis": true,
       "role": "independent solar clock formula cross-check",
       "notes": "Source formula facts referenced; original PDF not bundled."
+    },
+    {
+      "url": "https://zh.wikisource.org/zh-hant/%E6%BB%B4%E5%A4%A9%E9%AB%93/12",
+      "title": "滴天髓/12 - 維基文庫，自由的圖書館",
+      "accessed_at": "2026-10-09T09:50:43+00:00",
+      "accessed_precision": "instant",
+      "topics": [
+        "衰旺論正文",
+        "正文后注语（旺衰、极旺极衰与损益）"
+      ],
+      "role": "classical excerpt verification",
+      "use_for_synthesis": true,
+      "retrieval": {
+        "status": "sections_read",
+        "method": "actual child tool retrieval recorded in bazi-reference-audit.md",
+        "detail": "衰旺論正文; 正文后注语（旺衰、极旺极衰与损益）"
+      },
+      "notes": "Only sections explicitly read; no facsimile collation. Modern commentary not redistributed."
+    },
+    {
+      "url": "https://www.donglishuzhai.net/chapter/3721.html",
+      "title": "八、論用神__子平真詮_繁体字版原文全文-東里書齋",
+      "accessed_at": "2026-10-09T09:50:43+00:00",
+      "accessed_precision": "instant",
+      "topics": [
+        "八、論用神：月令取用",
+        "善用顺用与不善逆用",
+        "月令与四柱配合例",
+        "建禄月劫另取用神",
+        "校字与东里山人按语（只识别层次，不复制）"
+      ],
+      "role": "classical excerpt verification",
+      "use_for_synthesis": true,
+      "retrieval": {
+        "status": "sections_read",
+        "method": "actual child tool retrieval recorded in bazi-reference-audit.md",
+        "detail": "八、論用神：月令取用; 善用顺用与不善逆用; 月令与四柱配合例; 建禄月劫另取用神; 校字与东里山人按语（只识别层次，不复制）"
+      },
+      "notes": "Only sections explicitly read; no facsimile collation. Modern commentary not redistributed. 首次提取返回无www同站URL，重读返回所列URL；未核对影印底本。"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/6tail/lunar-python/v1.4.8/lunar_python/eightchar/Yun.py",
+      "title": "lunar-python v1.4.8 — lunar_python/eightchar/Yun.py（原始源码）",
+      "accessed_at": "2026-10-09T09:50:46+00:00",
+      "accessed_precision": "instant",
+      "topics": [
+        "Yun.__init__：gender与顺逆",
+        "__compute_start：sect=2分钟分解",
+        "getStartYear/Month/Day/Hour",
+        "getStartSolar",
+        "getDaYun"
+      ],
+      "role": "production algorithm source",
+      "use_for_synthesis": true,
+      "retrieval": {
+        "status": "code_read",
+        "method": "actual child tool retrieval recorded in bazi-reference-audit.md",
+        "detail": "Yun.__init__：gender与顺逆; __compute_start：sect=2分钟分解; getStartYear/Month/Day/Hour; getStartSolar; getDaYun"
+      },
+      "notes": "Pinned v1.4.8 implementation compared with installed dependency."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/6tail/lunar-python/v1.4.8/lunar_python/eightchar/DaYun.py",
+      "title": "lunar-python v1.4.8 — lunar_python/eightchar/DaYun.py（原始源码）",
+      "accessed_at": "2026-10-09T09:50:56+00:00",
+      "accessed_precision": "instant",
+      "topics": [
+        "DaYun.__init__：index=0与年度年龄公式",
+        "getStart/EndYear与getStart/EndAge",
+        "getGanZhi：月柱顺逆偏移",
+        "getLiuNian与getXiaoYun"
+      ],
+      "role": "production algorithm source",
+      "use_for_synthesis": true,
+      "retrieval": {
+        "status": "code_read",
+        "method": "actual child tool retrieval recorded in bazi-reference-audit.md",
+        "detail": "DaYun.__init__：index=0与年度年龄公式; getStart/EndYear与getStart/EndAge; getGanZhi：月柱顺逆偏移; getLiuNian与getXiaoYun"
+      },
+      "notes": "Pinned v1.4.8 implementation compared with installed dependency."
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/%E4%B8%89%E5%91%BD%E9%80%9A%E6%9C%83",
+      "title": "三命通會 - 维基文库，自由的图书馆",
+      "accessed_at": "2026-10-09T09:54:03+00:00",
+      "accessed_precision": "instant",
+      "topics": [
+        "首页提要：作者考辨、坊刻夹入与论法保留",
+        "卷目与缺卷提示",
+        "页面公有领域声明"
+      ],
+      "role": "classical excerpt verification",
+      "use_for_synthesis": true,
+      "retrieval": {
+        "status": "sections_read",
+        "method": "actual child tool retrieval recorded in bazi-reference-audit.md",
+        "detail": "首页提要：作者考辨、坊刻夹入与论法保留; 卷目与缺卷提示; 页面公有领域声明"
+      },
+      "notes": "Only sections explicitly read; no facsimile collation. Modern commentary not redistributed."
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/%E4%B8%89%E5%91%BD%E9%80%9A%E6%9C%83/%E5%8D%B7%E4%B8%80",
+      "title": "三命通會/卷一 - 维基文库，自由的图书馆",
+      "accessed_at": "2026-10-09T09:54:03+00:00",
+      "accessed_precision": "instant",
+      "topics": [
+        "论五行生成（重读开头）",
+        "论五行生克",
+        "论支干源流（重读所返段落）",
+        "总论纳音与论纳音取象开头",
+        "首轮选择性提取的若干纳音段（非整卷）"
+      ],
+      "role": "classical excerpt verification",
+      "use_for_synthesis": true,
+      "retrieval": {
+        "status": "partial_body_read",
+        "method": "actual child tool retrieval recorded in bazi-reference-audit.md",
+        "detail": "论五行生成（重读开头）; 论五行生克; 论支干源流（重读所返段落）; 总论纳音与论纳音取象开头; 首轮选择性提取的若干纳音段（非整卷）"
+      },
+      "notes": "Only sections explicitly read; no facsimile collation. Modern commentary not redistributed."
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/%E4%B8%89%E5%91%BD%E9%80%9A%E6%9C%83/%E5%8D%B7%E4%BA%8C",
+      "title": "三命通會/卷二 - 维基文库，自由的图书馆",
+      "accessed_at": "2026-10-09T09:54:03+00:00",
+      "accessed_precision": "instant",
+      "topics": [
+        "论天干阴阳生死：返回的己土段",
+        "论地支：返回的戌、亥及五行用法段"
+      ],
+      "role": "classical excerpt verification",
+      "use_for_synthesis": true,
+      "retrieval": {
+        "status": "partial_body_read",
+        "method": "actual child tool retrieval recorded in bazi-reference-audit.md",
+        "detail": "论天干阴阳生死：返回的己土段; 论地支：返回的戌、亥及五行用法段"
+      },
+      "notes": "Only sections explicitly read; no facsimile collation. Modern commentary not redistributed. 提取带显式省略；论大运、人元司事等未取得。浏览器与直接HTTP重试失败。"
+    },
+    {
+      "url": "https://zh.wikisource.org/zh-hant/%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE",
+      "title": "滴天髓闡微 - 維基文庫，自由的圖書館",
+      "accessed_at": "2026-10-09T10:53:46.060998+00:00",
+      "accessed_precision": "instant",
+      "topics": [
+        "通神论一、天道：原注与任氏层次",
+        "二、地道",
+        "三、人道（首轮返回段）",
+        "四、知命：任氏评论及命例，含旺极宜泄不宜克段（首轮）",
+        "五、理气开头（首轮）",
+        "重读返回的干支总论、体用、源流、假神、顺逆及六亲论标题下片段",
+        "通神论一至八（天道／地道／人道／知命／理气／配合／天干／地支）",
+        "通神论四知命（董中堂／同邑王姓／福建人）",
+        "通神论二十一官杀（任铁樵自造及一毫不验自述）",
+        "岁运：战冲和好片段"
+      ],
+      "role": "classical excerpt verification",
+      "use_for_synthesis": true,
+      "retrieval": {
+        "status": "sections_read",
+        "method": "merged prior partial retrieval and later section reading",
+        "detail": "通神论一至八、四知命命例、二十一官杀（任铁樵自造／一毫不验），以及岁运战冲和好片段已读；前次局部读取保留在extensions.reading_events。不宣称通读全书。"
+      },
+      "notes": "Electronic transcription only, not facsimile collation; exact past and later reading events retained. Historical outcomes are author narration, not independently verified.",
+      "extensions": {
+        "reading_events": [
+          {
+            "accessed_at": "2026-10-09T09:54:05+00:00",
+            "accessed_precision": "instant",
+            "retrieval": {
+              "status": "partial_body_read",
+              "method": "actual child tool retrieval recorded in bazi-reference-audit.md",
+              "detail": "通神论一、天道：原注与任氏层次; 二、地道; 三、人道（首轮返回段）; 四、知命：任氏评论及命例，含旺极宜泄不宜克段（首轮）; 五、理气开头（首轮）; 重读返回的干支总论、体用、源流、假神、顺逆及六亲论标题下片段"
+            },
+            "sections_read": [
+              "通神论一、天道：原注与任氏层次",
+              "二、地道",
+              "三、人道（首轮返回段）",
+              "四、知命：任氏评论及命例，含旺极宜泄不宜克段（首轮）",
+              "五、理气开头（首轮）",
+              "重读返回的干支总论、体用、源流、假神、顺逆及六亲论标题下片段"
+            ]
+          },
+          {
+            "accessed_at": "2026-10-09T10:53:46.060998+00:00",
+            "accessed_precision": "instant",
+            "retrieval": {
+              "status": "sections_read",
+              "method": "web_extract; recorded research-session reading event",
+              "detail": "Later sections read in the electronic transcription; not a full critical edition or independent biographical verification."
+            },
+            "sections_read": [
+              "通神论一至八（天道／地道／人道／知命／理气／配合／天干／地支）",
+              "通神论四知命（董中堂／同邑王姓／福建人）",
+              "通神论二十一官杀（任铁樵自造及一毫不验自述）",
+              "岁运：战冲和好片段"
+            ]
+          }
+        ],
+        "sections_read": [
+          "通神论一至八（天道／地道／人道／知命／理气／配合／天干／地支）",
+          "通神论四知命（董中堂／同邑王姓／福建人）",
+          "通神论二十一官杀（任铁樵自造及一毫不验自述）",
+          "岁运：战冲和好片段"
+        ]
+      }
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3",
+      "title": "淵海子平 - 维基文库，自由的图书馆",
+      "accessed_at": "2026-10-09T10:53:46.053700+00:00",
+      "accessed_precision": "instant",
+      "retrieval": {
+        "status": "sections_read",
+        "method": "web_extract",
+        "detail": "Full text fetched and read this session: 论日为主/论月令/论太岁吉凶/论征太岁/论大运/论八字撮要法/格局生死引用. Page carries '來源不明/未經查證' provenance flag.；sections_read=论日为主、论月令、论太岁吉凶、论征太岁、论大运、论八字撮要法、格局生死引用"
+      },
+      "topics": [
+        "bazi literature/case verification"
+      ],
+      "role": "verification",
+      "use_for_synthesis": true,
+      "extensions": {
+        "research_id": "TMP1",
+        "scope": "sections_read",
+        "original_status": "actualread"
+      }
+    },
+    {
+      "url": "https://journals.uchicago.edu/doi/10.1086/ahr/98.2.542-a",
+      "title": "AHR book review record of Smith 1991 (98.2 p.542)",
+      "accessed_at": "2026-10-09T11:33:58Z",
+      "accessed_precision": "instant",
+      "retrieval": {
+        "status": "metadata_only",
+        "method": "web_search",
+        "detail": "Catalog/metadata only: Westview 1991, xii+434pp, review places book as historical overview of Chinese mantic practices, not an empirical validity test."
+      },
+      "topics": [
+        "bazi literature/case verification"
+      ],
+      "role": "verification",
+      "use_for_synthesis": false,
+      "extensions": {
+        "research_id": "SRC6",
+        "scope": "catalog",
+        "original_status": "catalog"
+      }
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/三命通會",
+      "title": "三命通会 - 维基文库",
+      "accessed_at": "2026-10-09T11:33:58Z",
+      "accessed_precision": "instant",
+      "retrieval": {
+        "status": "sections_read",
+        "method": "prior_session_read",
+        "detail": "Wikisource 卷一/二 front sections read in a prior session (recorded in classical-texts.md, incl. 提要 noting possible later interpolations). Not re-read this session.；sections_read=卷一/二 前部 (前次会话实读)"
+      },
+      "topics": [
+        "bazi literature/case verification"
+      ],
+      "role": "verification",
+      "use_for_synthesis": true,
+      "extensions": {
+        "research_id": "SRC7",
+        "scope": "sections_read_prior",
+        "original_status": "catalog_prior_session"
+      }
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/子平真詮",
+      "title": "子平真詮 - 维基文库",
+      "accessed_at": "2026-10-09T11:33:58Z",
+      "accessed_precision": "instant",
+      "retrieval": {
+        "status": "blocked",
+        "method": "web_extract",
+        "detail": "Page does not exist (returned empty 'no content' page)."
+      },
+      "topics": [
+        "bazi literature/case verification"
+      ],
+      "role": "verification",
+      "use_for_synthesis": false,
+      "extensions": {
+        "research_id": "SRC8",
+        "scope": "blocked",
+        "original_status": "blocked"
+      }
+    },
+    {
+      "url": "https://abebooks.com/9780813377537/Fortune-tellers-Philosophers-Divination-Traditional-Chinese-0813377536/plp",
+      "title": "AbeBooks listing: Smith, Fortune-tellers and Philosophers",
+      "accessed_at": "2026-10-09T11:33:58Z",
+      "accessed_precision": "instant",
+      "retrieval": {
+        "status": "metadata_only",
+        "method": "web_search",
+        "detail": "Catalog metadata: hardcover 1991, Westview, 434 pages, ISBN 13 9780813377537."
+      },
+      "topics": [
+        "bazi literature/case verification"
+      ],
+      "role": "verification",
+      "use_for_synthesis": false,
+      "extensions": {
+        "research_id": "SRC9",
+        "scope": "catalog",
+        "original_status": "catalog"
+      }
+    },
+    {
+      "url": "https://legal.qishu.app/cases/ditian-sui-chanyao/ds-326",
+      "title": "qishu.app 滴天髓阐微命例索引 (third-party engine)",
+      "accessed_at": "2026-10-09T11:33:58Z",
+      "accessed_precision": "instant",
+      "retrieval": {
+        "status": "excluded",
+        "method": "web_search",
+        "detail": "Seen in search results only; third-party computation site, not relied upon for any claim. Its 命例 labels (e.g. 任铁樵自造 戊申 癸亥 丙午 壬辰) were NOT used; the 自造 chart cited instead is 癸巳 戊午 丙午 壬辰 as actually read on Wikisource."
+      },
+      "topics": [
+        "bazi literature/case verification"
+      ],
+      "role": "verification",
+      "use_for_synthesis": false,
+      "extensions": {
+        "research_id": "SRC10",
+        "scope": "not_used",
+        "original_status": "not_used"
+      }
     }
   ],
   "extensions": {

@@ -1,0 +1,402 @@
+{
+  "schema_version": 2,
+  "purposes": {
+    "knowledge": "culture, history and reflection; not prediction evidence"
+  },
+  "entries": [
+    {
+      "id": "book-1",
+      "kind": "book",
+      "module": "tarot",
+      "title": "皮克托里尔之钥（The Pictorial Key to the Tarot）",
+      "evidence_level": "sections_read (preface full, The Fool full, Part III sec.7 full, TOC, title page)",
+      "version": "Waite; Sacred Texts London W. Rider [1911] transcription",
+      "locator": "preface; The Fool; Part III section 7; table of contents",
+      "reading_status": "sections_read",
+      "source_urls": [
+        "https://archive.sacred-texts.com/tarot/pkt/pktintr.htm",
+        "https://archive.sacred-texts.com/tarot/pkt/pktar00.htm",
+        "https://archive.sacred-texts.com/tarot/pkt/pkt0307.htm",
+        "https://archive.sacred-texts.com/tarot/pkt/index.htm"
+      ],
+      "reference_path": "references/tarot/books-and-cases.md"
+    },
+    {
+      "id": "book-2",
+      "kind": "book",
+      "module": "tarot",
+      "title": "塔罗：其秘义象征、占卜用法与玩法（The Tarot: Its Occult Signification, Use in Fortune-Telling, and Method of Play）",
+      "evidence_level": "partial_body_read (introduction and Major Arcana meanings list read; extractor truncated)",
+      "version": "Mathers; Sacred Texts [1888] transcription",
+      "locator": "Introduction and Meanings of the Cards, retrieved portions",
+      "reading_status": "partial_body_read",
+      "source_urls": [
+        "https://archive.sacred-texts.com/tarot/mathers/mtar01.htm",
+        "https://archive.sacred-texts.com/tarot/mathers/mtar03.htm"
+      ],
+      "reference_path": "references/tarot/books-and-cases.md"
+    },
+    {
+      "id": "book-3",
+      "kind": "book",
+      "module": "tarot",
+      "title": "整体塔罗（Holistic Tarot: An Integrative Approach to Using Tarot for Personal Growth）",
+      "evidence_level": "metadata_only — no book text read; not summarized",
+      "version": "Benebell Wen; North Atlantic Books 2015; ISBN 9781583948354",
+      "locator": "publisher bibliographic page only",
+      "reading_status": "metadata_only",
+      "source_urls": [
+        "https://www.northatlanticbooks.com/shop/holistic-tarot/"
+      ],
+      "reference_path": "references/tarot/books-and-cases.md"
+    },
+    {
+      "id": "book-4",
+      "kind": "book",
+      "module": "tarot",
+      "title": "智慧七十八度（Seventy-Eight Degrees of Wisdom: A Book of Tarot）",
+      "evidence_level": "metadata_only — no book text read; not summarized",
+      "version": "Rachel Pollack; Red Wheel/Weiser 2019; ISBN 9781578636655",
+      "locator": "publisher bibliographic page only; older edition dates unresolved",
+      "reading_status": "metadata_only",
+      "source_urls": [
+        "https://redwheelweiser.com/book/seventy-eight-degrees-of-wisdom-9781578636655/"
+      ],
+      "reference_path": "references/tarot/books-and-cases.md"
+    },
+    {
+      "id": "TMP1",
+      "kind": "book",
+      "module": "bazi",
+      "title": "渊海子平",
+      "evidence_level": "sections_read (public-domain transcription; version/authorship caveat retained)",
+      "version": "渊海子平; Wikisource transcription; provenance/authorship uncertain",
+      "locator": "论日为主、论月令、论太岁吉凶、论征太岁、论大运、论八字撮要法、格局生死引用",
+      "reading_status": "sections_read",
+      "source_urls": [
+        "https://zh.wikisource.org/wiki/%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3"
+      ],
+      "reference_path": "references/bazi/books-and-cases.md"
+    },
+    {
+      "id": "TMP3",
+      "kind": "book",
+      "module": "bazi",
+      "title": "滴天髓阐微 (任铁樵)",
+      "evidence_level": "sections_read (通神论一至八、官杀；not a full critical edition)",
+      "version": "滴天髓阐微; Wikisource transcription; 正文/原注/任氏 layers",
+      "locator": "通神论一至八、四知命、二十一官杀；岁运 selected passages",
+      "reading_status": "sections_read",
+      "source_urls": [
+        "https://zh.wikisource.org/zh-hant/%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE"
+      ],
+      "reference_path": "references/bazi/books-and-cases.md"
+    },
+    {
+      "id": "SRC8",
+      "kind": "book",
+      "module": "bazi",
+      "title": "子平真诠",
+      "evidence_level": "sections_read_prior; 论用神 chapter, previous read; Wikisource candidate unavailable",
+      "version": "子平真诠; 东里书斋 electronic transcription",
+      "locator": "论用神 chapter, previous read; Wikisource candidate unavailable",
+      "reading_status": "sections_read_prior",
+      "source_urls": [
+        "https://www.donglishuzhai.net/chapter/3721.html",
+        "https://zh.wikisource.org/wiki/子平真詮"
+      ],
+      "reference_path": "references/bazi/books-and-cases.md"
+    },
+    {
+      "id": "SRC7",
+      "kind": "book",
+      "module": "bazi",
+      "title": "三命通会",
+      "evidence_level": "sections_read_prior (卷一/二前部; not re-read in this pass)",
+      "version": "三命通会; Wikisource transcription",
+      "locator": "卷一/二前部; previous read, not re-read in this pass",
+      "reading_status": "sections_read_prior",
+      "source_urls": [
+        "https://zh.wikisource.org/wiki/三命通會"
+      ],
+      "reference_path": "references/bazi/books-and-cases.md"
+    },
+    {
+      "id": "TMP2",
+      "kind": "book",
+      "module": "bazi",
+      "title": "Smith, Richard J. Fortune-tellers and Philosophers: Divination in Traditional Chinese Society",
+      "evidence_level": "metadata_only (bibliographic record and review placement; no text read)",
+      "version": "Richard J. Smith; Westview Press 1991; ISBN 0813377536",
+      "locator": "AHR 98.2 (1993) p.542 review metadata and bookseller listing only",
+      "reading_status": "metadata_only",
+      "source_urls": [
+        "https://journals.uchicago.edu/doi/10.1086/ahr/98.2.542-a",
+        "https://abebooks.com/9780813377537/Fortune-tellers-Philosophers-Divination-Traditional-Chinese-0813377536/plp"
+      ],
+      "reference_path": "references/bazi/books-and-cases.md"
+    },
+    {
+      "id": "book-tetrabiblos-loeb",
+      "kind": "book",
+      "module": "astrology",
+      "title": "Ptolemy, Tetrabiblos (tr. F. E. Robbins)",
+      "evidence_level": "sections_read; Introduction I/II selected paragraphs and III printing history; translation body not read",
+      "version": "F. E. Robbins translation; Loeb 435, 1940",
+      "locator": "Introduction I/II selected paragraphs and III printing history; translation body not read",
+      "reading_status": "sections_read",
+      "source_urls": [
+        "https://www.loebclassics.com/abstract/LCL435/1940/volume.xml",
+        "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Ptolemy/Tetrabiblos/Introduction*.html"
+      ],
+      "reference_path": "references/astrology/books-and-cases.md"
+    },
+    {
+      "id": "book-valens-ph",
+      "kind": "book",
+      "module": "astrology",
+      "title": "Vettius Valens, Anthology (tr. Robert Schmidt, ed. Robert Hand, Golden Hind Press)",
+      "evidence_level": "metadata_only; official Hellenistic Track publication descriptions only",
+      "version": "Robert Schmidt / Robert Hand; Golden Hind Press / Project Hindsight",
+      "locator": "official Hellenistic Track publication descriptions only",
+      "reading_status": "metadata_only",
+      "source_urls": [
+        "http://projecthindsight.com/archives/hellenistic.html"
+      ],
+      "reference_path": "references/astrology/books-and-cases.md"
+    },
+    {
+      "id": "book-valens-riley",
+      "kind": "book",
+      "module": "astrology",
+      "title": "Vettius Valens, The Anthology (tr. Mark T. Riley)",
+      "evidence_level": "catalog_only (UPenn Online Books + AbeBooks synopsis; free PDF at csus.edu exists, not read)",
+      "version": "Mark T. Riley; Amor Fati Publications 2022; ISBN 9780998588919",
+      "locator": "UPenn catalog and bookseller description only; translation PDF not read",
+      "reading_status": "metadata_only",
+      "source_urls": [
+        "https://onlinebooks.library.upenn.edu/webbin/book/lookupid?key=olbp91519",
+        "https://www.abebooks.com/9780998588919/Anthology-Valens-Vettius-0998588911/plp"
+      ],
+      "reference_path": "references/astrology/books-and-cases.md"
+    },
+    {
+      "id": "book-barton-ancient",
+      "kind": "book",
+      "module": "astrology",
+      "title": "Tamsyn Barton, Ancient Astrology",
+      "evidence_level": "metadata_only; Wellcome library catalog only; book text not read",
+      "version": "Tamsyn Barton; Routledge 1994",
+      "locator": "Wellcome library catalog only; book text not read",
+      "reading_status": "metadata_only",
+      "source_urls": [
+        "https://content.www.wellcomecollection.org/works/aaybg52m"
+      ],
+      "reference_path": "references/astrology/books-and-cases.md"
+    },
+    {
+      "id": "case-1",
+      "kind": "case",
+      "module": "tarot",
+      "title": "RWS / Waite / Smith：出版题签与创作分工（转录题签[1911]）",
+      "evidence_level": "primary_text_read (Waite preface) + publication chronology",
+      "version": "Waite / Smith; Sacred Texts [1911] transcription",
+      "locator": "Preface author/designer attribution; title/byline",
+      "reading_status": "sections_read",
+      "source_urls": [
+        "https://archive.sacred-texts.com/tarot/pkt/pktintr.htm",
+        "https://archive.sacred-texts.com/tarot/pkt/index.htm"
+      ],
+      "reference_path": "references/tarot/books-and-cases.md"
+    },
+    {
+      "id": "case-2",
+      "kind": "case",
+      "module": "tarot",
+      "title": "Gébelin→Etteilla 的“埃及起源”归因史",
+      "evidence_level": "historical chronology + primary/secondary source readings",
+      "version": "Tarot Heritage, Tarot History Chronology; secondary historical synthesis",
+      "locator": "1781, 1783, 1789 and later history-study entries; not direct reads of named historical books",
+      "reading_status": "secondary_body_read",
+      "source_urls": [
+        "https://tarot-heritage.com/history-4/tarot-history-chronology/",
+        "https://archive.sacred-texts.com/tarot/mathers/mtar01.htm"
+      ],
+      "reference_path": "references/tarot/books-and-cases.md"
+    },
+    {
+      "id": "case-3",
+      "kind": "case",
+      "module": "tarot",
+      "title": "Waite《皮克托里尔之钥》第三部第七节十字排阵教学规程",
+      "evidence_level": "primary_text_read (Part III §7)",
+      "version": "Waite; Sacred Texts [1911] transcription",
+      "locator": "Part III, section 7, An Ancient Celtic Method of Divination",
+      "reading_status": "sections_read",
+      "source_urls": [
+        "https://archive.sacred-texts.com/tarot/pkt/pkt0307.htm"
+      ],
+      "reference_path": "references/tarot/books-and-cases.md"
+    },
+    {
+      "id": "case-01",
+      "kind": "case",
+      "module": "bazi",
+      "title": "董中堂造",
+      "evidence_level": "sections_read; 通神论·四知命：董中堂造；identity and outcomes not independently verified",
+      "version": "滴天髓阐微; Wikisource transcription; 任氏曰",
+      "locator": "通神论·四知命：董中堂造；identity and outcomes not independently verified",
+      "reading_status": "sections_read",
+      "source_urls": [
+        "https://zh.wikisource.org/zh-hant/%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE"
+      ],
+      "reference_path": "references/bazi/books-and-cases.md"
+    },
+    {
+      "id": "case-02",
+      "kind": "case",
+      "module": "bazi",
+      "title": "同邑王姓造",
+      "evidence_level": "author_narration_hindsight; in-book divergent verdicts; no independent verification",
+      "version": "滴天髓阐微; Wikisource transcription; 任氏曰",
+      "locator": "通神论·四知命：同邑王姓造",
+      "reading_status": "sections_read",
+      "source_urls": [
+        "https://zh.wikisource.org/zh-hant/%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE"
+      ],
+      "reference_path": "references/bazi/books-and-cases.md"
+    },
+    {
+      "id": "case-03",
+      "kind": "case",
+      "module": "bazi",
+      "title": "福建人（不知姓氏）",
+      "evidence_level": "author_narration_hindsight; anonymous subject; no independent verification",
+      "version": "滴天髓阐微; Wikisource transcription; 任氏曰",
+      "locator": "通神论·四知命：福建人不知其姓氏",
+      "reading_status": "sections_read",
+      "source_urls": [
+        "https://zh.wikisource.org/zh-hant/%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE"
+      ],
+      "reference_path": "references/bazi/books-and-cases.md"
+    },
+    {
+      "id": "case-04",
+      "kind": "case",
+      "module": "bazi",
+      "title": "任铁樵自造",
+      "evidence_level": "sections_read; 通神论·二十一官杀：任铁樵自造及一毫不验自述；no independent birth verification",
+      "version": "滴天髓阐微; Wikisource transcription; 任氏曰",
+      "locator": "通神论·二十一官杀：任铁樵自造及一毫不验自述；no independent birth verification",
+      "reading_status": "sections_read",
+      "source_urls": [
+        "https://zh.wikisource.org/zh-hant/%E6%BB%B4%E5%A4%A9%E9%AB%93%E9%97%A1%E5%BE%AE"
+      ],
+      "reference_path": "references/bazi/books-and-cases.md"
+    },
+    {
+      "id": "case-05",
+      "kind": "case",
+      "module": "bazi",
+      "title": "渊海子平·征太岁示例（非真实命例）",
+      "evidence_level": "book_internal_illustration; not a documented person",
+      "version": "渊海子平; Wikisource transcription; provenance uncertain",
+      "locator": "论征太岁：乙丑 乙亥 壬申 乙巳 illustration; not an independently documented person",
+      "reading_status": "sections_read",
+      "source_urls": [
+        "https://zh.wikisource.org/wiki/%E6%B7%B5%E6%B5%B7%E5%AD%90%E5%B9%B3"
+      ],
+      "reference_path": "references/bazi/books-and-cases.md"
+    },
+    {
+      "id": "case-greek-horoscopes",
+      "kind": "case",
+      "module": "astrology",
+      "title": "Neugebauer & Van Hoesen, Greek Horoscopes (APS 1959)",
+      "evidence_level": "catalog_and_toc_read (not full text)",
+      "version": "Neugebauer and Van Hoesen; APS Memoirs 48, 1959",
+      "locator": "TOC: Original Documents and Literary Sources; no chart tables read",
+      "reading_status": "metadata_only",
+      "source_urls": [
+        "https://books.google.com/books/about/Greek_Horoscopes.html?id=kEgnLpm06zQC",
+        "https://catalog.hathitrust.org/Record/001632457"
+      ],
+      "reference_path": "references/astrology/books-and-cases.md"
+    },
+    {
+      "id": "case-augustus-capricorn",
+      "kind": "case",
+      "module": "astrology",
+      "title": "Augustus and Capricorn",
+      "evidence_level": "sections_read; Suetonius Augustus 5.1, 94.12; Dio 56.25.5; historical narrations only",
+      "version": "Suetonius/Rolfe and Cassius Dio/Cary; LacusCurtius translations; Barton JRS extract",
+      "locator": "Suetonius Augustus 5.1, 94.12; Dio 56.25.5; historical narrations only",
+      "reading_status": "sections_read",
+      "source_urls": [
+        "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Suetonius/12Caesars/Augustus*.html",
+        "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cassius_Dio/56*.html",
+        "https://www.cambridge.org/core/journals/journal-of-roman-studies/article/abs/augustus-and-capricorn-astrological-polyvalency-and-imperial-rhetoric/70FAE8BC72C8F217DCA55EACB952862F"
+      ],
+      "reference_path": "references/astrology/books-and-cases.md"
+    },
+    {
+      "id": "case-hellenistic-revival",
+      "kind": "case",
+      "module": "astrology",
+      "title": "20th-century Hellenistic revival (Project Hindsight; Neugebauer; Barton)",
+      "evidence_level": "metadata_only; publication descriptions and bibliographic reading roadmap; no translation method text",
+      "version": "Project Hindsight official publication list plus Neugebauer/Barton catalog entries",
+      "locator": "Hellenistic Track descriptions; scholarship reading roadmap only",
+      "reading_status": "metadata_only",
+      "source_urls": [
+        "http://projecthindsight.com/archives/hellenistic.html",
+        "https://books.google.com/books/about/Greek_Horoscopes.html?id=kEgnLpm06zQC",
+        "https://content.www.wellcomecollection.org/works/aaybg52m"
+      ],
+      "reference_path": "references/astrology/books-and-cases.md"
+    },
+    {
+      "id": "case-forer-personal-validation",
+      "kind": "case",
+      "module": "common",
+      "title": "Forer 1949：个人验证的课堂演示",
+      "evidence_level": "sections_read (scanned pp. 118–123; 39-person tables and 32-person recall task)",
+      "version": "Bertram R. Forer; Journal of Abnormal and Social Psychology 44(1), 1949",
+      "locator": "scanned pp.118–123; tables and recall task",
+      "reading_status": "sections_read",
+      "source_urls": [
+        "https://www.astronomy.com/wp-content/uploads/2024/01/Forer-fallacy-of-personal-validation-1949.pdf",
+        "https://doi.org/10.1037/h0059240"
+      ],
+      "reference_path": "references/common/experiments-and-evidence.md"
+    },
+    {
+      "id": "case-carlson-double-blind",
+      "kind": "case",
+      "module": "common",
+      "title": "Carlson 1985：出生星盘的双盲检验",
+      "evidence_level": "sections_read (Nature pp. 419–425; methods, tables and author conclusion; attributed, not generalized)",
+      "version": "Shawn Carlson; Nature 318, 1985",
+      "locator": "scanned pp.419–425; defined natal-astrology/personality hypothesis only",
+      "reading_status": "sections_read",
+      "source_urls": [
+        "https://muller.lbl.gov/papers/Astrology-Carlson.pdf",
+        "https://www.nature.com/articles/318419a0"
+      ],
+      "reference_path": "references/common/experiments-and-evidence.md"
+    }
+  ],
+  "evidence_rules": "references/common/research-reading-guide.md",
+  "generated_at": "2026-10-09T14:50:35.171751+00:00",
+  "per_module_sources_added": {
+    "tarot": 17,
+    "bazi": 14,
+    "astrology": 18
+  },
+  "counts": {
+    "entries": 26,
+    "books": 13,
+    "cases": 13
+  },
+  "counting_note": "Books counts bibliographic entries, including separate translations, not unique works or fully read books. Cases include teaching, history, book illustrations and experiments, not verified predictions."
+}

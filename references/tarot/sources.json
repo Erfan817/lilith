@@ -5,7 +5,8 @@
     "cards.md",
     "spreads.md",
     "relations.md",
-    "reading.md"
+    "reading.md",
+    "books-and-cases.md"
   ],
   "source_policy": "只使用已检索并实际读取的知识资料；不把搜索摘要当正文，未读尾部明确标注；不转载来源表达或媒体；公开资料不等于获再分发授权；预测及超自然主张不获科学背书",
   "sources": [
@@ -336,6 +337,395 @@
         "detail": "浏览器遇 Cloudflare 验证即停止，只有此前真实提取的片段可作为已读范围"
       },
       "use_for_synthesis": false
+    },
+    {
+      "url": "https://archive.sacred-texts.com/tarot/pkt/pktintr.htm",
+      "title": "The Pictorial Key to the Tarot: Introduction (Preface) — A.E. Waite, Sacred Texts transcription",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "retrieval": {
+        "status": "body_read",
+        "method": "web_extract (extractor backend)",
+        "detail": "full preface page returned and read; quotes noted: deck designs 'prepared under my supervision... by a lady who has high claims as an artist'; 'not put forward as a contribution to the history of playing cards'; divinatory part treated 'as a fact in the history of the Tarot'"
+      },
+      "topics": [
+        "RWS deck design supervision and artist attribution",
+        "Waite's stance on tarot history and divination",
+        "1910/1911 publication history"
+      ],
+      "role": "primary_source",
+      "use_for_synthesis": true,
+      "accessed_reason": "accessed during research session on 2026-10-09; exact per-request UTC instant not retained in session log",
+      "notes": "public domain (pre-1923); minimal short quotation only, in original English where quoted",
+      "extensions": {
+        "sections_read": "Preface (whole page)"
+      },
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "https://archive.sacred-texts.com/tarot/pkt/pktar00.htm",
+      "title": "The Pictorial Key to the Tarot: The Fool (Zero) — Sacred Texts transcription",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "retrieval": {
+        "status": "body_read",
+        "method": "web_extract (extractor backend)",
+        "detail": "whole chapter returned and read; Waite's image description ('a young man in gorgeous vestments pauses at the brink of a precipice') and his note that the Trumps Major had no place originally in cartomantic arts"
+      },
+      "topics": [
+        "RWS Fool card iconography",
+        "trumps as game cards before divinatory use"
+      ],
+      "role": "primary_source",
+      "use_for_synthesis": true,
+      "accessed_reason": "accessed during research session on 2026-10-09; exact per-request UTC instant not retained in session log",
+      "notes": "public domain",
+      "extensions": {
+        "sections_read": "The Fool chapter (whole page)"
+      },
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "https://archive.sacred-texts.com/tarot/pkt/pkt0307.htm",
+      "title": "The Pictorial Key to the Tarot: Part III, Section 7 'An Ancient Celtic Method of Divination' — Sacred Texts transcription",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "retrieval": {
+        "status": "body_read",
+        "method": "web_extract (extractor backend)",
+        "detail": "whole section returned and read; full 10-position procedure (Significator selection; covers/crosses/crowns/beneath/behind/before/himself/his house/hopes and fears/what will come) plus repeat rule and court-card positions diagram"
+      },
+      "topics": [
+        "documented 10-card cross reading procedure (1910)",
+        "operational reproducibility for rule-based implementations"
+      ],
+      "role": "primary_source",
+      "use_for_synthesis": true,
+      "accessed_reason": "accessed during research session on 2026-10-09; exact per-request UTC instant not retained in session log",
+      "notes": "public domain; procedure described, no outcome anecdotes anywhere in the section",
+      "extensions": {
+        "sections_read": "Part III section 7 (whole page)"
+      },
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "https://archive.sacred-texts.com/tarot/pkt/index.htm",
+      "title": "The Pictorial Key to the Tarot: Index / Table of Contents — Sacred Texts",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "retrieval": {
+        "status": "sections_read",
+        "method": "web_extract (extractor backend)",
+        "detail": "full chapter list read; confirms structure (3 parts, 99 chapters), Major Arcana order incl. VIII Strength, XI Justice, Zero Fool, XXI World; links scanned"
+      },
+      "topics": [
+        "book structure",
+        "Major Arcana ordering in RWS system"
+      ],
+      "role": "structural",
+      "use_for_synthesis": true,
+      "accessed_reason": "accessed during research session on 2026-10-09; exact per-request UTC instant not retained in session log",
+      "notes": "public domain",
+      "extensions": {
+        "sections_read": "TOC"
+      },
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "https://archive.sacred-texts.com/tarot/mathers/mtar01.htm",
+      "title": "The Tarot (Mathers, 1888): Introduction — Sacred Texts transcription",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "retrieval": {
+        "status": "partial_body_read",
+        "method": "web_extract (extractor backend)",
+        "detail": "introduction read up to extractor truncation; covers 78-card structure (4x14 + 22 trumps), Charles VI/Gringonneur attribution repudiation, Etteilla's Temple of Ptah account, Correr/Venice and Paris cabinet early-card references, Chinese-invention note"
+      },
+      "topics": [
+        "1888 Golden Dawn-era tarot account",
+        "pre-1900 divinatory meanings lineage"
+      ],
+      "role": "primary_source",
+      "use_for_synthesis": true,
+      "accessed_reason": "accessed during research session on 2026-10-09; exact per-request UTC instant not retained in session log",
+      "notes": "public domain; page truncated by extractor near the end",
+      "extensions": {
+        "sections_read": "Introduction (partial)"
+      },
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "https://archive.sacred-texts.com/tarot/mathers/mtar03.htm",
+      "title": "The Tarot (Mathers, 1888): Meanings of the Cards — Sacred Texts transcription",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "retrieval": {
+        "status": "partial_body_read",
+        "method": "web_extract (extractor backend)",
+        "detail": "meanings for all 22 Major Arcana plus first court cards read (truncated around King of Sceptres/entry 24); upright/reversed format documented"
+      },
+      "topics": [
+        "Etteilla-derived Major Arcana meanings (France, 18th-19th c.)"
+      ],
+      "role": "primary_source",
+      "use_for_synthesis": true,
+      "accessed_reason": "accessed during research session on 2026-10-09; exact per-request UTC instant not retained in session log",
+      "notes": "public domain; minor-arcana remainder not read",
+      "extensions": {
+        "sections_read": "Meanings of the Cards (partial)"
+      },
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "https://tarot-heritage.com/history-4/tarot-history-chronology/",
+      "title": "Tarot History Chronology (Tarot Heritage)",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "retrieval": {
+        "status": "sections_read",
+        "method": "web_extract (extractor backend) + full page paged through from saved copy",
+        "detail": "whole chronology paged through (head, middle, tail); entries used: 1660 Noblet, 1736 Chosson, 1760 Conver, 1781 de Gebelin Monde Primitif vol. VIII, 1783 Etteilla manual, 1789 Etteilla deck, 1888 Mathers book, 1909 RWS deck + Pictorial Key, 1930/1948 Marteau Marseille, 1971 U.S. Games RWS rights, 1980 Dummett The Game of Tarot, 1996 A Wicked Pack of Cards debunking"
+      },
+      "topics": [
+        "tarot chronology (15th-20th c.)",
+        "Tarot de Marseille lineage and standardization",
+        "de Gebelin/Etteilla attribution history",
+        "RWS deck publication"
+      ],
+      "role": "secondary_documented",
+      "use_for_synthesis": true,
+      "accessed_reason": "accessed during research session on 2026-10-09; exact per-request UTC instant not retained in session log",
+      "notes": "secondary web chronology (no author byline on page); used for dates only, cross-checked against primary text where possible (1909/1910 vs preface and [1911] imprint noted)",
+      "extensions": {
+        "sections_read": "full page (head + omitted middle + tail)"
+      },
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "https://www.northatlanticbooks.com/shop/holistic-tarot/",
+      "title": "Holistic Tarot — North Atlantic Books publisher page",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "retrieval": {
+        "status": "metadata_only",
+        "method": "web_extract (extractor backend)",
+        "detail": "publisher catalog page read: release date 2015-01-06, ISBN 9781583948354 (paperback) / 9781583948361 (ebook), marketing description; no book body text"
+      },
+      "topics": [
+        "modern tarot teaching book bibliography"
+      ],
+      "role": "bibliography",
+      "use_for_synthesis": false,
+      "accessed_reason": "accessed during research session on 2026-10-09; exact per-request UTC instant not retained in session log",
+      "notes": "modern copyrighted book; catalog-only, not summarized",
+      "extensions": {},
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "https://redwheelweiser.com/book/seventy-eight-degrees-of-wisdom-9781578636655/",
+      "title": "Seventy-Eight Degrees of Wisdom — Red Wheel/Weiser publisher page",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "retrieval": {
+        "status": "metadata_only",
+        "method": "web_extract (extractor backend)",
+        "detail": "publisher page read: 2019-03-01 new edition, ISBN 978-1-57863-665-5, 368 pp, description; no book body text"
+      },
+      "topics": [
+        "modern tarot teaching book bibliography"
+      ],
+      "role": "bibliography",
+      "use_for_synthesis": false,
+      "accessed_reason": "accessed during research session on 2026-10-09; exact per-request UTC instant not retained in session log",
+      "notes": "modern copyrighted book; catalog-only, not summarized",
+      "extensions": {},
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "https://www.amazon.com/Seventy-Eight-Degrees-Wisdom-Rachel-Pollack/dp/0722535724",
+      "title": "Seventy-Eight Degrees of Wisdom (Thorsons 2nd ed. 1998) — retail record",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "retrieval": {
+        "status": "metadata_only",
+        "method": "web_search result snippet",
+        "detail": "snippet + AbeBooks data: Aquarian Press 1980 (Part I) / 1983 (Part II), ISBN 085030220X; Thorsons 2nd ed. 1997/1998 ISBN 978-0722535721; no book body text"
+      },
+      "topics": [
+        "modern tarot teaching book bibliography"
+      ],
+      "role": "bibliography",
+      "use_for_synthesis": false,
+      "accessed_reason": "accessed during research session on 2026-10-09; exact per-request UTC instant not retained in session log",
+      "notes": "modern copyrighted book; catalog-only",
+      "extensions": {},
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "https://archive.org/download/pictorialkeytot00wait/pictorialkeytot00wait_djvu.txt",
+      "title": "The Pictorial Key to the Tarot (Internet Archive scan, djvu.txt) — attempt only",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "retrieval": {
+        "status": "failed",
+        "method": "curl direct download (two attempts, 240s and 300s)",
+        "detail": "connection timeouts; archive.org unreachable from research host; no content retrieved"
+      },
+      "topics": [
+        "alternative full-text mirror (unused)"
+      ],
+      "role": "alternative_mirror_unused",
+      "use_for_synthesis": false,
+      "accessed_reason": "accessed during research session on 2026-10-09; exact per-request UTC instant not retained in session log",
+      "notes": "documented as failed attempt; not used for any claim",
+      "extensions": {},
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "https://web.archive.org/web/2021id_/http://www.sacred-texts.com/tarot/pkt/index.htm",
+      "title": "Wayback Machine snapshot of old Sacred Texts pkt index — attempt only",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "retrieval": {
+        "status": "failed",
+        "method": "curl + extractor",
+        "detail": "gateway timeout / no response; web.archive.org unreachable from research host"
+      },
+      "topics": [
+        "alternative route (unused)"
+      ],
+      "role": "alternative_mirror_unused",
+      "use_for_synthesis": false,
+      "accessed_reason": "accessed during research session on 2026-10-09; exact per-request UTC instant not retained in session log",
+      "notes": "documented as failed attempt",
+      "extensions": {},
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "https://gallica.bnf.fr",
+      "title": "Gallica (BnF) — candidate for Marseille deck scans, attempt only",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "retrieval": {
+        "status": "blocked",
+        "method": "curl HEAD",
+        "detail": "HTTP 403; site blocks automated access; Marseille lineage documented from tarot-heritage chronology instead"
+      },
+      "topics": [
+        "French Marseille deck scans (unused)"
+      ],
+      "role": "candidate_unused",
+      "use_for_synthesis": false,
+      "accessed_reason": "accessed during research session on 2026-10-09; exact per-request UTC instant not retained in session log",
+      "notes": "documented as blocked attempt",
+      "extensions": {},
+      "accessed_on": "2026-10-09"
+    },
+    {
+      "url": "https://www.astronomy.com/wp-content/uploads/2024/01/Forer-fallacy-of-personal-validation-1949.pdf",
+      "title": "Bertram R. Forer, The Fallacy of Personal Validation: A Classroom Demonstration of Gullibility (scanned pp. 118–123)",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "accessed_on": "2026-10-09",
+      "accessed_reason": "Research-session date record; exact per-request instant not retained.",
+      "retrieval": {
+        "status": "sections_read",
+        "method": "vision_analyze of downloaded scan",
+        "detail": "All three scanned page images read; classroom procedure, 39-person tables, 13-item response distribution and 32-person recall table recorded; missing statistics remain unfilled."
+      },
+      "topics": [
+        "personal validation",
+        "generic personality descriptions",
+        "Barnum/Forer effect",
+        "evidence boundary"
+      ],
+      "role": "evidence",
+      "use_for_synthesis": true,
+      "extensions": {
+        "research_scope": "original classroom demonstration",
+        "copyright_boundary": "Original source is not bundled; only concise Chinese synthesis is published.",
+        "independent_review": {
+          "status": "partial",
+          "verified_sections": [
+            "journal 120–121; Table 1; Table 2; initial classroom procedure"
+          ],
+          "not_independently_reverified": [
+            "journal 122–123; Table 3; 1% t-test; author interpretation of recall"
+          ],
+          "reason": "image service errors persisted after permitted retries and JPEG conversion; PDF text layer empty",
+          "original_reading_record_retained": true
+        }
+      }
+    },
+    {
+      "url": "https://doi.org/10.1037/h0059240",
+      "title": "APA DOI metadata for Forer 1949 article",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "accessed_on": "2026-10-09",
+      "accessed_reason": "Research-session date record; exact per-request instant not retained.",
+      "retrieval": {
+        "status": "metadata_only",
+        "method": "web_search metadata cross-check",
+        "detail": "Bibliographic cross-check only: 1949, Journal of Abnormal and Social Psychology 44(1), pp. 118–123; not used as article-body evidence."
+      },
+      "topics": [
+        "bibliographic verification"
+      ],
+      "role": "bibliography",
+      "use_for_synthesis": false,
+      "extensions": {
+        "research_scope": "bibliographic metadata",
+        "copyright_boundary": "Original source is not bundled; only concise Chinese synthesis is published."
+      }
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18110193/",
+      "title": "PubMed record for Forer 1949 article",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "accessed_on": "2026-10-09",
+      "accessed_reason": "Research-session date record; exact per-request instant not retained.",
+      "retrieval": {
+        "status": "blocked",
+        "method": "browser retrieval",
+        "detail": "Cookie/PoW challenge page returned; no article body used."
+      },
+      "topics": [
+        "retrieval limitation"
+      ],
+      "role": "retrieval_limit",
+      "use_for_synthesis": false,
+      "extensions": {
+        "research_scope": "failed candidate retained for audit",
+        "copyright_boundary": "Original source is not bundled; only concise Chinese synthesis is published."
+      }
+    },
+    {
+      "url": "https://traditionaltarot.wordpress.com/2021/04/23/paul-marteau-editions-of-le-tarot-de-marseille-and-the-ancien-tarot-de-marseille/",
+      "title": "Traditional Tarot: Marteau editions (secondary version research)",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "retrieval": {
+        "status": "partial_body_read",
+        "method": "public body retrieval; original Chinese synthesis only",
+        "detail": "Introduction and notes read via web_extract. The page states 1949 for the book; Tarot Heritage states 1948. Conflict retained; no claim of first-ever Marseille reading method."
+      },
+      "topics": [
+        "translator introduction",
+        "note 8"
+      ],
+      "role": "secondary_documented",
+      "use_for_synthesis": true,
+      "accessed_on": "2026-10-09",
+      "accessed_reason": "Exact retrieval instant not retained; session date only.",
+      "extensions": {
+        "sections_read": [
+          "translator introduction",
+          "note 8"
+        ],
+        "copyright_boundary": "Only bibliography and original concise synthesis published; no source body bundled."
+      }
     }
   ],
   "extensions": {

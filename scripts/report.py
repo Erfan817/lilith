@@ -392,7 +392,10 @@ def checked_output_path(input_path, output_path):
 
 
 def write_report(output, document, overwrite=False):
-    """Publish a mode-0600 complete HTML atomically without following file links."""
+    """Publish complete HTML atomically without following file links.
+
+    Files have mode 0600 on POSIX; Windows privacy depends on filesystem ACLs.
+    """
     output = Path(output)
     if output.is_symlink():
         raise ValueError("输出不能是符号链接；请指定独立 HTML 文件。")

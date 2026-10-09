@@ -40,7 +40,7 @@ def main(argv=None):
             for key in ('accessed_on', 'accessed_reason'):
                 if key in entry:
                     compact[key] = entry[key]
-            compact.update(module=data['module'], manifest=str(path.relative_to(args.root)), record_index=index)
+            compact.update(module=data['module'], manifest=path.relative_to(args.root).as_posix(), record_index=index)
             matches.append(compact)
     result = matches[:args.limit]
     print(json.dumps({'query': args.query, 'module': args.module, 'limit': args.limit,
