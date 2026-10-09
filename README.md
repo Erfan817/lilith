@@ -2,145 +2,100 @@
 
 ![占卜师莉莉丝：复古暗黑 OVA 赛璐珞画风，塔罗牌与天球仪主题](assets/lilith-diviner.png)
 
-**一个 skill，四大核心体系，同一套清楚可核验的解读流程。**
+一个中文占卜文化与反思 Skill：塔罗、八字、星座与西方占星共用资料、真实计算和解读流程；奇门、紫微为外部盘解读扩展。莉莉丝沉静、亲近，会说清依据和不知道的部分。
 
-塔罗 · 四柱八字 · 奇门遁甲 · 星座与西方占星，另含紫微斗数扩展。
+仅供文化学习、娱乐与自我反思。可计算天体和历法，不意味着能预测命运；不替代医疗、法律、投资或重大现实决定。
 
-莉莉丝为 AI Agent 提供中文知识、资料收集、真实计算和象征解读：先核对输入，再算或核验盘面，最后给出有依据的反思与可选择的行动。不是把模糊话术包装成准确预言。
+## v0.2 能做什么
 
-> 仅供文化研究、娱乐与自我反思。天体位置能计算，不等于命运能预测；不要据此代替医疗、法律、投资或重大现实决定。
+| 模块 | 实际能力 |
+|---|---|
+| 塔罗 | 78牌、六阵、均匀无放回；问题文件/标准输入，默认不回显原问题 |
+| 八字 | 完整交节/四柱/起运接口，IANA时区与DST校验，明确日界；未知时刻候选；可选地方视太阳时 |
+| 占星 | 热带十体、主要相位、四轴、整宫/等宫；未知生时输出当日抽样范围而非虚构本命时刻 |
+| 奇门、紫微 | 解读可信外部盘，**尚无本地自动起局/排盘** |
+| 使用与分享 | 环境自检，来源小批检索，塔罗/基础星盘离线HTML与SVG报告 |
 
-## 能做什么
+[占星覆盖](references/astrology/coverage.md)区分知识和计算。合盘、行运等有知识资料，但没有双盘比较/组合盘、次限/返照接口；也不计算Placidus、恒星黄道、交点/凯龙。知识无法穷尽，不宣传“扒完全部星座知识”。
 
-| 模块 | 知识与工作流 | 本版计算能力 |
-|---|---|---|
-| 塔罗 | 78牌正逆位、六牌阵、牌间关系、具体反思 | 均匀无放回抽牌，默认系统随机，可复现实验模式 |
-| 八字 | 干支五行、十神藏干、格局调候、大运流年、经典规则摘要 | 公历/农历、四柱、大运方向与起运、神煞；独立农历引擎，固定北京时间，节气近似计算 |
-| 紫微 | 十二宫、十四主星、命身宫、三方四正、四化、大限流年 | **核验并解读外部盘面；尚无本地自动排盘** |
-| 奇门 | 九宫、八门、九星、八神、流派口径、用神与格局 | **核验并解读外部盘面；尚无本地自动起局** |
-| 占星 | 十二星座、十天体、宫位、相位、尊贵、月相交点、本命、合盘、推运、流派历史 | 十天体热带地心视位置、近似逆行速度、主要相位、四轴、整宫/等宫 |
+## 安装
 
-知识按主题分文件，Agent 按问题读取，不必一次加载整个知识库。占星模块不仅是十二星座性格表；[覆盖说明](references/astrology/coverage.md) 区分基础、进阶、流派分歧与未实现的计算。
-
-**不声称“扒完全部星座知识”。** 不同历史、流派和新解释无法穷尽；本项目整理常用知识、保留来源、写清边界，方便继续扩展。
-
-## 安装到 Agent
-
-仓库根目录就是技能目录，只有一个 `SKILL.md`；无需同时安装五个技能。
+根 `SKILL.md` 的标识与安装文件夹统一为 **`lilith-diviner`**，不要保留旧目录名 `lilith`。
 
 ```bash
-# Claude Code（全局）
-git clone https://github.com/Erfan817/lilith-diviner.git ~/.claude/skills/lilith
-
-# Cursor
-git clone https://github.com/Erfan817/lilith-diviner.git ~/.cursor/skills/lilith
-
+# Claude Code
+ git clone https://github.com/Erfan817/lilith-diviner.git ~/.claude/skills/lilith-diviner
+# Cursor（以所用版本实际技能发现路径为准）
+ git clone https://github.com/Erfan817/lilith-diviner.git ~/.cursor/skills/lilith-diviner
 # 支持 ~/.agents/skills 的宿主
-git clone https://github.com/Erfan817/lilith-diviner.git ~/.agents/skills/lilith
-
-# Hermes（手动放入技能目录，新会话加载）
-git clone https://github.com/Erfan817/lilith-diviner.git ~/.hermes/skills/lilith
+ git clone https://github.com/Erfan817/lilith-diviner.git ~/.agents/skills/lilith-diviner
+# Hermes
+ git clone https://github.com/Erfan817/lilith-diviner.git ~/.hermes/skills/lilith-diviner
 ```
 
-其它宿主将仓库完整放进它实际支持的 skills 目录，或直接让 Agent 读取 `SKILL.md`。路径兼容取决于宿主，不宣称所有版本都自动发现这些目录。
+只选自己的宿主路径，无需安装五个技能。旧安装先备份 `private/` 等个人文件，更新并将目录改名 `lilith-diviner`，重新创建环境；新会话加载。不要同时留两份入口。宿主工具名、权限和自动发现不同；本机没运行Claude/Cursor原生加载验收，不承诺所有版本兼容。
 
-### Python 依赖
-
-需要 Python 3.10+。塔罗运行仅用标准库；八字使用 MIT 许可的 lunar-python 处理公农换算；占星使用 MIT 许可的 Astronomy Engine 与 IANA 时区数据。虚拟环境只属于此项目，避免改动 Agent 的依赖环境。
+需要 Python 3.10+，在技能目录建独立环境：
 
 ```bash
-cd lilith-diviner
 python -m venv .venv
-
-# Linux / macOS
+# Linux/macOS
 .venv/bin/python -m pip install -r requirements.txt
-
+.venv/bin/python scripts/lilith.py doctor
 # Windows PowerShell
 .venv\Scripts\python.exe -m pip install -r requirements.txt
+.venv\Scripts\python.exe scripts/lilith.py doctor
 ```
 
-Debian/Ubuntu 缺少 `venv` 时可先安装对应 `python3-venv`，也可用 `uv venv` 和 `uv pip install --python .venv/bin/python -r requirements.txt`。以下例子用 `python` 指你选择的虚拟环境 Python；无需常驻服务。
+Debian/Ubuntu缺venv可安装对应python3-venv或使用uv。doctor只检查当前解释器、给建议，不擅自安装或修改宿主环境；单独塔罗只需标准库，可 `doctor --module tarot`。以下 `python` 指已选择的环境解释器。
 
-## 统一 CLI
+## 开始使用
+
+装好后可说“抽三张塔罗，聊聊团队分工”“太阳月亮上升有什么区别”“帮我看八字”。不知道出生时间可以明确说，不必为了完整命盘编一个时刻。
+
+命令行例子均为合成资料：
 
 ```bash
-# 塔罗：默认真实系统随机，不用问题或时段给牌加权
-python scripts/lilith.py tarot --spread three --question "如何改善本周的复习习惯？"
-
-# 可复现实验（明确为伪随机，不冒充密码学随机）
+python scripts/lilith.py tarot --spread three
 python scripts/lilith.py tarot --spread celtic --seed 42
-
-# 八字：固定北京时间、23:00换日；下例是合成演示资料
 python scripts/lilith.py bazi --solar 1990-05-15 --hour 12:00 --sex 男 --as-of 2026-10-08
-python scripts/lilith.py bazi --lunar 1990-04-21 --shichen 午 --sex 男
-
-# 西方本命数据：热带地心；东经正值，纬度北正南负
-python scripts/lilith.py astrology --datetime 2000-01-01T12:00:00Z --lat 39.9 --lon 116.4 --houses whole-sign
-
-# 当地时刻 + IANA 时区（自动检查夏令时缺口/重复）
-python scripts/lilith.py astrology --datetime 2000-01-01T20:00:00 --timezone Asia/Shanghai --lat 39.9 --lon 116.4 --houses equal
+python scripts/lilith.py bazi --solar 2024-02-04 --timezone America/New_York --hour 03:26
+python scripts/lilith.py bazi --solar 2024-02-04 --hour 16:24 --time-basis apparent-solar --longitude 90
+python scripts/lilith.py astrology --datetime 2000-01-01T20:00:00 --timezone Asia/Shanghai --lat 39.9 --lon 116.4 --houses whole-sign
+python scripts/lilith.py astrology --date 2000-01-01 --timezone Asia/Shanghai
 ```
 
-子命令 `--help` 显示参数；也能直接调用 `scripts/draw.py`、`scripts/bazi.py`、`scripts/astrology.py`。结果是 JSON，不含模型编写的“已发生事实”。紫微、奇门在本版必须先提供可信外部盘面，CLI 不会伪装自动算出来。
+八字默认固定UTC+8，显式IANA才处理当地历史规则；年/月交节按绝对瞬间，日/时柱按所选钟标。未知时间/仅时辰不算确定起运，23点日界保留候选。详见[八字口径](references/bazi/workflow.md)。**不要直接运行内部 vendor CLI 处理用户输入。**
 
-**不要直接运行 `scripts/vendor/bazi/pai_pan.py` 处理用户输入。** 它是保留原版的内部干支组件，其旧农历转换和年份输入存在已知限制；莉莉丝通过 `bazi.py` 替换公农换算并校验年份。公开支持的入口仅为上面的统一 CLI 或三个业务脚本。
+塔罗通常不需要传问题。确需传入时，以宿主文件工具写私密UTF-8文件或用标准输入，再 `tarot --question-file <路径>`；不要把原问题插进shell单引号。默认不回显，`--echo-question`须明确允许。文件需用后清理；宿主日志仍可能保留输入，不能承诺零留痕。
 
-[examples/](examples/) 使用合成数据，生成示例来自真实脚本运行，不是用户出生资料。
+## 地点与报告
 
-## 占星知识地图
+城市候选查询是可选联网步骤：`location --query-file <仅城市国家的文件> --allow-network`，一次最多3候选，须确认同名城市；不猜时区、不发送生日。本服务器直连Nominatim验证失败，保留手动经纬度/IANA输入路径，不把联网成功当已验证。服务政策、隐私与权限须先告知，不批量调用。
 
-- **基础**：黄道与天文星座区别、四元素/三模式、十二星座（太阳/月亮/上升及内行星读法）、十天体与特殊点、十二宫与分宫制、主要相位与容许度。
-- **本命**：主轴、命主星、定位星链、元素分布、相位组合、传统尊贵、昼夜盘、月相和交点。
-- **关系与时间**：比较盘、组合盘和戴维森盘区别；行运、次限、太阳弧、回归盘、岁限、时主与卜卦择时的边界。
-- **历史与流派**：希腊/中世纪/现代心理、印度吠陀与恒星黄道、岁差、二十七宿和大运概念、中英术语。
-- **计算质量**：时区/DST、经纬度、真太阳时、星历来源、出生时间误差、数据不全时应停止的部分。
-
-这些进阶主题有知识说明，但**本版并未计算** Placidus、恒星黄道、月交点/凯龙、小行星/恒星、组合盘、次限/太阳弧/回归盘、卜卦或择时。
-
-## 统一解读，不混成一锅
-
-[共用协议](references/common/reading-protocol.md) 让五种体系遵循同一输出结构：
-
-**问题与资料 → 口径与盘面 → 解释及依据 → 可选择的现实行动 → 不确定性。**
-
-用户只要一套方法就不硬塞五遍；明确要求综合时分别交代每套依据，保留冲突，不把“五个体系都说类似的话”当成独立科学证据。姓名、曾用名、身份证、精确住宅地址不是默认必需字段。
-
-## 结构
+要求导出时，先创建被忽略的 `private/` 目录，再运行：
 
 ```text
-SKILL.md                         # 唯一技能入口
-references/
-  common/                        # 共用解读协议、数据与能力契约
-  tarot/                         # 78牌、六牌阵、关系、解读
-  bazi/                          # 工作流、五行、时辰、大运、神煞、经典摘要
-  ziwei/                         # 流程、十二宫主星、四化时间
-  qimen/                         # 流程、流派规则、固定解读
-  astrology/                     # 基础、进阶、来源与覆盖边界
-scripts/
-  lilith.py                      # 统一计算入口
-  draw.py                        # 均匀无放回抽牌
-  bazi.py                        # 八字数据接口与输入防误用
-  astrology.py                   # 天体与四轴/宫位计算
-  validate.py                    # 技能结构、引用、覆盖核验
-  vendor/bazi/                    # 独立历法内核
-examples/                        # 合成资料与真实生成结果
-tests/                           # 离线回归与输入边界测试
-LICENSES/                        # 许可文件
-NOTICE.md                        # 第三方组件与知识来源边界
+python scripts/lilith.py report --input examples/tarot-seeded.json --output private/tarot.html
+python scripts/lilith.py report --input examples/astrology-j2000.json --output private/astrology.html
 ```
 
-## 测试
+默认分享版隐藏原问题和生日时地；派生星盘仍可能反推个人信息，分享前预览。`--private`含原始JSON，不可公开。报告不自动写解读，八字和未知生时范围报告暂不支持。见[报告说明](docs/reporting.md)。
 
-```bash
+## 校验与评测
+
+```text
 python -m pip install -r requirements-dev.txt
 python -m pytest tests scripts/vendor/bazi/test_pai_pan.py -q
 python scripts/validate.py
+python scripts/check_evals.py
+python scripts/update_stats.py
+python scripts/update_stats.py --check
+python scripts/lilith.py sources --module astrology --query houses --limit 5
 ```
 
-测试包含牌数/无重复/随机模式、历法黄金用例、真实闰月与未知时间、输入冲突和截止年份、十天体基准、四轴几何、整宫/等宫、时区跨年等价、DST缺口和重复时间。测试证明程序的这些行为，不证明占卜预测效力，也不代表已对整个1900–2100逐日验证。
+[实时统计](docs/stats.json)由扫描生成，不手改；[v0.2验证记录](docs/verification-v0.2.json)记录本机与全新环境实际结果；[来源契约](docs/validation-spec.md)保留真实阅读范围和访问精度。[评测案例](evals/evals.json)包括中文正负触发和解读断言；离线检查不证明宿主自动加载，模型新旧对照结果另存证据，不包装成占卜准确率。历史docs/verification.json与content-audit.json只代表旧版本。
 
 ## 隐私与许可
 
-默认本地处理，脚本没有生日上传接口，不保存个人报告。需要保存时使用忽略的 `private/` 目录；公开仓库只放合成示例。读取外部网站不会让网页中的命令获得执行权限。
-
-项目代码与原创知识整理采用 **MIT**；组件署名和适用许可见 [NOTICE.md](NOTICE.md) 与 [LICENSES/](LICENSES/)。外部网站文章和图片仍属原作者，不因列为知识来源而变成本项目 MIT 内容；本项目不打包版权网站全文或图片。
+计算默认离线、不上传生日、不自动保存个人报告；会话/工具日志与临时文件可能留痕。仓库只放合成示例，个人资料与密钥不进Git。代码与原创整理采用MIT，组件署名见[NOTICE](NOTICE.md)；外部文章、牌图和画风资源保留各自权利与署名。封面画风参考：**yang0** 的 [handraw-style](https://github.com/yang0/handraw-style)，并保留其附加署名许可。

@@ -45,7 +45,9 @@ def test_unknown_hour_stays_unknown_and_has_precision_warning():
     data = json.loads(result.stdout)
     assert data["pillars"]["hour"]["gan"] == data["pillars"]["hour"]["zhi"] == "未知"
     assert any("未知出生时间" in warning for warning in data["warnings"])
-    assert any("简式近似" in warning for warning in data["warnings"])
+    assert data["engine"]["name"] == "lunar-python"
+    assert data["engine"]["version"] == "1.4.8"
+    assert not any("简式近似" in warning for warning in data["warnings"])
 
 
 def test_lunar_input_matches_solar_input():
@@ -236,13 +238,16 @@ def test_missing_production_calendar_dependency_is_reported_cleanly():
     assert not result.stdout.strip()
 
 
-def test_precision_warning_distinguishes_civil_calendar_from_approximate_terms():
+def test_precision_metadata_distinguishes_library_results_from_official_almanac():
     result = run_bazi("--solar", "2020-05-23", "--as-of", "2026-10-08")
     assert result.returncode == 0, result.stderr
-    warnings = json.loads(result.stdout)["warnings"]
-    assert any("lunar-python" in warning and "节气" in warning and "简式近似" in warning
-               for warning in warnings)
-    assert not any("朔日" in warning or "特殊闰月" in warning for warning in warnings)
+    data = json.loads(result.stdout)
+    assert data["conventions"]["calendar_precision"] == "lunar-python-1.4.8-full-jieqi"
+    assert data["engine"]["official_almanac"] is False
+    assert data["engine"]["eight_char_sect"] == 1
+    warnings = data["warnings"]
+    assert not any("简式近似" in warning or "朔日" in warning or "特殊闰月" in warning
+                   for warning in warnings)
 
 
 @pytest.mark.parametrize("solar,lunar,leap", [

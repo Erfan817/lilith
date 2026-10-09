@@ -1,12 +1,30 @@
 {
   "schema_version": "1.0",
   "system": "bazi",
+  "engine": {
+    "name": "lunar-python",
+    "version": "1.4.8",
+    "eight_char_sect": 1,
+    "yun_sect": 2,
+    "official_almanac": false
+  },
+  "uncertainty": {
+    "time_known": true,
+    "pillars": {},
+    "candidates": [],
+    "candidate_limit": 8,
+    "dayun": null
+  },
   "input": {
     "solar": "1990-05-15 12:00",
     "lunar": "1990年四月廿一",
     "hour": "午 / 12:00",
     "sex_convention": "男",
-    "place": null
+    "place": null,
+    "civil_time": "1990-05-15T12:00:00+08:00",
+    "calendar_time": "1990-05-15T12:00:00+08:00",
+    "fold": null,
+    "pillar_time": "1990-05-15T12:00:00+08:00"
   },
   "conventions": {
     "timezone": "UTC+08:00",
@@ -14,7 +32,11 @@
     "month_boundary": "twelve-jie",
     "day_boundary": "23:00-next-day",
     "true_solar_time": false,
-    "calendar_precision": "approximate; boundary cross-check required"
+    "calendar_precision": "lunar-python-1.4.8-full-jieqi",
+    "solar_correction": null,
+    "term_basis": "absolute-instant",
+    "day_hour_basis": "local-civil",
+    "calendar_timezone": "UTC+08:00"
   },
   "pillars": {
     "year": {
@@ -46,55 +68,129 @@
     "direction": "forward",
     "start_age": {
       "years": 7,
-      "months": 3
+      "months": 3,
+      "days": 3,
+      "hours": 20
     },
+    "start_solar": "1997-08-19T08:00:00+08:00",
+    "start_solar_timezone": "UTC+08:00",
     "rows": [
       [
-        "起运前",
-        "0岁-7岁3个月",
-        "辛巳（小运）"
-      ],
-      [
         "1",
-        "7-16岁",
+        "8-17岁",
         "壬午"
       ],
       [
         "2",
-        "17-26岁",
+        "18-27岁",
         "癸未"
       ],
       [
         "3",
-        "27-36岁",
+        "28-37岁",
         "甲申"
       ],
       [
         "4",
-        "37-46岁",
+        "38-47岁",
         "乙酉"
       ],
       [
         "5",
-        "47-56岁",
+        "48-57岁",
         "丙戌"
       ],
       [
         "6",
-        "57-66岁",
+        "58-67岁",
         "丁亥"
       ],
       [
         "7",
-        "67-76岁",
+        "68-77岁",
         "戊子"
       ],
       [
         "8",
-        "77-86岁",
+        "78-87岁",
         "己丑"
       ]
-    ]
+    ],
+    "periods": [
+      {
+        "index": 0,
+        "ganzhi": "",
+        "start_year": 1990,
+        "end_year": 1996,
+        "start_age": 1,
+        "end_age": 7
+      },
+      {
+        "index": 1,
+        "ganzhi": "壬午",
+        "start_year": 1997,
+        "end_year": 2006,
+        "start_age": 8,
+        "end_age": 17
+      },
+      {
+        "index": 2,
+        "ganzhi": "癸未",
+        "start_year": 2007,
+        "end_year": 2016,
+        "start_age": 18,
+        "end_age": 27
+      },
+      {
+        "index": 3,
+        "ganzhi": "甲申",
+        "start_year": 2017,
+        "end_year": 2026,
+        "start_age": 28,
+        "end_age": 37
+      },
+      {
+        "index": 4,
+        "ganzhi": "乙酉",
+        "start_year": 2027,
+        "end_year": 2036,
+        "start_age": 38,
+        "end_age": 47
+      },
+      {
+        "index": 5,
+        "ganzhi": "丙戌",
+        "start_year": 2037,
+        "end_year": 2046,
+        "start_age": 48,
+        "end_age": 57
+      },
+      {
+        "index": 6,
+        "ganzhi": "丁亥",
+        "start_year": 2047,
+        "end_year": 2056,
+        "start_age": 58,
+        "end_age": 67
+      },
+      {
+        "index": 7,
+        "ganzhi": "戊子",
+        "start_year": 2057,
+        "end_year": 2066,
+        "start_age": 68,
+        "end_age": 77
+      },
+      {
+        "index": 8,
+        "ganzhi": "己丑",
+        "start_year": 2067,
+        "end_year": 2076,
+        "start_age": 78,
+        "end_age": 87
+      }
+    ],
+    "period_age_convention": "nominal-year-age"
   },
   "current_year": 2026,
   "current_ganzhi": "丙午",
@@ -112,7 +208,7 @@
     "- 寡宿 — 见于日支 — 年支"
   ],
   "warnings": [
-    "公农历换算采用 lunar-python；四柱与起运使用的节气时刻仍为简式近似，交界请用独立历书交叉核验。",
-    "固定北京时间；未做历史夏令时、海外时区或真太阳时校正。"
+    "节气与四柱采用 lunar-python 1.4.8 完整接口；库结果并非官方历书认证。",
+    "默认固定北京时间 UTC+08:00；未指定当地时区时不自动处理历史夏令时。"
   ]
 }

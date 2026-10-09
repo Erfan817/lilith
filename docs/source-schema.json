@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lilith provenance manifest v2",
+  "description": "Historical reading records, not a claim that every candidate was read or used. Runtime validation also checks real calendar dates, URL ports/credentials and module-directory equality.",
+  "type": "object",
+  "required": ["schema_version", "module", "documents", "source_policy", "sources"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"type": "integer", "const": 2},
+    "module": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$"},
+    "documents": {
+      "type": "array", "minItems": 1,
+      "items": {"type": "string", "pattern": "^(?!/)(?!.*\\\\)(?!.*(?:^|/)\\.\\.(?:/|$)).+\\.md$"}
+    },
+    "source_policy": {"$ref": "#/$defs/nonblank"},
+    "sources": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/source"}},
+    "extensions": {"type": "object", "description": "Unmodified historical envelope, including old notes, scopes and counters. Old counters are archival, never authoritative live statistics."}
+  },
+  "$defs": {
+    "nonblank": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "source": {
+      "type": "object",
+      "required": ["url", "title", "accessed_at", "accessed_precision", "retrieval", "topics", "use_for_synthesis", "role"],
+      "additionalProperties": true,
+      "properties": {
+        "url": {"type": "string", "format": "uri", "pattern": "^https?://[^/\\s?#]+(?:[/\\?#][^\\s]*)?$"},
+        "title": {"$ref": "#/$defs/nonblank"},
+        "accessed_at": {"type": ["string", "null"], "description": "Recorded historical access instant; null for date-only or unknown historical precision. Never use migration time here."},
+        "accessed_precision": {"enum": ["instant", "date", "unknown"]},
+        "accessed_on": {"type": "string", "format": "date", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "description": "Original calendar date retained as-is; not converted to midnight."},
+        "accessed_reason": {"$ref": "#/$defs/nonblank"},
+        "retrieval": {
+          "type": "object", "required": ["status", "method", "detail"], "additionalProperties": true,
+          "properties": {
+            "status": {"enum": ["body_read", "sections_read", "partial_body_read", "code_read", "provenance_review", "metadata_only", "index_only", "image_only", "blocked", "failed", "excluded"]},
+            "method": {"$ref": "#/$defs/nonblank"},
+            "detail": {"$ref": "#/$defs/nonblank"}
+          }
+        },
+        "topics": {"type": "array", "items": {"$ref": "#/$defs/nonblank"}},
+        "use_for_synthesis": {"type": "boolean"},
+        "role": {"$ref": "#/$defs/nonblank"},
+        "notes": {"oneOf": [{"type": "string"}, {"type": "array", "items": {"type": "string"}}]},
+        "extensions": {"type": "object", "description": "Original complete entry and historical group; optional metadata_retrieval with its own actual lookup time and metadata_only status."}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"accessed_precision": {"const": "instant"}}, "required": ["accessed_precision"]},
+          "then": {"properties": {"accessed_at": {"type": "string", "format": "date-time", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(?:\\.[0-9]+)?(?:Z|[+-](?:[01][0-9]|2[0-3]):[0-5][0-9])$"}}},
+          "else": {"properties": {"accessed_at": {"type": "null"}}, "required": ["accessed_reason"]}
+        },
+        {
+          "if": {"properties": {"accessed_precision": {"const": "date"}}, "required": ["accessed_precision"]},
+          "then": {"required": ["accessed_on", "accessed_reason"]}
+        },
+        {
+          "if": {"properties": {"accessed_precision": {"const": "unknown"}}, "required": ["accessed_precision"]},
+          "then": {"not": {"required": ["accessed_on"]}}
+        },
+        {
+          "if": {"properties": {"use_for_synthesis": {"const": true}}, "required": ["use_for_synthesis"]},
+          "then": {"properties": {"retrieval": {"properties": {"status": {"enum": ["body_read", "sections_read", "partial_body_read", "code_read"]}}}}}
+        }
+      ]
+    }
+  }
+}

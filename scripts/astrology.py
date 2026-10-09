@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Tropical, apparent geocentric longitude data; not a destiny predictor."""
 import argparse
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from importlib.metadata import version
 import itertools
 import json
@@ -13,7 +13,7 @@ BODIES = {"Sun": "太阳", "Moon": "月亮", "Mercury": "水星", "Venus": "金�
 ASPECTS = (("合相", 0, 8), ("六合", 60, 4), ("刑相", 90, 6), ("拱相", 120, 6), ("对冲", 180, 8))
 
 
-def parse_datetime(text, zone=None, fold=None):
+def parse_datetime(text, zone=None, fold=None, *, allow_upper_endpoint=False):
     if "T" not in text and " " not in text:
         raise ValueError("日期缺出生时刻；不能用午夜代替未知时间")
     dt = datetime.fromisoformat(text.replace("Z", "+00:00"))
@@ -41,7 +41,9 @@ def parse_datetime(text, zone=None, fold=None):
     if dt.tzinfo is None or dt.utcoffset() is None:
         raise ValueError("--datetime 必须带明确的 UTC 偏移，如 +08:00 或 Z")
     dt = dt.astimezone(timezone.utc)
-    if not datetime(1900, 1, 1, tzinfo=timezone.utc) <= dt < datetime(2101, 1, 1, tzinfo=timezone.utc):
+    lower = datetime(1900, 1, 1, tzinfo=timezone.utc)
+    upper = datetime(2101, 1, 1, tzinfo=timezone.utc)
+    if not lower <= dt < upper and not (allow_upper_endpoint and dt == upper):
         raise ValueError("本项目验证范围为 UTC [1900-01-01T00:00:00Z, 2101-01-01T00:00:00Z)")
     return dt
 
@@ -124,9 +126,45 @@ def chart(text, latitude=None, longitude=None, house_system="whole-sign", zone=N
     }
 
 
+def date_ranges(text, zone):
+    """Sample a known civil day; report uncertainty rather than an invented time."""
+    import astronomy
+    if not zone:
+        raise ValueError("未知出生时刻模式仍需 --timezone 确认民用日期范围")
+    day = date.fromisoformat(text)
+    start = parse_datetime(day.isoformat() + "T00:00:00", zone)
+    end = parse_datetime((day + timedelta(days=1)).isoformat() + "T00:00:00", zone, allow_upper_endpoint=True)
+    if end <= start:
+        raise ValueError("该民用日期不存在或无法形成有效时间区间")
+    samples = [start + (end - start) * index / 96 for index in range(97)]
+    ranges = {}
+    for name, label in BODIES.items():
+        longitudes = [astronomy.Ecliptic(astronomy.GeoVector(getattr(astronomy.Body, name),
+                      astronomy.Time(moment.isoformat().replace("+00:00", "Z")), True)).elon % 360
+                      for moment in samples]
+        base = longitudes[0]
+        offsets = [(value - base + 180) % 360 - 180 for value in longitudes]
+        ranges[name] = {"name": label, "start_longitude": base, "end_longitude": longitudes[-1],
+                        "min_offset_from_start": min(offsets), "max_offset_from_start": max(offsets),
+                        "sampled_signs": list(dict.fromkeys(SIGNS[int(value // 30)] for value in longitudes))}
+    return {"schema_version": "1.1", "mode": "unknown-time-day-range", "time_known": False,
+            "zodiac": "tropical", "frame": "geocentric-apparent-ecliptic-of-date",
+            "engine": {"name": "astronomy-engine", "version": version("astronomy-engine")},
+            "date_range": {"date": text, "timezone": zone, "start_utc": start.isoformat(),
+                           "end_utc": end.isoformat(), "end_exclusive": True},
+            "range_method": "97-point sampled day including endpoint for bounds; not a solved ingress search",
+            "body_ranges": ranges, "bodies": None, "angles": None, "houses": None, "aspects": None,
+            "location": None,
+            "warnings": ["出生时刻未知：只给当日抽样范围；不把任何样本当成本命时刻。",
+                         "端点只用于范围包络；换座和停滞附近需精确搜索，抽样不是完整误差证明。",
+                         "不输出上升、宫位、精确月亮位置或相位；天体坐标不证明占星预测有效。"]}
+
+
 def main():
     parser = argparse.ArgumentParser(description="西方占星天文数据（热带黄道，十天体）")
-    parser.add_argument("--datetime", required=True, help="带 UTC 偏移的公历 ISO 日期时间")
+    times = parser.add_mutually_exclusive_group(required=True)
+    times.add_argument("--datetime", help="带 UTC 偏移的公历 ISO 日期时间")
+    times.add_argument("--date", help="仅知公历日期 YYYY-MM-DD；需 --timezone，输出抽样范围")
     parser.add_argument("--lat", type=float)
     parser.add_argument("--lon", type=float)
     parser.add_argument("--houses", choices=("whole-sign", "equal"), default="whole-sign")
@@ -134,7 +172,12 @@ def main():
     parser.add_argument("--fold", choices=(0, 1), type=int, help="夏令时重复时间第0/1次")
     args = parser.parse_args()
     try:
-        result = chart(args.datetime, args.lat, args.lon, args.houses, args.timezone, args.fold)
+        if args.date:
+            if args.lat is not None or args.lon is not None or args.fold is not None:
+                raise ValueError("未知时刻模式不接受经纬度或 --fold，不能借此计算四轴")
+            result = date_ranges(args.date, args.timezone)
+        else:
+            result = chart(args.datetime, args.lat, args.lon, args.houses, args.timezone, args.fold)
     except ImportError:
         parser.error("缺少依赖，请在虚拟环境安装 requirements.txt")
     except (ValueError, OverflowError) as exc:

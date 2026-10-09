@@ -1,203 +1,565 @@
 {
-  "schema_version": "1.0",
-  "brand": "莉莉丝 Lilith",
-  "module_content": "原创中文文化、娱乐与反思参考；无独立 SKILL 入口",
-  "source_policy": "只使用已检索并实际读取的知识资料；不把搜索摘要当正文，未读尾部明确标注；不转载来源表达或媒体；公开资料不等于获再分发授权；预测及超自然主张不获科学背书",
-  "personal_chart_data_included": false,
+  "schema_version": 2,
   "module": "ziwei",
-  "files": [
+  "documents": [
     "workflow.md",
     "palaces-and-stars.md",
     "sihua-and-timing.md"
   ],
-  "local_chart_engine_implemented": false,
-  "knowledge_sources": [
+  "source_policy": "只使用已检索并实际读取的知识资料；不把搜索摘要当正文，未读尾部明确标注；不转载来源表达或媒体；公开资料不等于获再分发授权；预测及超自然主张不获科学背书",
+  "sources": [
     {
-      "id": "ZI-BASIS",
-      "title": "紫微斗数基础",
       "url": "https://iztro.com/learn/basis",
-      "publisher_or_author": "紫微研习社；iztro 文档",
+      "title": "紫微斗数基础",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "topics": [
+        "结构名词及与安星计算分开的阅读层次"
+      ],
+      "role": "knowledge",
+      "extensions": {
+        "legacy_group": "knowledge_sources",
+        "legacy": {
+          "id": "ZI-BASIS",
+          "title": "紫微斗数基础",
+          "url": "https://iztro.com/learn/basis",
+          "publisher_or_author": "紫微研习社；iztro 文档",
+          "accessed_on": "2026-10-08",
+          "retrieval_method": "web_extract",
+          "read_scope": "实际读取本宫、对宫、三合、三方四正、空宫、会照等术语",
+          "used_for": "结构名词及与安星计算分开的阅读层次",
+          "limitations": "网页属于传统文化和软件资料，非预测准确性或人格效度证据",
+          "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
+          "copied_text_or_media": false
+        }
+      },
       "accessed_on": "2026-10-08",
-      "retrieval_method": "web_extract",
-      "read_scope": "实际读取本宫、对宫、三合、三方四正、空宫、会照等术语",
-      "used_for": "结构名词及与安星计算分开的阅读层次",
-      "limitations": "网页属于传统文化和软件资料，非预测准确性或人格效度证据",
-      "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
-      "copied_text_or_media": false
+      "accessed_reason": "Historical record contains only accessed_on (calendar date), without a time or timezone; no access instant is inferred.",
+      "retrieval": {
+        "status": "sections_read",
+        "method": "web_extract",
+        "detail": "实际读取本宫、对宫、三合、三方四正、空宫、会照等术语"
+      },
+      "use_for_synthesis": true,
+      "notes": [
+        "网页属于传统文化和软件资料，非预测准确性或人格效度证据",
+        "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体"
+      ]
     },
     {
-      "id": "ZI-PALACES",
-      "title": "紫微斗数宫位系统",
       "url": "https://iztro.com/learn/palace",
-      "publisher_or_author": "紫微研习社；iztro 文档",
+      "title": "紫微斗数宫位系统",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "topics": [
+        "十二宫、身宫与结构关系；本项目新写非决定性解释"
+      ],
+      "role": "knowledge",
+      "extensions": {
+        "legacy_group": "knowledge_sources",
+        "legacy": {
+          "id": "ZI-PALACES",
+          "title": "紫微斗数宫位系统",
+          "url": "https://iztro.com/learn/palace",
+          "publisher_or_author": "紫微研习社；iztro 文档",
+          "accessed_on": "2026-10-08",
+          "retrieval_method": "web_extract + HTTP HTML/DOM 正文",
+          "read_scope": "提取返回不完整后，HTTP 读取真实 .vp-doc 全文，实际读取十二宫、身宫六落点和三方四正",
+          "used_for": "十二宫、身宫与结构关系；本项目新写非决定性解释",
+          "limitations": "现代作者叙述、性别和强断语不复制；数据事实和自写反思分开",
+          "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
+          "copied_text_or_media": false
+        }
+      },
       "accessed_on": "2026-10-08",
-      "retrieval_method": "web_extract + HTTP HTML/DOM 正文",
-      "read_scope": "提取返回不完整后，HTTP 读取真实 .vp-doc 全文，实际读取十二宫、身宫六落点和三方四正",
-      "used_for": "十二宫、身宫与结构关系；本项目新写非决定性解释",
-      "limitations": "现代作者叙述、性别和强断语不复制；数据事实和自写反思分开",
-      "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
-      "copied_text_or_media": false
+      "accessed_reason": "Historical record contains only accessed_on (calendar date), without a time or timezone; no access instant is inferred.",
+      "retrieval": {
+        "status": "sections_read",
+        "method": "web_extract + HTTP HTML/DOM 正文",
+        "detail": "提取返回不完整后，HTTP 读取真实 .vp-doc 全文，实际读取十二宫、身宫六落点和三方四正"
+      },
+      "use_for_synthesis": true,
+      "notes": [
+        "现代作者叙述、性别和强断语不复制；数据事实和自写反思分开",
+        "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体"
+      ]
     },
     {
-      "id": "ZI-STARS",
-      "title": "紫微斗数星曜系统",
       "url": "https://iztro.com/learn/star",
-      "publisher_or_author": "紫微研习社；iztro 文档",
+      "title": "紫微斗数星曜系统",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "topics": [
+        "避免把安星系列误作南北斗天文分类；亮度版本需记录"
+      ],
+      "role": "knowledge",
+      "extensions": {
+        "legacy_group": "knowledge_sources",
+        "legacy": {
+          "id": "ZI-STARS",
+          "title": "紫微斗数星曜系统",
+          "url": "https://iztro.com/learn/star",
+          "publisher_or_author": "紫微研习社；iztro 文档",
+          "accessed_on": "2026-10-08",
+          "retrieval_method": "web_extract",
+          "read_scope": "实际读取十四主星的两个安星系列、辅星分类、庙旺等级差异",
+          "used_for": "避免把安星系列误作南北斗天文分类；亮度版本需记录",
+          "limitations": "未完整逐宫校验亮度表，因此本项目不提供固定庙旺全表或数值命分",
+          "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
+          "copied_text_or_media": false
+        }
+      },
       "accessed_on": "2026-10-08",
-      "retrieval_method": "web_extract",
-      "read_scope": "实际读取十四主星的两个安星系列、辅星分类、庙旺等级差异",
-      "used_for": "避免把安星系列误作南北斗天文分类；亮度版本需记录",
-      "limitations": "未完整逐宫校验亮度表，因此本项目不提供固定庙旺全表或数值命分",
-      "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
-      "copied_text_or_media": false
+      "accessed_reason": "Historical record contains only accessed_on (calendar date), without a time or timezone; no access instant is inferred.",
+      "retrieval": {
+        "status": "sections_read",
+        "method": "web_extract",
+        "detail": "实际读取十四主星的两个安星系列、辅星分类、庙旺等级差异"
+      },
+      "use_for_synthesis": true,
+      "notes": [
+        "未完整逐宫校验亮度表，因此本项目不提供固定庙旺全表或数值命分",
+        "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体"
+      ]
     },
     {
-      "id": "ZI-MAJOR-STARS",
-      "title": "十四主星",
       "url": "https://iztro.com/learn/major-star",
-      "publisher_or_author": "紫微研习社；iztro 文档",
+      "title": "十四主星",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "topics": [
+        "主星名称与通行文化主题；所有用户向反思表达独立编写"
+      ],
+      "role": "knowledge",
+      "extensions": {
+        "legacy_group": "knowledge_sources",
+        "legacy": {
+          "id": "ZI-MAJOR-STARS",
+          "title": "十四主星",
+          "url": "https://iztro.com/learn/major-star",
+          "publisher_or_author": "紫微研习社；iztro 文档",
+          "accessed_on": "2026-10-08",
+          "retrieval_method": "web_extract",
+          "read_scope": "实际读取所有十四主星单节和相关组合的资料，按标题检查完整覆盖",
+          "used_for": "主星名称与通行文化主题；所有用户向反思表达独立编写",
+          "limitations": "原网页统计概率、人格定性和外貌/道德判断不采用；不转载其人物类比或组合故事",
+          "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
+          "copied_text_or_media": false
+        }
+      },
       "accessed_on": "2026-10-08",
-      "retrieval_method": "web_extract",
-      "read_scope": "实际读取所有十四主星单节和相关组合的资料，按标题检查完整覆盖",
-      "used_for": "主星名称与通行文化主题；所有用户向反思表达独立编写",
-      "limitations": "原网页统计概率、人格定性和外貌/道德判断不采用；不转载其人物类比或组合故事",
-      "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
-      "copied_text_or_media": false
+      "accessed_reason": "Historical record contains only accessed_on (calendar date), without a time or timezone; no access instant is inferred.",
+      "retrieval": {
+        "status": "sections_read",
+        "method": "web_extract",
+        "detail": "实际读取所有十四主星单节和相关组合的资料，按标题检查完整覆盖"
+      },
+      "use_for_synthesis": true,
+      "notes": [
+        "原网页统计概率、人格定性和外貌/道德判断不采用；不转载其人物类比或组合故事",
+        "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体"
+      ]
     },
     {
-      "id": "ZI-SIHUA",
-      "title": "紫微斗数四化",
       "url": "https://iztro.com/learn/mutagen",
-      "publisher_or_author": "紫微研习社；iztro 文档",
+      "title": "紫微斗数四化",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "topics": [
+        "明确采用该文自述全书系通行版本，不称所有流派唯一标准"
+      ],
+      "role": "knowledge",
+      "extensions": {
+        "legacy_group": "knowledge_sources",
+        "legacy": {
+          "id": "ZI-SIHUA",
+          "title": "紫微斗数四化",
+          "url": "https://iztro.com/learn/mutagen",
+          "publisher_or_author": "紫微研习社；iztro 文档",
+          "accessed_on": "2026-10-08",
+          "retrieval_method": "web_extract",
+          "read_scope": "实际读取四化类型、层次、宫干飞化及完整十天干表，包括甲至癸十行",
+          "used_for": "明确采用该文自述全书系通行版本，不称所有流派唯一标准",
+          "limitations": "没有逐页核对古籍刻本，作者归属与具体版本仅按文档自述；表为传统对应知识，叙述与比喻不复制",
+          "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
+          "copied_text_or_media": false
+        }
+      },
       "accessed_on": "2026-10-08",
-      "retrieval_method": "web_extract",
-      "read_scope": "实际读取四化类型、层次、宫干飞化及完整十天干表，包括甲至癸十行",
-      "used_for": "明确采用该文自述全书系通行版本，不称所有流派唯一标准",
-      "limitations": "没有逐页核对古籍刻本，作者归属与具体版本仅按文档自述；表为传统对应知识，叙述与比喻不复制",
-      "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
-      "copied_text_or_media": false
+      "accessed_reason": "Historical record contains only accessed_on (calendar date), without a time or timezone; no access instant is inferred.",
+      "retrieval": {
+        "status": "sections_read",
+        "method": "web_extract",
+        "detail": "实际读取四化类型、层次、宫干飞化及完整十天干表，包括甲至癸十行"
+      },
+      "use_for_synthesis": true,
+      "notes": [
+        "没有逐页核对古籍刻本，作者归属与具体版本仅按文档自述；表为传统对应知识，叙述与比喻不复制",
+        "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体"
+      ]
     },
     {
-      "id": "ZI-CONFIG",
-      "title": "配置和插件",
       "url": "https://iztro.com/posts/config-n-plugin",
-      "publisher_or_author": "紫微研习社；iztro 文档",
+      "title": "配置和插件",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "topics": [
+        "年界、换日与规则配置存在差异；软件示例不等于流派标准"
+      ],
+      "role": "knowledge",
+      "extensions": {
+        "legacy_group": "knowledge_sources",
+        "legacy": {
+          "id": "ZI-CONFIG",
+          "title": "配置和插件",
+          "url": "https://iztro.com/posts/config-n-plugin",
+          "publisher_or_author": "紫微研习社；iztro 文档",
+          "accessed_on": "2026-10-08",
+          "retrieval_method": "web_extract",
+          "read_scope": "实际读取 yearDivide、horoscopeDivide、ageDivide、dayDivide、algorithm 及可自定义四化/亮度说明",
+          "used_for": "年界、换日与规则配置存在差异；软件示例不等于流派标准",
+          "limitations": "仅阅读文档，没有在本项目安装或执行 iztro，也不声称完成本地排盘",
+          "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
+          "copied_text_or_media": false
+        }
+      },
       "accessed_on": "2026-10-08",
-      "retrieval_method": "web_extract",
-      "read_scope": "实际读取 yearDivide、horoscopeDivide、ageDivide、dayDivide、algorithm 及可自定义四化/亮度说明",
-      "used_for": "年界、换日与规则配置存在差异；软件示例不等于流派标准",
-      "limitations": "仅阅读文档，没有在本项目安装或执行 iztro，也不声称完成本地排盘",
-      "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
-      "copied_text_or_media": false
+      "accessed_reason": "Historical record contains only accessed_on (calendar date), without a time or timezone; no access instant is inferred.",
+      "retrieval": {
+        "status": "sections_read",
+        "method": "web_extract",
+        "detail": "实际读取 yearDivide、horoscopeDivide、ageDivide、dayDivide、algorithm 及可自定义四化/亮度说明"
+      },
+      "use_for_synthesis": true,
+      "notes": [
+        "仅阅读文档，没有在本项目安装或执行 iztro，也不声称完成本地排盘",
+        "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体"
+      ]
     },
     {
-      "id": "ZI-QUICKSTART",
-      "title": "iztro 官方文档：获取星盘数据及方法定义",
       "url": "https://iztro.com/quick-start",
-      "publisher_or_author": "紫微研习社；iztro 文档",
+      "title": "iztro 官方文档：获取星盘数据及方法定义",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "topics": [
+        "区分实际闰月与软件处理，设计原创接入数据结构"
+      ],
+      "role": "knowledge",
+      "extensions": {
+        "legacy_group": "knowledge_sources",
+        "legacy": {
+          "id": "ZI-QUICKSTART",
+          "title": "iztro 官方文档：获取星盘数据及方法定义",
+          "url": "https://iztro.com/quick-start",
+          "publisher_or_author": "紫微研习社；iztro 文档",
+          "accessed_on": "2026-10-08",
+          "retrieval_method": "web_extract",
+          "read_scope": "实际读取 bySolar/byLunar 数据与完整参数说明，特别是 isLeapMonth、fixLeap、时辰序号及外部盘层字段",
+          "used_for": "区分实际闰月与软件处理，设计原创接入数据结构",
+          "limitations": "仅学习接口概念，不复制代码或软件演示盘为用户实际盘；参数规则须以实际版本核对",
+          "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
+          "copied_text_or_media": false
+        }
+      },
       "accessed_on": "2026-10-08",
-      "retrieval_method": "web_extract",
-      "read_scope": "实际读取 bySolar/byLunar 数据与完整参数说明，特别是 isLeapMonth、fixLeap、时辰序号及外部盘层字段",
-      "used_for": "区分实际闰月与软件处理，设计原创接入数据结构",
-      "limitations": "仅学习接口概念，不复制代码或软件演示盘为用户实际盘；参数规则须以实际版本核对",
-      "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
-      "copied_text_or_media": false
+      "accessed_reason": "Historical record contains only accessed_on (calendar date), without a time or timezone; no access instant is inferred.",
+      "retrieval": {
+        "status": "sections_read",
+        "method": "web_extract",
+        "detail": "实际读取 bySolar/byLunar 数据与完整参数说明，特别是 isLeapMonth、fixLeap、时辰序号及外部盘层字段"
+      },
+      "use_for_synthesis": true,
+      "notes": [
+        "仅学习接口概念，不复制代码或软件演示盘为用户实际盘；参数规则须以实际版本核对",
+        "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体"
+      ]
     },
     {
-      "id": "ZI-TIMING",
-      "title": "紫微斗数运限",
       "url": "https://iztro.com/learn/horoscope",
-      "publisher_or_author": "紫微研习社；iztro 文档",
+      "title": "紫微斗数运限",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "topics": [
+        "区分时间层、本命和运限资料不可互相替代"
+      ],
+      "role": "knowledge",
+      "extensions": {
+        "legacy_group": "knowledge_sources",
+        "legacy": {
+          "id": "ZI-TIMING",
+          "title": "紫微斗数运限",
+          "url": "https://iztro.com/learn/horoscope",
+          "publisher_or_author": "紫微研习社；iztro 文档",
+          "accessed_on": "2026-10-08",
+          "retrieval_method": "web_extract",
+          "read_scope": "实际读取大限、小限、流年、流月、流日的分类与常见起限概念；提取末段中途结束",
+          "used_for": "区分时间层、本命和运限资料不可互相替代",
+          "limitations": "不声称已读取尾部完整算法；不以网页预测性措辞为可靠应期",
+          "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
+          "copied_text_or_media": false
+        }
+      },
       "accessed_on": "2026-10-08",
-      "retrieval_method": "web_extract",
-      "read_scope": "实际读取大限、小限、流年、流月、流日的分类与常见起限概念；提取末段中途结束",
-      "used_for": "区分时间层、本命和运限资料不可互相替代",
-      "limitations": "不声称已读取尾部完整算法；不以网页预测性措辞为可靠应期",
-      "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
-      "copied_text_or_media": false
+      "accessed_reason": "Historical record contains only accessed_on (calendar date), without a time or timezone; no access instant is inferred.",
+      "retrieval": {
+        "status": "partial_body_read",
+        "method": "web_extract",
+        "detail": "实际读取大限、小限、流年、流月、流日的分类与常见起限概念；提取末段中途结束"
+      },
+      "use_for_synthesis": true,
+      "notes": [
+        "不声称已读取尾部完整算法；不以网页预测性措辞为可靠应期",
+        "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体"
+      ]
     },
     {
-      "id": "ZI-CLASSIC-1",
-      "title": "紫微斗数全书：卷一",
       "url": "https://iztro.com/learn/ancientBook-1",
-      "publisher_or_author": "紫微研习社转录；页面标记校对知秋",
+      "title": "紫微斗数全书：卷一",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "topics": [
+        "说明传统标签需要整体条件，旧断语不能直接套给现代用户"
+      ],
+      "role": "knowledge",
+      "extensions": {
+        "legacy_group": "knowledge_sources",
+        "legacy": {
+          "id": "ZI-CLASSIC-1",
+          "title": "紫微斗数全书：卷一",
+          "url": "https://iztro.com/learn/ancientBook-1",
+          "publisher_or_author": "紫微研习社转录；页面标记校对知秋",
+          "accessed_on": "2026-10-08",
+          "retrieval_method": "web_extract",
+          "read_scope": "实际读取太微赋、形性赋等卷一部分，观察术语与旧时代极端断语",
+          "used_for": "说明传统标签需要整体条件，旧断语不能直接套给现代用户",
+          "limitations": "未校勘全部古籍；寿夭、等级、外貌、性道德及恐吓断语明确排除",
+          "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
+          "copied_text_or_media": false
+        }
+      },
       "accessed_on": "2026-10-08",
-      "retrieval_method": "web_extract",
-      "read_scope": "实际读取太微赋、形性赋等卷一部分，观察术语与旧时代极端断语",
-      "used_for": "说明传统标签需要整体条件，旧断语不能直接套给现代用户",
-      "limitations": "未校勘全部古籍；寿夭、等级、外貌、性道德及恐吓断语明确排除",
-      "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
-      "copied_text_or_media": false
+      "accessed_reason": "Historical record contains only accessed_on (calendar date), without a time or timezone; no access instant is inferred.",
+      "retrieval": {
+        "status": "partial_body_read",
+        "method": "web_extract",
+        "detail": "实际读取太微赋、形性赋等卷一部分，观察术语与旧时代极端断语"
+      },
+      "use_for_synthesis": true,
+      "notes": [
+        "未校勘全部古籍；寿夭、等级、外貌、性道德及恐吓断语明确排除",
+        "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体"
+      ]
     },
     {
-      "id": "CAL-HKO-CALENDAR",
-      "title": "历法：农历历法",
       "url": "https://www.hko.gov.hk/sc/gts/time/calendarinfo.htm",
-      "publisher_or_author": "香港天文台",
+      "title": "历法：农历历法",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "topics": [
+        "区分公历农历、实际闰月及术数规则中的月份处理"
+      ],
+      "role": "knowledge",
+      "extensions": {
+        "legacy_group": "knowledge_sources",
+        "legacy": {
+          "id": "CAL-HKO-CALENDAR",
+          "title": "历法：农历历法",
+          "url": "https://www.hko.gov.hk/sc/gts/time/calendarinfo.htm",
+          "publisher_or_author": "香港天文台",
+          "accessed_on": "2026-10-08",
+          "retrieval_method": "web_extract + browser DOM 正文",
+          "read_scope": "web_extract 返回短段后，浏览器实际读取正文：阴阳历、回归年、朔望月及闰月概念",
+          "used_for": "区分公历农历、实际闰月及术数规则中的月份处理",
+          "limitations": "天文历法资料不支持术数预测；历史十九年七闰描述不当作现行农历换算算法",
+          "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
+          "copied_text_or_media": false
+        }
+      },
       "accessed_on": "2026-10-08",
-      "retrieval_method": "web_extract + browser DOM 正文",
-      "read_scope": "web_extract 返回短段后，浏览器实际读取正文：阴阳历、回归年、朔望月及闰月概念",
-      "used_for": "区分公历农历、实际闰月及术数规则中的月份处理",
-      "limitations": "天文历法资料不支持术数预测；历史十九年七闰描述不当作现行农历换算算法",
-      "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
-      "copied_text_or_media": false
+      "accessed_reason": "Historical record contains only accessed_on (calendar date), without a time or timezone; no access instant is inferred.",
+      "retrieval": {
+        "status": "sections_read",
+        "method": "web_extract + browser DOM 正文",
+        "detail": "web_extract 返回短段后，浏览器实际读取正文：阴阳历、回归年、朔望月及闰月概念"
+      },
+      "use_for_synthesis": true,
+      "notes": [
+        "天文历法资料不支持术数预测；历史十九年七闰描述不当作现行农历换算算法",
+        "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体"
+      ]
     },
     {
-      "id": "TIME-HKO-SOLAR",
-      "title": "视太阳时",
       "url": "https://www.hko.gov.hk/sc/gts/time/basicterms-apparentsolartime.htm",
-      "publisher_or_author": "香港天文台",
+      "title": "视太阳时",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "topics": [
+        "区分太阳位置时标与民用时间"
+      ],
+      "role": "knowledge",
+      "extensions": {
+        "legacy_group": "knowledge_sources",
+        "legacy": {
+          "id": "TIME-HKO-SOLAR",
+          "title": "视太阳时",
+          "url": "https://www.hko.gov.hk/sc/gts/time/basicterms-apparentsolartime.htm",
+          "publisher_or_author": "香港天文台",
+          "accessed_on": "2026-10-08",
+          "retrieval_method": "web_extract",
+          "read_scope": "实际读取视太阳时定义与日晷说明",
+          "used_for": "区分太阳位置时标与民用时间",
+          "limitations": "短定义不能作为个人真太阳时校正值，更不作为命运预测依据",
+          "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
+          "copied_text_or_media": false
+        }
+      },
       "accessed_on": "2026-10-08",
-      "retrieval_method": "web_extract",
-      "read_scope": "实际读取视太阳时定义与日晷说明",
-      "used_for": "区分太阳位置时标与民用时间",
-      "limitations": "短定义不能作为个人真太阳时校正值，更不作为命运预测依据",
-      "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
-      "copied_text_or_media": false
+      "accessed_reason": "Historical record contains only accessed_on (calendar date), without a time or timezone; no access instant is inferred.",
+      "retrieval": {
+        "status": "sections_read",
+        "method": "web_extract",
+        "detail": "实际读取视太阳时定义与日晷说明"
+      },
+      "use_for_synthesis": true,
+      "notes": [
+        "短定义不能作为个人真太阳时校正值，更不作为命运预测依据",
+        "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体"
+      ]
     },
     {
-      "id": "TIME-HKO-ASTRONOMICAL",
-      "title": "天文时与原子时",
       "url": "https://www.hko.gov.hk/sc/education/astronomy-and-time/time-service/00409-astronomical-time-and-atomic-time.html",
-      "publisher_or_author": "香港天文台；刘迪森",
+      "title": "天文时与原子时",
+      "accessed_at": null,
+      "accessed_precision": "date",
+      "topics": [
+        "区别视太阳时、平太阳时与标准时；校正需要真实工具"
+      ],
+      "role": "knowledge",
+      "extensions": {
+        "legacy_group": "knowledge_sources",
+        "legacy": {
+          "id": "TIME-HKO-ASTRONOMICAL",
+          "title": "天文时与原子时",
+          "url": "https://www.hko.gov.hk/sc/education/astronomy-and-time/time-service/00409-astronomical-time-and-atomic-time.html",
+          "publisher_or_author": "香港天文台；刘迪森",
+          "accessed_on": "2026-10-08",
+          "retrieval_method": "web_extract",
+          "read_scope": "实际读取视太阳时不均匀、平太阳时、UT、TAI 与 UTC 的教育资料",
+          "used_for": "区别视太阳时、平太阳时与标准时；校正需要真实工具",
+          "limitations": "2013 年文章中的历史原子钟数量、闰秒累计不是当前统计，本项目不把它们作为最新数据",
+          "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
+          "copied_text_or_media": false
+        }
+      },
       "accessed_on": "2026-10-08",
-      "retrieval_method": "web_extract",
-      "read_scope": "实际读取视太阳时不均匀、平太阳时、UT、TAI 与 UTC 的教育资料",
-      "used_for": "区别视太阳时、平太阳时与标准时；校正需要真实工具",
-      "limitations": "2013 年文章中的历史原子钟数量、闰秒累计不是当前统计，本项目不把它们作为最新数据",
-      "reuse_boundary": "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体",
-      "copied_text_or_media": false
-    }
-  ],
-  "provenance_review_only": [
+      "accessed_reason": "Historical record contains only accessed_on (calendar date), without a time or timezone; no access instant is inferred.",
+      "retrieval": {
+        "status": "sections_read",
+        "method": "web_extract",
+        "detail": "实际读取视太阳时不均匀、平太阳时、UT、TAI 与 UTC 的教育资料"
+      },
+      "use_for_synthesis": true,
+      "notes": [
+        "2013 年文章中的历史原子钟数量、闰秒累计不是当前统计，本项目不把它们作为最新数据",
+        "未取得本文再分发许可；仅参考知识点并独立撰写，不转载正文或媒体"
+      ]
+    },
     {
-      "repository": "https://github.com/FANzR-arch/Numerologist_skills",
-      "revision": "ea28c3fb7e808fa74f6b8e7b4c9ac8c8a9d44c39",
-      "review_scope": [
-        "README.md",
-        "qimen-dunjia/references/ruleset-mainline.md",
-        "qimen-dunjia/references/interview.md",
-        "qimen-dunjia/references/yongshen.md",
-        "qimen-dunjia/references/geju.md",
-        "qimen-dunjia/scripts/qimen_cli.py",
-        "ziwei-doushu/references/calculation.md",
-        "ziwei-doushu/references/stars.md",
-        "ziwei-doushu/references/sihua.md",
-        "ziwei-doushu/scripts/ziwei_verify.py"
+      "url": "https://github.com/FANzR-arch/Numerologist_skills",
+      "title": "FANzR-arch/Numerologist_skills",
+      "accessed_at": null,
+      "accessed_precision": "unknown",
+      "topics": [
+        "provenance review",
+        "ziwei"
       ],
       "role": "只读方法及输入/规则/计算/解释分层的概念审查；全部中文模块独立新写，不依赖其脚本",
-      "license_observation": "给定快照无 LICENSE；公开可见不是开源授权；没有复制其代码、参考正文或资产",
-      "code_copied": false,
-      "reference_text_copied": false,
-      "assets_copied": false,
-      "upstream_code_executed": false,
-      "important_difference": "不移植其简化定局、星门同步、反吟与门迫检测；无真实引擎时禁止模型补造盘面"
-    }
-  ],
-  "excluded_or_failed_reads": [
+      "extensions": {
+        "legacy_group": "provenance_review_only",
+        "legacy": {
+          "repository": "https://github.com/FANzR-arch/Numerologist_skills",
+          "revision": "ea28c3fb7e808fa74f6b8e7b4c9ac8c8a9d44c39",
+          "review_scope": [
+            "README.md",
+            "qimen-dunjia/references/ruleset-mainline.md",
+            "qimen-dunjia/references/interview.md",
+            "qimen-dunjia/references/yongshen.md",
+            "qimen-dunjia/references/geju.md",
+            "qimen-dunjia/scripts/qimen_cli.py",
+            "ziwei-doushu/references/calculation.md",
+            "ziwei-doushu/references/stars.md",
+            "ziwei-doushu/references/sihua.md",
+            "ziwei-doushu/scripts/ziwei_verify.py"
+          ],
+          "role": "只读方法及输入/规则/计算/解释分层的概念审查；全部中文模块独立新写，不依赖其脚本",
+          "license_observation": "给定快照无 LICENSE；公开可见不是开源授权；没有复制其代码、参考正文或资产",
+          "code_copied": false,
+          "reference_text_copied": false,
+          "assets_copied": false,
+          "upstream_code_executed": false,
+          "important_difference": "不移植其简化定局、星门同步、反吟与门迫检测；无真实引擎时禁止模型补造盘面"
+        },
+        "metadata_retrieval": {
+          "status": "metadata_only",
+          "method": "GitHub API",
+          "accessed_at": "2026-10-09T04:37:40.096991+00:00",
+          "url": "https://api.github.com/repos/FANzR-arch/Numerologist_skills",
+          "title": "FANzR-arch/Numerologist_skills",
+          "description": "🔮 An engineering framework to stop LLM hallucinations in Chinese astrology. / 给“赛博半仙”戴上紧箍咒：减少幻觉、固定排盘步骤的奇门遁甲与紫微斗数 AI skills。",
+          "license": null,
+          "detail": "Fetched repository metadata only during v2 migration; does not re-date or expand historical code/article review."
+        },
+        "title_origin": "GitHub API metadata"
+      },
+      "accessed_reason": "Historical record contains no access date/time; new metadata lookup is recorded separately and does not establish when the old read occurred.",
+      "retrieval": {
+        "status": "provenance_review",
+        "method": "historical repository snapshot review (exact retrieval tool not recorded)",
+        "detail": "只读方法及输入/规则/计算/解释分层的概念审查；全部中文模块独立新写，不依赖其脚本; reviewed files: README.md, qimen-dunjia/references/ruleset-mainline.md, qimen-dunjia/references/interview.md, qimen-dunjia/references/yongshen.md, qimen-dunjia/references/geju.md, qimen-dunjia/scripts/qimen_cli.py, ziwei-doushu/references/calculation.md, ziwei-doushu/references/stars.md, ziwei-doushu/references/sihua.md, ziwei-doushu/scripts/ziwei_verify.py"
+      },
+      "use_for_synthesis": false
+    },
     {
       "url": "https://iztro.com/guide/config",
-      "reason": "实际返回 404，未用于规则证据；已转读真实 posts/config-n-plugin 文档"
+      "title": "Historical failed candidate; page title unavailable: https://iztro.com/guide/config",
+      "accessed_at": null,
+      "accessed_precision": "unknown",
+      "topics": [
+        "excluded research candidate"
+      ],
+      "role": "excluded_candidate",
+      "extensions": {
+        "legacy_group": "excluded_or_failed_reads",
+        "legacy": {
+          "url": "https://iztro.com/guide/config",
+          "reason": "实际返回 404，未用于规则证据；已转读真实 posts/config-n-plugin 文档"
+        },
+        "title_origin": "historical record/URL label; not a newly successful page read"
+      },
+      "accessed_reason": "Historical record contains no access date/time; new metadata lookup is recorded separately and does not establish when the old read occurred.",
+      "retrieval": {
+        "status": "failed",
+        "method": "historical retrieval (exact method not recorded)",
+        "detail": "实际返回 404，未用于规则证据；已转读真实 posts/config-n-plugin 文档"
+      },
+      "use_for_synthesis": false
     }
-  ]
+  ],
+  "extensions": {
+    "legacy_manifest": {
+      "schema_version": "1.0",
+      "brand": "莉莉丝 Lilith",
+      "module_content": "原创中文文化、娱乐与反思参考；无独立 SKILL 入口",
+      "source_policy": "只使用已检索并实际读取的知识资料；不把搜索摘要当正文，未读尾部明确标注；不转载来源表达或媒体；公开资料不等于获再分发授权；预测及超自然主张不获科学背书",
+      "personal_chart_data_included": false,
+      "module": "ziwei",
+      "files": [
+        "workflow.md",
+        "palaces-and-stars.md",
+        "sihua-and-timing.md"
+      ],
+      "local_chart_engine_implemented": false
+    },
+    "migration_policy": "Original records and root details retained without expanding read scope. Date-only/unknown historical access times remain null. Supplemental metadata retrieval is not article/code reading."
+  }
 }

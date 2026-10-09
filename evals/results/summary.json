@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "baseline_commit": "479bf05d0738d00a1b294499af6343f9f2f12d45",
+  "routing": [
+    {
+      "version": "baseline",
+      "passed_count": 11,
+      "case_count": 11,
+      "model": "gpt-6.1-sol",
+      "scope": "model-metadata-routing; not host discovery/activation",
+      "evidence_file": "results/routing-baseline.json"
+    },
+    {
+      "version": "v02",
+      "passed_count": 11,
+      "case_count": 11,
+      "model": "gpt-6.1-sol",
+      "scope": "model-metadata-routing; not host discovery/activation",
+      "evidence_file": "results/routing-v02.json"
+    }
+  ],
+  "behavior_runs": 6,
+  "behavior_case_count": 3,
+  "behavior_scope": "Actual model responses using precomputed actual script output; tool invocation was not available in this experiment. Stored responses are development snapshots, not identical to the final SKILL.md hash.",
+  "native_host_activation": {
+    "Hermes_frontmatter_parser": "passed",
+    "Claude_Code": "not_run",
+    "Cursor": "not_run",
+    "Hermes_natural_language_loader": "not_run"
+  },
+  "observations": [
+    "Both old English and new Chinese descriptions routed all eleven selected prompts correctly with this model; no evidence that English always fails or that routing accuracy improved.",
+    "New tarot answer referred to actual three card positions and gave one optional action without asserting colleague thoughts.",
+    "Unknown-time answer preserved the day range and did not invent an ascendant or houses; it discussed moon sign from sampled signs and stated sampling limits.",
+    "Missing QiMen engine was disclosed before offering external-chart and real-world alternatives."
+  ],
+  "limitations": [
+    "One model, one run per batch; no statistical claim or general auto-activation success rate.",
+    "Behavior outputs have not been tested as complete multi-turn interactions with real host tools.",
+    "Human taste and reliability across other providers still require feedback."
+  ]
+}

@@ -8,11 +8,11 @@ Lilith / 莉莉丝 is maintained by Erfan (Erfan817). The unified workflow, CLI 
 
 Files under `scripts/vendor/bazi/` and the five table/summary files in `references/bazi/` (other than `workflow.md`) derive from jinchenma94/bazi-skill, revision `112a5d84cd1a001a0038cafca3be68d93e4c0cc9`, licensed MIT.
 
-Copyright (c) 2025 jinchenma94. Full notice is retained in `LICENSES/bazi-skill-MIT.txt`; exact imported file hashes are recorded in `docs/bazi-import.json`. The calendar is integrated through the project's JSON/input-validation layer, not exposed as a second skill entry. Its approximations and known scope restrictions are stated in the interface and workflow. The unchanged raw vendor CLI is an internal component, not a supported user entry: its old lunar conversion and unbounded year path are bypassed or validated by `scripts/bazi.py`.
+Copyright (c) 2025 jinchenma94. Full notice is retained in `LICENSES/bazi-skill-MIT.txt`; exact imported file hashes are recorded in `docs/bazi-import.json`. v0.2 retains the original vendor bytes for attribution, input parsing, rule tables and auxiliary shensha calculations, but does not call its approximate `compute` path. Production calendar/term/pillar/Yun computation is in `scripts/bazi_engine.py` through lunar-python. The raw vendor CLI remains unsupported for user input: its legacy conversion and unbounded year path must not be used directly.
 
 ## Lunar calendar dependency
 
-`lunar-python==1.4.8`, https://github.com/6tail/lunar-python , is an MIT-licensed dependency by 6tail. It supplies production civil-date lunar/solar conversion; the integrated wrapper deliberately bypasses the legacy calendar component's lunar conversion. Full notice is retained in `LICENSES/lunar-python-MIT.txt`. The package is installed, not vendored.
+`lunar-python==1.4.8`, https://github.com/6tail/lunar-python , is an MIT-licensed dependency by 6tail. It supplies production civil-date lunar/solar conversion, full solar-term interfaces, EightChar and Yun; day-rollover and fortune-cycle sects are selected explicitly and documented. This is not official almanac certification. Full notice is retained in `LICENSES/lunar-python-MIT.txt`. The package is installed, not vendored.
 
 ## Astronomy Engine dependency
 

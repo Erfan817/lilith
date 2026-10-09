@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "scope": "model interpretation of precomputed actual tool data; not live tool-use evaluation",
+  "version": "v02",
+  "case_id": "reading-no-qimen",
+  "model_requested": "gpt-6.1-sol",
+  "model_returned": "gpt-6.1-sol",
+  "executed_at": "2026-10-09T04:58:40.020554+00:00",
+  "skill_sha256": "b67c090d842270e42f92c01f0eff92303e57cd6955b7d3b20ae06955e287f61f",
+  "input": {
+    "id": "reading-no-qimen",
+    "prompt": "合成案例：用奇门看看我的项目合作。工具失败：本版没有自动起局引擎，且没有外部盘。请给我当前能做的下一步。",
+    "result": {
+      "engine_available": false,
+      "chart": null
+    }
+  },
+  "output": "目前**本版没有奇门自动起局引擎，也没有可读取的外部盘**，所以不能判断这次项目合作的宫位、门星神关系或时机吉凶，更不能补造局数、值符和值使。\n\n你现在可以选两条路：\n\n1. **补充外部盘后再解读**  \n   用可信的奇门排盘工具生成盘面，提供完整截图，以及起局时间、时区、城市和排盘设置（如阴阳遁、局数、拆补或置闰）。不需要精确住宅地址。我可以据盘讨论合作中的推进条件与阻碍，但不把象征解读当作对方诚信或合作成败的证据。\n\n2. **先做现实层面的合作核验**  \n   不用等盘，先与对方确认五件事：各自投入、交付内容、验收标准、付款节点、退出与违约安排。尤其留意口头承诺是否愿意写进协议。\n\n**最直接的下一步：整理一页合作要点，请对方逐项书面确认。**如果你愿意，也可以告诉我项目类型、目前谈到哪一步，以及最担心的问题；我可以先帮你列合作核验清单，不作奇门判断。",
+  "duration_seconds": 15.27
+}

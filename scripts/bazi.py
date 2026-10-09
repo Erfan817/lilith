@@ -7,9 +7,9 @@ import json
 from pathlib import Path
 
 
-def calendar_engine():
-    path = Path(__file__).resolve().parent / "vendor" / "bazi" / "pai_pan.py"
-    spec = importlib.util.spec_from_file_location("mystic_calendar_engine", path)
+def calendar_engine(filename="vendor/bazi/pai_pan.py", name="mystic_calendar_engine"):
+    path = Path(__file__).resolve().parent / filename
+    spec = importlib.util.spec_from_file_location(name, path)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
@@ -22,7 +22,11 @@ def main():
     parser.add_argument("--lunar", help="农历 YYYY-MM-DD（不是公历日期有效性规则）")
     parser.add_argument("--leap", action="store_true", help="农历闰月")
     hours = parser.add_mutually_exclusive_group()
-    hours.add_argument("--hour", help="固定北京时间 HH:MM")
+    hours.add_argument("--hour", help="民用钟表时间 HH:MM；默认固定北京时间，可用 --timezone 指定当地时区")
+    parser.add_argument("--timezone", help="当地 IANA 时区，如 Asia/Shanghai；省略为固定 UTC+08:00")
+    parser.add_argument("--fold", type=int, choices=(0, 1), help="回拨歧义时刻：0 第一次，1 第二次")
+    parser.add_argument("--time-basis", choices=("civil", "apparent-solar"), default="civil", help="日/时柱时间口径；默认民用时，视太阳时须显式选择")
+    parser.add_argument("--longitude", type=float, help="视太阳时经度；东经为正，需 --time-basis apparent-solar 与确定钟点")
     hours.add_argument("--shichen", choices=list(engine.ZHI))
     parser.add_argument("--sex", choices=("男", "女"), help="传统大运顺逆参数；省略则不输出大运")
     parser.add_argument("--place", help="出生城市；仅展示与风险提示")
@@ -31,6 +35,7 @@ def main():
     args = parser.parse_args()
     try:
         from lunar_python import Lunar, Solar
+        compute = calendar_engine("bazi_engine.py", "lilith_bazi_engine").compute
         if not args.solar and not args.lunar:
             raise ValueError("至少提供 --solar 或 --lunar")
         if args.hour and args.shichen:
@@ -75,24 +80,24 @@ def main():
         now = datetime(as_of.year, as_of.month, as_of.day, 12, tzinfo=engine.BJ)
         if args.deceased_year is not None and args.deceased_year > as_of.year:
             raise ValueError("逝世年份不能超过分析年份")
-        result = engine.compute(solar_date, hour, minute, args.shichen, args.sex, args.place, args.deceased_year, display, now)
+        result = compute(solar_date, hour, minute, args.shichen, args.sex, args.place,
+                         args.deceased_year, display, now, engine, args.timezone, args.fold, args.time_basis, args.longitude)
     except ImportError:
         parser.error("缺少依赖，请在虚拟环境安装 requirements.txt")
     except (ValueError, argparse.ArgumentTypeError, OverflowError) as exc:
         parser.error(str(exc))
     warnings = list(result["warnings"])
-    warnings.append("公农历换算采用 lunar-python；四柱与起运使用的节气时刻仍为简式近似，交界请用独立历书交叉核验。")
-    warnings.append("固定北京时间；未做历史夏令时、海外时区或真太阳时校正。")
-    if result["hour_unknown"]:
-        warnings.append("未知出生时间；内部正午占位不是真实时刻，节气交界年/月柱和起运年龄待核验。")
+    if args.timezone is None:
+        warnings.append("默认固定北京时间 UTC+08:00；未指定当地时区时不自动处理历史夏令时。")
     if args.sex is None:
         warnings.append("未提供传统顺逆参数；仅输出四柱，不输出大运和依赖该参数的神煞。")
     payload = {
-        "schema_version": "1.0", "system": "bazi",
-        "input": {"solar": result["solar_text"], "lunar": result["lunar_text"], "hour": result["shichen_text"], "sex_convention": result["sex"], "place": result["place"]},
-        "conventions": {"timezone": "UTC+08:00", "year_boundary": "lichun", "month_boundary": "twelve-jie", "day_boundary": "23:00-next-day", "true_solar_time": False, "calendar_precision": "approximate; boundary cross-check required"},
+        "schema_version": "1.0", "system": "bazi", "engine": result["engine"],
+        "uncertainty": result.get("uncertainty", {"time_known": True, "pillars": {}, "candidates": [], "candidate_limit": 8, "dayun": None}),
+        "input": {"solar": result["solar_text"], "lunar": result["lunar_text"], "hour": result["shichen_text"], "sex_convention": result["sex"], "place": result["place"], **{k: result["time"].get(k) for k in ("civil_time", "calendar_time", "fold", "pillar_time")}},
+        "conventions": {"timezone": result["time"]["timezone"], "year_boundary": "lichun", "month_boundary": "twelve-jie", "day_boundary": "23:00-next-day", "true_solar_time": args.time_basis == "apparent-solar", "calendar_precision": "lunar-python-1.4.8-full-jieqi", "solar_correction": result["time"].get("solar_correction"), **{k: result["time"][k] for k in ("term_basis", "day_hour_basis", "calendar_timezone")}},
         "pillars": {name: {"gan": cells[0], "zhi": cells[1], "ten_god": cells[2], "hidden_stems": cells[3]} for name, cells in result["pillars"].items()},
-        "dayun": None if args.sex is None else {"direction": "forward" if result["forward"] else "reverse", "start_age": {"years": result["qiyun_years"], "months": result["qiyun_months"]}, "rows": result["dayun_rows"]},
+        "dayun": result["dayun"],
         "current_year": result["current_year"], "current_ganzhi": result["current_gz"],
         "shensha": [entry for entry in result["shensha_lines"] if args.sex is not None or "元辰" not in entry], "warnings": list(dict.fromkeys(warnings)),
     }

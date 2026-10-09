@@ -1,0 +1,54 @@
+{
+  "version": "0.2.0",
+  "baseline_commit": "479bf05d0738d00a1b294499af6343f9f2f12d45",
+  "executed_at": "2026-10-09T08:16:07.645908+00:00",
+  "python": "3.12.3",
+  "pytest_summary": "455 passed, 2 subtests passed",
+  "junit": {
+    "tests": 457,
+    "failures": 0,
+    "errors": 0
+  },
+  "clean_install": {
+    "method": "Export all intended files to a fresh lilith-diviner directory; create fresh venv and install only requirements-dev.txt",
+    "pytest_summary": "455 passed, 2 subtests passed",
+    "structure_validation": "passed",
+    "stats_check": "passed",
+    "doctor": "ready; no network/installation at runtime"
+  },
+  "official_agent_skills_validator": {
+    "result": "Valid skill",
+    "tool": "skills-ref 0.1.0",
+    "reference_revision": "69ef37e9424c0a7ea9dd2293b559e43ec8176379"
+  },
+  "hermes_frontmatter_parser": "passed for imported/existing skill; not native natural-language activation",
+  "model_evaluation_evidence": "../evals/results/summary.json",
+  "inventory": {
+    "skill_entries": 1,
+    "reference_files": 34,
+    "astrology_topics": 15,
+    "source_manifests": 6,
+    "source_records": 162,
+    "source_unique_urls": 155
+  },
+  "verification_scope": "Linux Python3.12 local and fresh install. Remote CI and GitHub contents must be separately verified after publishing.",
+  "not_verified": [
+    "Native Claude Code and Cursor activation",
+    "Native Windows/macOS execution",
+    "Real successful Nominatim lookup (host direct connection failed)",
+    "All dates/timezones across 1900–2100 exhaustively",
+    "Supernatural prediction effectiveness"
+  ],
+  "known_limits": [
+    "QiMen/ZiWei external charts only",
+    "No Placidus, nodes/Chiron, composite/progressions/returns engine",
+    "Unknown-time astrology is 97-point sample, not solved ingress/uncertainty proof",
+    "HTML reports currently tarot and known-time astrology only",
+    "Apparent solar clock is explicit label only; UTC approximates UT1",
+    "Host logs/temp files can retain input; share projection not guaranteed anonymity"
+  ],
+  "range_regression": {
+    "status": "passed",
+    "scope": "Unknown clock/day/branch domains enforce full Beijing half-open calendar range without silently clipping; exclusive upper endpoints retained."
+  }
+}

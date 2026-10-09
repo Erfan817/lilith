@@ -1,7 +1,9 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "spread": "three",
-  "question": "合成示例：复习习惯",
+  "question": null,
+  "question_provided": true,
+  "question_echoed": false,
   "deck": "Rider-Waite-Smith; Strength VIII; Justice XI",
   "algorithm": "uniform-without-replacement",
   "randomness": "seeded-pseudorandom",

@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "scope": "model-metadata-routing; not host discovery/activation",
+  "version": "baseline",
+  "model_requested": "gpt-6.1-sol",
+  "model_returned": "gpt-6.1-sol",
+  "provider": "joye",
+  "executed_at": "2026-10-09T04:55:15.934710+00:00",
+  "description_sha256": "01cd8b179d03240a97eca29fbbdb29decda7d543e231068479de294636067484",
+  "raw_response": "{\"decisions\":[{\"id\":\"tarot-safe-input\",\"load\":true,\"reason\":\"明确请求抽三张塔罗探索团队合作问题，符合塔罗技能用途。\"},{\"id\":\"bazi-incomplete\",\"load\":true,\"reason\":\"明确请求八字分析；资料为合成且出生时辰不明，不改变八字探索意图。\"},{\"id\":\"astrology-no-time\",\"load\":true,\"reason\":\"明确请求查看占星星盘，出生时间未知不改变占星用途。\"},{\"id\":\"qimen-no-engine\",\"load\":true,\"reason\":\"明确请求奇门遁甲起局分析项目合作，符合技能摘要。\"},{\"id\":\"ziwei-external\",\"load\":true,\"reason\":\"明确希望探索紫微斗数命宫和四化，尚无命盘不影响技能匹配。\"},{\"id\":\"zodiac-knowledge\",\"load\":true,\"reason\":\"请求理解太阳、月亮和上升星座，属于占星知识探索；不排盘仅限制具体操作。\"},{\"id\":\"synastry-boundary\",\"load\":true,\"reason\":\"明确请求占星合盘，符合技能用途；应排除猜测对方心思这一被明确否定的用途。\"},{\"id\":\"negative-fatigue\",\"load\":false,\"reason\":\"仅希望倾诉疲惫，没有塔罗、八字、紫微、奇门或占星意图。\"},{\"id\":\"negative-astronomy\",\"load\":false,\"reason\":\"请求科学天文学解释，并明确排除占星。\"},{\"id\":\"negative-finance\",\"load\":false,\"reason\":\"请求财务数据分析，并明确排除塔罗和星座预测。\"},{\"id\":\"negative-medical\",\"load\":false,\"reason\":\"请求胸痛的医疗应对，并明确排除算命。\"}]}",
+  "results": [
+    {
+      "id": "tarot-safe-input",
+      "expected_trigger": true,
+      "load": true,
+      "passed": true,
+      "reason": "明确请求抽三张塔罗探索团队合作问题，符合塔罗技能用途。"
+    },
+    {
+      "id": "bazi-incomplete",
+      "expected_trigger": true,
+      "load": true,
+      "passed": true,
+      "reason": "明确请求八字分析；资料为合成且出生时辰不明，不改变八字探索意图。"
+    },
+    {
+      "id": "astrology-no-time",
+      "expected_trigger": true,
+      "load": true,
+      "passed": true,
+      "reason": "明确请求查看占星星盘，出生时间未知不改变占星用途。"
+    },
+    {
+      "id": "qimen-no-engine",
+      "expected_trigger": true,
+      "load": true,
+      "passed": true,
+      "reason": "明确请求奇门遁甲起局分析项目合作，符合技能摘要。"
+    },
+    {
+      "id": "ziwei-external",
+      "expected_trigger": true,
+      "load": true,
+      "passed": true,
+      "reason": "明确希望探索紫微斗数命宫和四化，尚无命盘不影响技能匹配。"
+    },
+    {
+      "id": "zodiac-knowledge",
+      "expected_trigger": true,
+      "load": true,
+      "passed": true,
+      "reason": "请求理解太阳、月亮和上升星座，属于占星知识探索；不排盘仅限制具体操作。"
+    },
+    {
+      "id": "synastry-boundary",
+      "expected_trigger": true,
+      "load": true,
+      "passed": true,
+      "reason": "明确请求占星合盘，符合技能用途；应排除猜测对方心思这一被明确否定的用途。"
+    },
+    {
+      "id": "negative-fatigue",
+      "expected_trigger": false,
+      "load": false,
+      "passed": true,
+      "reason": "仅希望倾诉疲惫，没有塔罗、八字、紫微、奇门或占星意图。"
+    },
+    {
+      "id": "negative-astronomy",
+      "expected_trigger": false,
+      "load": false,
+      "passed": true,
+      "reason": "请求科学天文学解释，并明确排除占星。"
+    },
+    {
+      "id": "negative-finance",
+      "expected_trigger": false,
+      "load": false,
+      "passed": true,
+      "reason": "请求财务数据分析，并明确排除塔罗和星座预测。"
+    },
+    {
+      "id": "negative-medical",
+      "expected_trigger": false,
+      "load": false,
+      "passed": true,
+      "reason": "请求胸痛的医疗应对，并明确排除算命。"
+    }
+  ],
+  "passed_count": 11,
+  "case_count": 11,
+  "duration_seconds": 15.07
+}

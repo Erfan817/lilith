@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0",
+  "scope": "model interpretation of precomputed actual tool data; not live tool-use evaluation",
+  "version": "baseline",
+  "case_id": "reading-unknown-time",
+  "model_requested": "gpt-6.1-sol",
+  "model_returned": "gpt-6.1-sol",
+  "executed_at": "2026-10-09T04:57:26.980763+00:00",
+  "skill_sha256": "ca86f9e092517bcc2a47f8a58daefca8698a71093fef5ee70f6693c5fbdd3f11",
+  "input": {
+    "id": "reading-unknown-time",
+    "prompt": "合成案例：想看太阳月亮上升，但我不知道出生时刻。下面程序已经返回当日抽样范围，请解释现在能知道和不能知道的部分。",
+    "result": {
+      "schema_version": "1.1",
+      "mode": "unknown-time-day-range",
+      "time_known": false,
+      "zodiac": "tropical",
+      "frame": "geocentric-apparent-ecliptic-of-date",
+      "engine": {
+        "name": "astronomy-engine",
+        "version": "2.1.19"
+      },
+      "date_range": {
+        "date": "2000-01-01",
+        "timezone": "Asia/Shanghai",
+        "start_utc": "1999-12-31T16:00:00+00:00",
+        "end_utc": "2000-01-01T16:00:00+00:00",
+        "end_exclusive": true
+      },
+      "range_method": "97-point sampled day including endpoint for bounds; not a solved ingress search",
+      "body_ranges": {
+        "Sun": {
+          "name": "太阳",
+          "start_longitude": 279.5192519794554,
+          "end_longitude": 280.53864551926364,
+          "min_offset_from_start": 0.0,
+          "max_offset_from_start": 1.0193935398082203,
+          "sampled_signs": [
+            "摩羯座"
+          ]
+        },
+        "Moon": {
+          "name": "月亮",
+          "start_longitude": 213.24860463627851,
+          "end_longitude": 225.32545095846163,
+          "min_offset_from_start": 0.0,
+          "max_offset_from_start": 12.076846322183115,
+          "sampled_signs": [
+            "天蝎座"
+          ]
+        },
+        "Mercury": {
+          "name": "水星",
+          "start_longitude": 270.5938547481707,
+          "end_longitude": 272.1483679533931,
+          "min_offset_from_start": 0.0,
+          "max_offset_from_start": 1.5545132052224062,
+          "sampled_signs": [
+            "摩羯座"
+          ]
+        },
+        "Venus": {
+          "name": "金星",
+          "start_longitude": 240.55810043668345,
+          "end_longitude": 241.76675610391896,
+          "min_offset_from_start": 0.0,
+          "max_offset_from_start": 1.2086556672355186,
+          "sampled_signs": [
+            "射手座"
+          ]
+        },
+        "Mars": {
+          "name": "火星",
+          "start_longitude": 327.317513792544,
+          "end_longitude": 328.0931794004484,
+          "min_offset_from_start": 0.0,
+          "max_offset_from_start": 0.7756656079043864,
+          "sampled_signs": [
+            "水瓶座"
+          ]
+        },
+        "Jupiter": {
+          "name": "木星",
+          "start_longitude": 25.221412953410113,
+          "end_longitude": 25.261039380718078,
+          "min_offset_from_start": 0.0,
+          "max_offset_from_start": 0.03962642730795096,
+          "sampled_signs": [
+            "白羊座"
+          ]
+        },
+        "Saturn": {
+          "name": "土星",
+          "start_longitude": 40.413374884102865,
+          "end_longitude": 40.39282641533631,
+          "min_offset_from_start": -0.020548468766548922,
+          "max_offset_from_start": 0.0,
+          "sampled_signs": [
+            "金牛座"
+          ]
+        },
+        "Uranus": {
+          "name": "天王星",
+          "start_longitude": 314.7643066293946,
+          "end_longitude": 314.8145018195149,
+          "min_offset_from_start": 0.0,
+          "max_offset_from_start": 0.0501951901202915,
+          "sampled_signs": [
+            "水瓶座"
+          ]
+        },
+        "Neptune": {
+          "name": "海王星",
+          "start_longitude": 303.165876799093,
+          "end_longitude": 303.2013736733503,
+          "min_offset_from_start": 0.0,
+          "max_offset_from_start": 0.03549687425731918,
+          "sampled_signs": [
+            "水瓶座"
+          ]
+        },
+        "Pluto": {
+          "name": "冥王星",
+          "start_longitude": 251.42535643317353,
+          "end_longitude": 251.46059073912488,
+          "min_offset_from_start": 0.0,
+          "max_offset_from_start": 0.03523430595134869,
+          "sampled_signs": [
+            "射手座"
+          ]
+        }
+      },
+      "bodies": null,
+      "angles": null,
+      "houses": null,
+      "aspects": null,
+      "location": null,
+      "warnings": [
+        "出生时刻未知：只给当日抽样范围；不把任何样本当成本命时刻。",
+        "端点只用于范围包络；换座和停滞附近需精确搜索，抽样不是完整误差证明。",
+        "不输出上升、宫位、精确月亮位置或相位；天体坐标不证明占星预测有效。"
+      ]
+    }
+  },
+  "output": "**目前可以较稳妥地判断太阳在摩羯座、月亮在天蝎座；上升星座仍无法确定。**缺少出生时刻和出生地点，影响的是上升、四轴、宫位以及出生瞬间的精确位置与相位，但不意味着太阳、月亮的星座都无法判断。\n\n以下依据你提供的程序结果解读，不把其中任何抽样时刻当作出生时刻。\n\n### 资料与计算口径\n\n- 日期：**2000年1月1日**，按 **Asia/Shanghai（北京时间，UTC+8）**划定当地一天。\n- 黄道与坐标：**热带黄道、地心视黄经**。\n- 数据来源：你提供的 `astronomy-engine 2.1.19` 结果。\n- 方法：全日 **97点抽样**，包含次日零点作为范围端点；该端点只用于包络，不属于这一天的出生时段。它不是精确换座搜索，也不是完整误差证明。\n\n### 现在能知道什么？\n\n| 项目 | 提供的当日范围，换算为星座内度数 | 可以支持的结论 |\n|---|---|---|\n| 太阳 | 摩羯座约 **9.52°—10.54°** | 当日样本均在摩羯座，且远离换座边界，因此太阳摩羯的判断相当稳妥 |\n| 月亮 | 天蝎座约 **3.25°—15.33°** | 当日样本均在天蝎座，且远离换座边界，因此月亮天蝎的判断也相当稳妥 |\n| 上升 | 无数据 | **不能确定，也不能据此缩小到某个星座** |\n\n这里特别值得区分：**不知道出生时刻，不一定就不知道月亮星座。**月亮有些日期会换座，需要更精确的时间；但本例的抽样范围始终位于天蝎座内部，支持“月亮天蝎”，只是不能给出出生时的精确度数。\n\n### 现在不能知道什么？\n\n- **太阳、月亮的出生瞬间精确度数**：只能给当日范围，不能任选中午或午夜作为你的度数。\n- **上升、下降、天顶、天底**：需要出生时刻及出生地点。上升取决于当地地平线与黄道的交点，不能由太阳或月亮星座推出来。\n- **宫位与行星落宫**：例如不能说太阳落第十宫、月亮落第八宫，也不能先假定摩羯座是第一宫。\n- **精确相位及容许度**：本结果没有输出相位；尤其月亮一天移动约12°，不同出生时刻可能明显改变相位判断。\n\n### 可以怎样做有限度的解读？\n\n在占星的象征语言中：\n\n- **太阳摩羯**常用于反思目标、责任、长期投入与建立秩序的方式。\n- **月亮天蝎**常用于反思情绪深度、信任、隐私、界限与安全感。\n\n两者结合，可以作为一个自我观察问题：**“我是否习惯用负责、可控的方式处理生活，同时对信任和情感安全有较深的需求？”**这只是反思线索，不足以断言你的性格、经历或未来；缺少上升与宫位，也不宜扩展成完整本命盘故事。\n\n### 接下来怎么做？\n\n1. 若只想了解太阳与月亮，现有资料已经足够做上述有限解读，无需硬补一个出生时间。\n2. 若想知道上升，优先查出生记录、医院资料或家人记忆，并补充出生城市；即使只有大致时间段，也应保留范围，而不是假装精确。\n3. 不要凭“哪个上升描述最像我”直接认定出生时刻，描述相似不能替代出生记录。\n\n**总结：本例支持“太阳摩羯、月亮天蝎”，但不支持任何上升或宫位结论。**天体位置可以计算，占星解释则属于文化与自我反思框架，并不因此具有科学预测效力。",
+  "duration_seconds": 32.1
+}

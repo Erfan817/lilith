@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "scope": "model interpretation of precomputed actual tool data; not live tool-use evaluation",
+  "version": "baseline",
+  "case_id": "reading-actual-tarot",
+  "model_requested": "gpt-6.1-sol",
+  "model_returned": "gpt-6.1-sol",
+  "executed_at": "2026-10-09T04:56:54.877557+00:00",
+  "skill_sha256": "ca86f9e092517bcc2a47f8a58daefca8698a71093fef5ee70f6693c5fbdd3f11",
+  "input": {
+    "id": "reading-actual-tarot",
+    "prompt": "合成案例：团队合作时大家迟迟不明确分工，请根据已经真实抽到的下面三张牌给简短反思，不断言同事内心。",
+    "result": {
+      "schema_version": "1.1",
+      "spread": "three",
+      "question": null,
+      "question_provided": false,
+      "question_echoed": false,
+      "deck": "Rider-Waite-Smith; Strength VIII; Justice XI",
+      "algorithm": "uniform-without-replacement",
+      "randomness": "seeded-pseudorandom",
+      "seed": 42,
+      "reversed_probability": 0.5,
+      "cards": [
+        {
+          "position": "过去",
+          "card": "节制",
+          "orientation": "逆位",
+          "is_major": true
+        },
+        {
+          "position": "现在",
+          "card": "女皇",
+          "orientation": "逆位",
+          "is_major": true
+        },
+        {
+          "position": "可能走向",
+          "card": "权杖国王",
+          "orientation": "逆位",
+          "is_major": false
+        }
+      ]
+    }
+  },
+  "output": "依据你提供的已抽牌结果：RWS 三牌阵，使用种子 42 的伪随机、无放回抽取，逆位概率为 50%。以下将牌面用于团队合作反思，不判断同事内心，也不作确定预测。\n\n- **过去｜节制逆位**：可提示协作节奏或协调方式不一致。回顾一下：是否讨论了很多，却没有统一任务范围、优先级和交接方式？\n- **现在｜女皇逆位**：可象征支持与落实之间的失衡。与其猜测大家为什么不认领，不如检查：每项任务是否有足够资源、清晰边界和验收标准？\n- **可能走向｜权杖国王逆位**：提醒留意领导与执行失衡的风险——例如反复发号施令，却仍无人确认责任。这是值得防范的模式，不是必然结局。\n\n**可以做的两步：**\n1. 把任务列成“交付物—负责人—截止时间—所需支持”，请成员逐项明确确认。\n2. 对无人认领的任务，直接询问：“卡在范围、资源，还是决策权限？我们需要谁来拍板？”\n\n核心反思：**先把模糊讨论变成可确认的责任，而不是把迟迟不分工解释成某个人的态度。**实际判断仍以会议记录和后续行动为准。",
+  "duration_seconds": 13.96
+}

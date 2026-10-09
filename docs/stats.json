@@ -1,0 +1,160 @@
+{
+  "accessed_precisions": {
+    "date": 25,
+    "instant": 129,
+    "unknown": 8
+  },
+  "astrology_topics": 15,
+  "markdown_files": 43,
+  "modules": {
+    "astrology": {
+      "han_characters": 62236,
+      "reference_characters": 92873,
+      "reference_files": 15,
+      "source_records": 125,
+      "source_unique_urls": 123,
+      "synthesis_source_records": 100
+    },
+    "bazi": {
+      "han_characters": 7138,
+      "reference_characters": 14464,
+      "reference_files": 6,
+      "source_records": 6,
+      "source_unique_urls": 6,
+      "synthesis_source_records": 4
+    },
+    "common": {
+      "han_characters": 3185,
+      "reference_characters": 5158,
+      "reference_files": 3
+    },
+    "qimen": {
+      "han_characters": 8834,
+      "reference_characters": 12975,
+      "reference_files": 3,
+      "source_records": 8,
+      "source_unique_urls": 8,
+      "synthesis_source_records": 7
+    },
+    "tarot": {
+      "han_characters": 21576,
+      "reference_characters": 30179,
+      "reference_files": 4,
+      "source_records": 9,
+      "source_unique_urls": 8,
+      "synthesis_source_records": 6
+    },
+    "ziwei": {
+      "han_characters": 9674,
+      "reference_characters": 13820,
+      "reference_files": 3,
+      "source_records": 14,
+      "source_unique_urls": 14,
+      "synthesis_source_records": 12
+    }
+  },
+  "reference_characters": 169469,
+  "reference_files": 34,
+  "required_core_astrology_topics": 15,
+  "required_core_reference_files": 33,
+  "schema_version": 1,
+  "skill_entries": 1,
+  "source_manifest_stats": [
+    {
+      "file": "references/astrology/sources-advanced.json",
+      "module": "astrology",
+      "records": 46,
+      "retrieval_statuses": {
+        "blocked": 1,
+        "body_read": 19,
+        "failed": 2,
+        "index_only": 4,
+        "partial_body_read": 16,
+        "sections_read": 4
+      },
+      "synthesis_records": 39,
+      "unique_urls": 46
+    },
+    {
+      "file": "references/astrology/sources-basic.json",
+      "module": "astrology",
+      "records": 79,
+      "retrieval_statuses": {
+        "blocked": 1,
+        "body_read": 61,
+        "failed": 1,
+        "image_only": 1,
+        "index_only": 5,
+        "partial_body_read": 10
+      },
+      "synthesis_records": 61,
+      "unique_urls": 79
+    },
+    {
+      "file": "references/bazi/sources.json",
+      "module": "bazi",
+      "records": 6,
+      "retrieval_statuses": {
+        "code_read": 2,
+        "sections_read": 4
+      },
+      "synthesis_records": 4,
+      "unique_urls": 6
+    },
+    {
+      "file": "references/qimen/sources.json",
+      "module": "qimen",
+      "records": 8,
+      "retrieval_statuses": {
+        "provenance_review": 1,
+        "sections_read": 7
+      },
+      "synthesis_records": 7,
+      "unique_urls": 8
+    },
+    {
+      "file": "references/tarot/sources.json",
+      "module": "tarot",
+      "records": 9,
+      "retrieval_statuses": {
+        "blocked": 1,
+        "excluded": 1,
+        "partial_body_read": 5,
+        "provenance_review": 1,
+        "sections_read": 1
+      },
+      "synthesis_records": 6,
+      "unique_urls": 8
+    },
+    {
+      "file": "references/ziwei/sources.json",
+      "module": "ziwei",
+      "records": 14,
+      "retrieval_statuses": {
+        "failed": 1,
+        "partial_body_read": 2,
+        "provenance_review": 1,
+        "sections_read": 10
+      },
+      "synthesis_records": 12,
+      "unique_urls": 14
+    }
+  ],
+  "source_manifests": 6,
+  "source_records": 162,
+  "source_statuses": {
+    "blocked": 3,
+    "body_read": 80,
+    "code_read": 2,
+    "excluded": 1,
+    "failed": 4,
+    "image_only": 1,
+    "index_only": 9,
+    "partial_body_read": 33,
+    "provenance_review": 3,
+    "sections_read": 26
+  },
+  "source_unique_urls": 155,
+  "synthesis_source_records": 129,
+  "synthesis_source_unique_urls": 125
+}

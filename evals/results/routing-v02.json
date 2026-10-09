@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "scope": "model-metadata-routing; not host discovery/activation",
+  "version": "v02",
+  "model_requested": "gpt-6.1-sol",
+  "model_returned": "gpt-6.1-sol",
+  "provider": "joye",
+  "executed_at": "2026-10-09T04:55:32.370707+00:00",
+  "description_sha256": "262999860f1a20f3085a9f1dfa06fd60ae05e6801ed3870d90ea834e4dcf1382",
+  "raw_response": "{\"decisions\":[{\"id\":\"tarot-safe-input\",\"load\":true,\"reason\":\"明确请求抽三张塔罗并反思团队合作，属于塔罗抽牌与象征解读用途。\"},{\"id\":\"bazi-incomplete\",\"load\":true,\"reason\":\"明确请求八字分析；出生时辰缺失影响分析完整性，但不改变技能匹配。\"},{\"id\":\"astrology-no-time\",\"load\":true,\"reason\":\"明确请求星盘解读；出生时间未知会限制可解读内容，但仍属于占星用途。\"},{\"id\":\"qimen-no-engine\",\"load\":true,\"reason\":\"明确提出奇门遁甲需求，属于技能覆盖领域；但技能不支持直接排局，须有可信外部盘才能解读。\"},{\"id\":\"ziwei-external\",\"load\":true,\"reason\":\"请求解读紫微斗数命宫与四化，属于技能范围；目前没有命盘，需要可信外部盘，不能自动排盘。\"},{\"id\":\"zodiac-knowledge\",\"load\":true,\"reason\":\"询问太阳、月亮和上升星座的知识，属于占星知识用途；不排盘的要求不排除知识讲解。\"},{\"id\":\"synastry-boundary\",\"load\":true,\"reason\":\"明确请求合盘，属于占星技能范围；应尊重不猜测对方心思的限制，仅作关系模式的象征解读，不判定对方真实感情。\"},{\"id\":\"negative-fatigue\",\"load\":false,\"reason\":\"仅表达疲惫并寻求聊天，没有塔罗、命理或占星意图。\"},{\"id\":\"negative-astronomy\",\"load\":false,\"reason\":\"请求科学天文学解释且明确排除占星，不属于该技能用途。\"},{\"id\":\"negative-finance\",\"load\":false,\"reason\":\"请求财务数据分析并明确排除塔罗或星座预测，该技能不用于金融预测。\"},{\"id\":\"negative-medical\",\"load\":false,\"reason\":\"请求胸痛处理建议且明确排除算命，属于医疗问题，不适用该技能。\"}]}",
+  "results": [
+    {
+      "id": "tarot-safe-input",
+      "expected_trigger": true,
+      "load": true,
+      "passed": true,
+      "reason": "明确请求抽三张塔罗并反思团队合作，属于塔罗抽牌与象征解读用途。"
+    },
+    {
+      "id": "bazi-incomplete",
+      "expected_trigger": true,
+      "load": true,
+      "passed": true,
+      "reason": "明确请求八字分析；出生时辰缺失影响分析完整性，但不改变技能匹配。"
+    },
+    {
+      "id": "astrology-no-time",
+      "expected_trigger": true,
+      "load": true,
+      "passed": true,
+      "reason": "明确请求星盘解读；出生时间未知会限制可解读内容，但仍属于占星用途。"
+    },
+    {
+      "id": "qimen-no-engine",
+      "expected_trigger": true,
+      "load": true,
+      "passed": true,
+      "reason": "明确提出奇门遁甲需求，属于技能覆盖领域；但技能不支持直接排局，须有可信外部盘才能解读。"
+    },
+    {
+      "id": "ziwei-external",
+      "expected_trigger": true,
+      "load": true,
+      "passed": true,
+      "reason": "请求解读紫微斗数命宫与四化，属于技能范围；目前没有命盘，需要可信外部盘，不能自动排盘。"
+    },
+    {
+      "id": "zodiac-knowledge",
+      "expected_trigger": true,
+      "load": true,
+      "passed": true,
+      "reason": "询问太阳、月亮和上升星座的知识，属于占星知识用途；不排盘的要求不排除知识讲解。"
+    },
+    {
+      "id": "synastry-boundary",
+      "expected_trigger": true,
+      "load": true,
+      "passed": true,
+      "reason": "明确请求合盘，属于占星技能范围；应尊重不猜测对方心思的限制，仅作关系模式的象征解读，不判定对方真实感情。"
+    },
+    {
+      "id": "negative-fatigue",
+      "expected_trigger": false,
+      "load": false,
+      "passed": true,
+      "reason": "仅表达疲惫并寻求聊天，没有塔罗、命理或占星意图。"
+    },
+    {
+      "id": "negative-astronomy",
+      "expected_trigger": false,
+      "load": false,
+      "passed": true,
+      "reason": "请求科学天文学解释且明确排除占星，不属于该技能用途。"
+    },
+    {
+      "id": "negative-finance",
+      "expected_trigger": false,
+      "load": false,
+      "passed": true,
+      "reason": "请求财务数据分析并明确排除塔罗或星座预测，该技能不用于金融预测。"
+    },
+    {
+      "id": "negative-medical",
+      "expected_trigger": false,
+      "load": false,
+      "passed": true,
+      "reason": "请求胸痛处理建议且明确排除算命，属于医疗问题，不适用该技能。"
+    }
+  ],
+  "passed_count": 11,
+  "case_count": 11,
+  "duration_seconds": 16.43
+}

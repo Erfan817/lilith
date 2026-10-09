@@ -1,44 +1,213 @@
 {
-  "schema_version": "1.0",
+  "schema_version": 2,
   "module": "bazi",
+  "documents": [
+    "workflow.md",
+    "wuxing-tables.md",
+    "shichen-table.md",
+    "dayun-rules.md",
+    "shensha-table.md",
+    "classical-texts.md"
+  ],
   "source_policy": "Calendar facts cross-checked against the Hong Kong Observatory; source article/table bodies are not bundled. Cultural interpretation is separate from astronomy.",
   "sources": [
     {
       "url": "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2020c.txt",
       "title": "2020公历与农历日期对照表",
       "accessed_at": "2026-10-08T12:20:23.184901+00:00",
-      "retrieval_outcome": "full_text_fetched; specified civil-date rows checked",
+      "accessed_precision": "instant",
       "topics": [
         "civil-date lunar/solar conversion",
         "leap month regression"
       ],
-      "reuse": "calendar facts used for regression; original table not redistributed"
+      "role": "knowledge",
+      "extensions": {
+        "legacy_group": "sources",
+        "legacy": {
+          "url": "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2020c.txt",
+          "title": "2020公历与农历日期对照表",
+          "accessed_at": "2026-10-08T12:20:23.184901+00:00",
+          "retrieval_outcome": "full_text_fetched; specified civil-date rows checked",
+          "topics": [
+            "civil-date lunar/solar conversion",
+            "leap month regression"
+          ],
+          "reuse": "calendar facts used for regression; original table not redistributed"
+        }
+      },
+      "retrieval": {
+        "status": "sections_read",
+        "method": "historical retrieval (exact method not recorded)",
+        "detail": "full_text_fetched; specified civil-date rows checked"
+      },
+      "use_for_synthesis": true
     },
     {
       "url": "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2025c.txt",
       "title": "2025公历与农历日期对照表",
       "accessed_at": "2026-10-08T12:20:23.491912+00:00",
-      "retrieval_outcome": "full_text_fetched; specified civil-date rows checked",
+      "accessed_precision": "instant",
       "topics": [
         "civil-date lunar/solar conversion",
         "leap month regression"
       ],
-      "reuse": "calendar facts used for regression; original table not redistributed"
+      "role": "knowledge",
+      "extensions": {
+        "legacy_group": "sources",
+        "legacy": {
+          "url": "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2025c.txt",
+          "title": "2025公历与农历日期对照表",
+          "accessed_at": "2026-10-08T12:20:23.491912+00:00",
+          "retrieval_outcome": "full_text_fetched; specified civil-date rows checked",
+          "topics": [
+            "civil-date lunar/solar conversion",
+            "leap month regression"
+          ],
+          "reuse": "calendar facts used for regression; original table not redistributed"
+        }
+      },
+      "retrieval": {
+        "status": "sections_read",
+        "method": "historical retrieval (exact method not recorded)",
+        "detail": "full_text_fetched; specified civil-date rows checked"
+      },
+      "use_for_synthesis": true
     },
     {
       "url": "https://github.com/6tail/lunar-python",
       "title": "lunar-python",
-      "version": "1.4.8",
-      "license": "MIT",
+      "accessed_at": null,
+      "accessed_precision": "unknown",
+      "topics": [
+        "calendar dependency",
+        "licensed code review"
+      ],
       "role": "production lunar/solar conversion dependency",
-      "retrieval_outcome": "GitHub API metadata and MIT license read; installed 1.4.8 inspected and executed"
+      "extensions": {
+        "legacy_group": "sources",
+        "legacy": {
+          "url": "https://github.com/6tail/lunar-python",
+          "title": "lunar-python",
+          "version": "1.4.8",
+          "license": "MIT",
+          "role": "production lunar/solar conversion dependency",
+          "retrieval_outcome": "GitHub API metadata and MIT license read; installed 1.4.8 inspected and executed"
+        },
+        "metadata_retrieval": {
+          "status": "metadata_only",
+          "method": "GitHub API",
+          "accessed_at": "2026-10-09T04:37:39.999896+00:00",
+          "url": "https://api.github.com/repos/6tail/lunar-python",
+          "title": "6tail/lunar-python",
+          "description": "日历、公历(阳历)、农历(阴历、老黄历)、佛历、道历，支持节假日、星座、儒略日、干支、生肖、节气、节日、彭祖百忌、每日宜忌、吉神宜趋凶煞宜忌、吉神(喜神/福神/财神/阳贵神/阴贵神)方位、胎神方位、冲煞、纳音、星宿、八字、五行、十神、建除十二值星、青龙名堂等十二神、黄道黑道日及吉凶等。lunar is a calendar library for Solar and Chinese Lunar.",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          },
+          "detail": "Fetched repository metadata only during v2 migration; does not re-date or expand historical code/article review."
+        }
+      },
+      "accessed_reason": "Historical record contains no access date/time; new metadata lookup is recorded separately and does not establish when the old read occurred.",
+      "retrieval": {
+        "status": "code_read",
+        "method": "historical retrieval (exact method not recorded)",
+        "detail": "GitHub API metadata and MIT license read; installed 1.4.8 inspected and executed"
+      },
+      "use_for_synthesis": false
     },
     {
       "url": "https://github.com/jinchenma94/bazi-skill",
-      "revision": "112a5d84cd1a001a0038cafca3be68d93e4c0cc9",
-      "license": "MIT",
+      "title": "jinchenma94/bazi-skill",
+      "accessed_at": null,
+      "accessed_precision": "unknown",
+      "topics": [
+        "calendar dependency",
+        "licensed code review"
+      ],
       "role": "licensed calendar/stems and reference tables integrated through validated wrapper",
-      "retrieval_outcome": "full source snapshot, license, script and regression read; legacy lunar conversion not used by Lilith entry"
+      "extensions": {
+        "legacy_group": "sources",
+        "legacy": {
+          "url": "https://github.com/jinchenma94/bazi-skill",
+          "revision": "112a5d84cd1a001a0038cafca3be68d93e4c0cc9",
+          "license": "MIT",
+          "role": "licensed calendar/stems and reference tables integrated through validated wrapper",
+          "retrieval_outcome": "full source snapshot, license, script and regression read; legacy lunar conversion not used by Lilith entry"
+        },
+        "metadata_retrieval": {
+          "status": "metadata_only",
+          "method": "GitHub API",
+          "accessed_at": "2026-10-09T04:37:40.876161+00:00",
+          "url": "https://api.github.com/repos/jinchenma94/bazi-skill",
+          "title": "jinchenma94/bazi-skill",
+          "description": "四柱八字命理分析",
+          "license": {
+            "key": "mit",
+            "name": "MIT License",
+            "spdx_id": "MIT",
+            "url": "https://api.github.com/licenses/mit",
+            "node_id": "MDc6TGljZW5zZTEz"
+          },
+          "detail": "Fetched repository metadata only during v2 migration; does not re-date or expand historical code/article review."
+        },
+        "title_origin": "GitHub API metadata"
+      },
+      "accessed_reason": "Historical record contains no access date/time; new metadata lookup is recorded separately and does not establish when the old read occurred.",
+      "retrieval": {
+        "status": "code_read",
+        "method": "historical retrieval (exact method not recorded)",
+        "detail": "full source snapshot, license, script and regression read; legacy lunar conversion not used by Lilith entry"
+      },
+      "use_for_synthesis": false
+    },
+    {
+      "url": "https://www.hko.gov.hk/tc/gts/astronomy/data/files/24SolarTerms_2024.xml",
+      "title": "Hong Kong Observatory 2024 Solar Terms XML",
+      "accessed_at": "2026-10-09T08:02:54.596277+00:00",
+      "accessed_precision": "instant",
+      "retrieval": {
+        "status": "sections_read",
+        "method": "web_extract of actual XML",
+        "detail": "Read 2024 table; Feb 4 16:27 HKT minute-precision row used for Lichun before/after regression. Do not equate second precision library output with official certification."
+      },
+      "topics": [
+        "solar terms",
+        "Lichun 2024",
+        "calendar regression"
+      ],
+      "use_for_synthesis": true,
+      "role": "independent numerical regression",
+      "notes": "Facts only; source table body is not bundled."
+    },
+    {
+      "url": "https://gml.noaa.gov/grad/solcalc/solareqns.PDF",
+      "title": "NOAA General Solar Position Calculations",
+      "accessed_at": "2026-10-09T08:02:54.596277+00:00",
+      "accessed_precision": "instant",
+      "retrieval": {
+        "status": "sections_read",
+        "method": "web_extract of PDF text",
+        "detail": "Read fractional-year equation-of-time and longitude/UTC-offset correction formula; used as independent approximate cross-check, not production BaZi or a full solar-time precision certificate."
+      },
+      "topics": [
+        "equation of time",
+        "true solar time",
+        "longitude correction"
+      ],
+      "use_for_synthesis": true,
+      "role": "independent solar clock formula cross-check",
+      "notes": "Source formula facts referenced; original PDF not bundled."
     }
-  ]
+  ],
+  "extensions": {
+    "legacy_manifest": {
+      "schema_version": "1.0",
+      "module": "bazi",
+      "source_policy": "Calendar facts cross-checked against the Hong Kong Observatory; source article/table bodies are not bundled. Cultural interpretation is separate from astronomy."
+    },
+    "migration_policy": "Original records and root details retained without expanding read scope. Date-only/unknown historical access times remain null. Supplemental metadata retrieval is not article/code reading."
+  }
 }

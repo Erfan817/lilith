@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.1",
+  "mode": "unknown-time-day-range",
+  "time_known": false,
+  "zodiac": "tropical",
+  "frame": "geocentric-apparent-ecliptic-of-date",
+  "engine": {
+    "name": "astronomy-engine",
+    "version": "2.1.19"
+  },
+  "date_range": {
+    "date": "2000-01-01",
+    "timezone": "Asia/Shanghai",
+    "start_utc": "1999-12-31T16:00:00+00:00",
+    "end_utc": "2000-01-01T16:00:00+00:00",
+    "end_exclusive": true
+  },
+  "range_method": "97-point sampled day including endpoint for bounds; not a solved ingress search",
+  "body_ranges": {
+    "Sun": {
+      "name": "太阳",
+      "start_longitude": 279.5192519794554,
+      "end_longitude": 280.53864551926364,
+      "min_offset_from_start": 0.0,
+      "max_offset_from_start": 1.0193935398082203,
+      "sampled_signs": [
+        "摩羯座"
+      ]
+    },
+    "Moon": {
+      "name": "月亮",
+      "start_longitude": 213.24860463627851,
+      "end_longitude": 225.32545095846163,
+      "min_offset_from_start": 0.0,
+      "max_offset_from_start": 12.076846322183115,
+      "sampled_signs": [
+        "天蝎座"
+      ]
+    },
+    "Mercury": {
+      "name": "水星",
+      "start_longitude": 270.5938547481707,
+      "end_longitude": 272.1483679533931,
+      "min_offset_from_start": 0.0,
+      "max_offset_from_start": 1.5545132052224062,
+      "sampled_signs": [
+        "摩羯座"
+      ]
+    },
+    "Venus": {
+      "name": "金星",
+      "start_longitude": 240.55810043668345,
+      "end_longitude": 241.76675610391896,
+      "min_offset_from_start": 0.0,
+      "max_offset_from_start": 1.2086556672355186,
+      "sampled_signs": [
+        "射手座"
+      ]
+    },
+    "Mars": {
+      "name": "火星",
+      "start_longitude": 327.317513792544,
+      "end_longitude": 328.0931794004484,
+      "min_offset_from_start": 0.0,
+      "max_offset_from_start": 0.7756656079043864,
+      "sampled_signs": [
+        "水瓶座"
+      ]
+    },
+    "Jupiter": {
+      "name": "木星",
+      "start_longitude": 25.221412953410113,
+      "end_longitude": 25.261039380718078,
+      "min_offset_from_start": 0.0,
+      "max_offset_from_start": 0.03962642730795096,
+      "sampled_signs": [
+        "白羊座"
+      ]
+    },
+    "Saturn": {
+      "name": "土星",
+      "start_longitude": 40.413374884102865,
+      "end_longitude": 40.39282641533631,
+      "min_offset_from_start": -0.020548468766548922,
+      "max_offset_from_start": 0.0,
+      "sampled_signs": [
+        "金牛座"
+      ]
+    },
+    "Uranus": {
+      "name": "天王星",
+      "start_longitude": 314.7643066293946,
+      "end_longitude": 314.8145018195149,
+      "min_offset_from_start": 0.0,
+      "max_offset_from_start": 0.0501951901202915,
+      "sampled_signs": [
+        "水瓶座"
+      ]
+    },
+    "Neptune": {
+      "name": "海王星",
+      "start_longitude": 303.165876799093,
+      "end_longitude": 303.2013736733503,
+      "min_offset_from_start": 0.0,
+      "max_offset_from_start": 0.03549687425731918,
+      "sampled_signs": [
+        "水瓶座"
+      ]
+    },
+    "Pluto": {
+      "name": "冥王星",
+      "start_longitude": 251.42535643317353,
+      "end_longitude": 251.46059073912488,
+      "min_offset_from_start": 0.0,
+      "max_offset_from_start": 0.03523430595134869,
+      "sampled_signs": [
+        "射手座"
+      ]
+    }
+  },
+  "bodies": null,
+  "angles": null,
+  "houses": null,
+  "aspects": null,
+  "location": null,
+  "warnings": [
+    "出生时刻未知：只给当日抽样范围；不把任何样本当成本命时刻。",
+    "端点只用于范围包络；换座和停滞附近需精确搜索，抽样不是完整误差证明。",
+    "不输出上升、宫位、精确月亮位置或相位；天体坐标不证明占星预测有效。"
+  ]
+}

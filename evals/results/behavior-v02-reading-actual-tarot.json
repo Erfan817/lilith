@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "scope": "model interpretation of precomputed actual tool data; not live tool-use evaluation",
+  "version": "v02",
+  "case_id": "reading-actual-tarot",
+  "model_requested": "gpt-6.1-sol",
+  "model_returned": "gpt-6.1-sol",
+  "executed_at": "2026-10-09T04:57:59.904283+00:00",
+  "skill_sha256": "b67c090d842270e42f92c01f0eff92303e57cd6955b7d3b20ae06955e287f61f",
+  "input": {
+    "id": "reading-actual-tarot",
+    "prompt": "合成案例：团队合作时大家迟迟不明确分工，请根据已经真实抽到的下面三张牌给简短反思，不断言同事内心。",
+    "result": {
+      "schema_version": "1.1",
+      "spread": "three",
+      "question": null,
+      "question_provided": false,
+      "question_echoed": false,
+      "deck": "Rider-Waite-Smith; Strength VIII; Justice XI",
+      "algorithm": "uniform-without-replacement",
+      "randomness": "seeded-pseudorandom",
+      "seed": 42,
+      "reversed_probability": 0.5,
+      "cards": [
+        {
+          "position": "过去",
+          "card": "节制",
+          "orientation": "逆位",
+          "is_major": true
+        },
+        {
+          "position": "现在",
+          "card": "女皇",
+          "orientation": "逆位",
+          "is_major": true
+        },
+        {
+          "position": "可能走向",
+          "card": "权杖国王",
+          "orientation": "逆位",
+          "is_major": false
+        }
+      ]
+    }
+  },
+  "output": "这三张牌可以作为对协作方式的反思，不代表同事的真实想法，也不是必然预测。\n\n- **过去｜节制逆位**：提醒回顾沟通节奏与协调方式——是否讨论不少，却始终没有形成明确的分工共识？\n- **现在｜女皇逆位**：可以检视“照顾整体”是否缺少具体落实：任务需要哪些资源、谁负责、何时交付，有没有说清楚？不必靠自己多做来填补所有空缺。\n- **可能走向｜权杖国王逆位**：若职责继续悬空，可能出现推进乏力，或有人急于拍板、分工却未经确认的情况。这是值得防范的协作模式，不是对某位同事性格的判断。\n\n**一个可选行动：**发出一份简短任务表，列出“任务—负责人—截止时间—需要的支持”，请大家在约定时间前确认或提出调整。把“谁愿意做什么”的讨论，转成可以回应的具体方案。",
+  "duration_seconds": 16.53
+}
