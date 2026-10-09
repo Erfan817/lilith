@@ -28,6 +28,12 @@ Source inventories in `references/*/sources*.json` identify material actually co
 
 Publicly viewable repositories without an explicit redistribution license are not copied into this repository. General historical concepts and independently expressed rules may be discussed, but their original source-specific code and wording are not relicensed or reproduced.
 
+## Cover artwork and style reference
+
+`assets/lilith-diviner.png` is an AI-generated character illustration produced for this project through Packy's OpenAI-compatible Images API, using `gpt-image-2` at high quality. It is the actual generated output, not an image copied from a gallery. The cover does not depict a real person or reproduce a gallery character.
+
+The rendering guidance was informed by **yang0**, https://github.com/yang0/handraw-style , revision `4eb29e2fcea3d9595d2f67b363e30ffdea338027`. Legacy style `239` maps to `FG-001`, “Late-80s Cyberpunk Dark OVA Cel Anime”. The gallery's custom **MIT License (with Attribution Requirement)** is retained in `LICENSES/handraw-style-attribution.txt`; it is not plain unmodified MIT. No gallery sample is redistributed. Artwork provenance is documented in `assets/README.md`; API credentials and server configuration are excluded from this repository.
+
 ## Scope
 
 MIT covers the project's work subject to the retained component notices above. Examples contain synthetic inputs. No user birth records, credentials, private conversations or personal reports belong in the public repository.
