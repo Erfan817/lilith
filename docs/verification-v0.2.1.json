@@ -33,7 +33,14 @@
     "execution_target": "GitHub Actions windows-latest with Python 3.10/3.12/3.13",
     "local_host_is_windows": false,
     "publication_verification": "Read the exact published revision's Actions run and per-job result after upload; no Windows result is inferred from Linux tests.",
-    "status": "pending_native_ci"
+    "status": "passed_on_first_candidate; full matrix rerun pending fixture repair",
+    "verified_revision": "7df364efcdc540ed1c831237c6baafd840290ba6",
+    "verified_run_url": "https://github.com/Erfan817/lilith-diviner/actions/runs/37952796485",
+    "passed_python_versions": [
+      "3.10",
+      "3.12",
+      "3.13"
+    ]
   },
   "vendor_unchanged": true,
   "secret_scan": "passed",
@@ -47,7 +54,7 @@
     "Live-host workflow evidence predates the final knowledge expansion; interpretation quality is not certified and the current entry document was not fully rerated."
   ],
   "last_review_fix": "Birth lower bound uses aware instant/earliest real domain; prebirth precise cutoffs rejected; cutoff and deceased information precision separated.",
-  "recorded_at": "2026-10-09T15:32:11.985931+00:00",
+  "recorded_at": "2026-10-09T15:47:21.803136+00:00",
   "code_review": {
     "passed": true,
     "scope": "relative to baseline commit; actual targeted and complete regression, security scan, allocation/time boundary probes",
@@ -58,9 +65,59 @@
     "index_entries": 26,
     "books": 13,
     "cases": 13,
-    "independent_review": "four fixable source-scope issues reported; remedied and covered by targeted regression; fresh correction review pending",
+    "independent_review": "Four source-scope corrections passed independent post-remediation review; audited hashes match current files; original failed review retained as historical.",
     "original_reading": "Forer 118–123 and Carlson 419–425 documented",
     "independent_reread": "Forer 120–121 and Carlson relevant tables verified; Forer 122–123 reread blocked by image service errors",
-    "modern_book_bodies": "not acquired; metadata-only books remain labeled"
+    "modern_book_bodies": "not acquired; metadata-only books remain labeled",
+    "correction_review_tests": "105 passed in tests/test_library_index.py and tests/test_sources.py; two new regressions explicitly passed",
+    "reviewed_file_sha256": {
+      "references/bazi/books-and-cases.md": "c6a86369196af212d5746f079d2e66e7711110bd2cc4ee52ad49d4fc154d684d",
+      "references/bazi/sources.json": "c1fa3679f89ae0ad07691e4ed242d11767ee719d6ec606466ca837b6f02f6f80",
+      "references/astrology/sources-advanced.json": "d09c71b817f724d707f6651fe13e16ebc7978d87908b4f6d18c037fada44785b",
+      "docs/library-index.json": "094035454b3c7115041745ad3b5f7b240cc3ed1b1889572a46e0568d163dce9d",
+      "references/common/experiments-and-evidence.md": "d7e38ad7293eda5463beaeb97ac1fd577f8b47d82f92eadb82a53fcfccecb68c",
+      "tests/test_library_index.py": "812b0a70d80dcf7780fcb422b8a1044e1dcb0db581c13c20eb762bf94d830476",
+      "tests/test_sources.py": "34b496413f3e7c2560cfecdf7a67b0407aae54274476a4859fa0d636ee7350cd",
+      "references/tarot/sources.json": "5c483e5ff43659c269d530d17bbe6ea773521804e48b5a54baf91302db86fbe1",
+      "references/astrology/sources-basic.json": "2ba1c079ca31aee1b4a73d72983bf046d3b7d2f28a72e89986d64c23435d36c8",
+      "references/qimen/sources.json": "c9e42e59efc5b6f4e047346b268d84450c3b0c82bc861c0427ded8c9cb56a176",
+      "references/ziwei/sources.json": "4538314eb3ac14f472254abc596eafafd909c523e62f9215514ae4626ff3af37",
+      "references/astrology/books-and-cases.md": "be7346e90e1d22cb2c6ea67a6cd1d38ff3c3be309674b1276241cefddaef0826",
+      "docs/bazi-reference-audit.md": "6be8b2f42f273160678e728f5bbab94a324f702cf87f5c234bb639269a8a0a28"
+    },
+    "scope": "Four cited corrections and Forer evidence boundary; not a full new research audit"
+  },
+  "ci_initial_candidate": {
+    "revision": "7df364efcdc540ed1c831237c6baafd840290ba6",
+    "url": "https://github.com/Erfan817/lilith-diviner/actions/runs/37952796485",
+    "conclusion": "failure",
+    "passed_jobs": [
+      "windows-latest 3.10",
+      "windows-latest 3.12",
+      "windows-latest 3.13",
+      "ubuntu-latest 3.12"
+    ],
+    "failed_jobs": [
+      "ubuntu-latest 3.10",
+      "ubuntu-latest 3.13"
+    ],
+    "failed_test": "test_sources_main_serializes_windows_manifest_as_posix",
+    "diagnosis": "Test fixture mixed PureWindowsPath manifest and native POSIX root; production sources CLI remains unchanged; new-revision native rerun required."
+  },
+  "fixture_remediation": {
+    "changed_file": "tests/test_sources.py",
+    "changed_function": "test_sources_main_serializes_windows_manifest_as_posix",
+    "production_code_changed": false,
+    "root_cause": "Foreign-path fixture must consistently supply Windows root at argparse boundary, not mix a native POSIX root with PureWindowsPath manifest.",
+    "red": "Added root type assertion rejects native POSIX root before factory fix.",
+    "green": "Factory supplies PureWindowsPath for the explicit synthetic root and real Path for default __file__; target and 100 source tests pass.",
+    "mutation": "Changing as_posix to str in a disposable script copy fails the exact JSON path assertion.",
+    "parent_targeted_regression": "105 passed",
+    "final_independent_fixture_review": {
+      "passed": true,
+      "security_concerns": [],
+      "logic_errors": [],
+      "scope": "The explicit synthetic root and loader use Windows flavour, real main/argparse and exact POSIX JSON assertion retained; isolated fixture, not native filesystem validation."
+    }
   }
 }

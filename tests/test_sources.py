@@ -212,7 +212,18 @@ def test_sources_main_serializes_windows_manifest_as_posix(monkeypatch, capsys):
     root = PureWindowsPath('C:/synthetic-skill')
     path = root / 'references' / 'tarot' / 'sources.json'
     assert str(path.relative_to(root)) == r'references\tarot\sources.json'
-    monkeypatch.setattr(module, 'load_source_manifests', lambda root: [(path, manifest())])
+    def load_windows_manifests(received_root):
+        assert type(received_root) is PureWindowsPath
+        assert received_root == root
+        return [(path, manifest())]
+
+    def windows_path_factory(value):
+        if value == root.as_posix():
+            return root
+        return Path(value)
+
+    monkeypatch.setattr(module, 'Path', windows_path_factory)
+    monkeypatch.setattr(module, 'load_source_manifests', load_windows_manifests)
 
     assert module.main(['--root', root.as_posix()]) == 0
     data = json.loads(capsys.readouterr().out)
