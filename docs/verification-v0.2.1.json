@@ -15,7 +15,8 @@
     "fresh_venv": true,
     "dependency_source": "requirements-dev.txt resolved from uv offline cache into new environment; no ambient host packages",
     "junit_tests": 508,
-    "skill_directory_name": "lilith-diviner"
+    "skill_directory_name": "lilith-diviner",
+    "scope": "Refreshed snapshot after the fixture repair, same independent fresh environment; 506 passed and 2 subtests passed."
   },
   "official_skill_validator": "passed with absolute directory path",
   "structure_validator": "passed",
@@ -33,9 +34,9 @@
     "execution_target": "GitHub Actions windows-latest with Python 3.10/3.12/3.13",
     "local_host_is_windows": false,
     "publication_verification": "Read the exact published revision's Actions run and per-job result after upload; no Windows result is inferred from Linux tests.",
-    "status": "passed_on_first_candidate; full matrix rerun pending fixture repair",
-    "verified_revision": "7df364efcdc540ed1c831237c6baafd840290ba6",
-    "verified_run_url": "https://github.com/Erfan817/lilith-diviner/actions/runs/37952796485",
+    "status": "passed",
+    "verified_revision": "e939af9e2422db00ab0a00b16687c183b91922ca",
+    "verified_run_url": "https://github.com/Erfan817/lilith-diviner/actions/runs/37955327976",
     "passed_python_versions": [
       "3.10",
       "3.12",
@@ -119,5 +120,65 @@
       "logic_errors": [],
       "scope": "The explicit synthetic root and loader use Windows flavour, real main/argparse and exact POSIX JSON assertion retained; isolated fixture, not native filesystem validation."
     }
+  },
+  "native_ci": {
+    "status": "passed",
+    "verified_revision": "e939af9e2422db00ab0a00b16687c183b91922ca",
+    "url": "https://github.com/Erfan817/lilith-diviner/actions/runs/37955327976",
+    "job_count": 6,
+    "all_jobs_succeeded": true,
+    "jobs": [
+      {
+        "name": "offline-tests (ubuntu-latest, 3.10)",
+        "id": 113904265962,
+        "conclusion": "success",
+        "summary": "506 passed, 2 subtests passed in 15.61s",
+        "skip_details": []
+      },
+      {
+        "name": "offline-tests (ubuntu-latest, 3.13)",
+        "id": 113904266117,
+        "conclusion": "success",
+        "summary": "506 passed, 2 subtests passed in 26.48s",
+        "skip_details": []
+      },
+      {
+        "name": "offline-tests (ubuntu-latest, 3.12)",
+        "id": 113904266119,
+        "conclusion": "success",
+        "summary": "506 passed, 2 subtests passed in 25.82s",
+        "skip_details": []
+      },
+      {
+        "name": "offline-tests (windows-latest, 3.12)",
+        "id": 113904266153,
+        "conclusion": "success",
+        "summary": "499 passed, 7 skipped, 2 subtests passed in 35.45s",
+        "skip_details": []
+      },
+      {
+        "name": "offline-tests (windows-latest, 3.13)",
+        "id": 113904266311,
+        "conclusion": "success",
+        "summary": "499 passed, 7 skipped, 2 subtests passed in 18.39s",
+        "skip_details": []
+      },
+      {
+        "name": "offline-tests (windows-latest, 3.10)",
+        "id": 113904266490,
+        "conclusion": "success",
+        "summary": "499 passed, 7 skipped, 2 subtests passed in 19.66s",
+        "skip_details": []
+      }
+    ],
+    "scope": "Native Ubuntu/Windows runners × Python 3.10/3.12/3.13. Platform-specific POSIX permission fixtures may skip on Windows; core CLI/content/report safety tests still run."
+  },
+  "publication_snapshot": {
+    "tested_commit": "e939af9e2422db00ab0a00b16687c183b91922ca",
+    "tree": "e40181919c6e2f34873e84540ae42e0753070a70",
+    "remote_blobs_verified": 131,
+    "all_remote_blob_hashes_match": true,
+    "downloaded_commit_suite": "506 passed, 2 subtests passed",
+    "final_evidence_commit_scope": "The following evidence-only commit does not change code, references, workflow or test assertions."
   }
 }
