@@ -13,7 +13,7 @@ def test_offline_eval_suite_reports_cases_and_explicitly_not_model_execution():
     assert result.returncode == 0, result.stderr
     data = json.loads(result.stdout)
     assert data["passed"]
-    assert data["case_count"] == 11
-    assert data["positive_count"] == 7
-    assert data["negative_count"] == 4
+    assert data["case_count"] == 15
+    assert data["positive_count"] == 10
+    assert data["negative_count"] == 5
     assert data["model_evaluation_executed"] is False

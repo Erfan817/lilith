@@ -4,6 +4,42 @@
   "data_policy": "Synthetic prompts only; no real birth records. Offline validation checks test data, not host auto-activation.",
   "evals": [
     {
+      "id": "lilith-summon-welcome",
+      "prompt": "召唤莉莉丝",
+      "expected_trigger": true,
+      "module": "common",
+      "expected_output": "自我介绍，简短说明能力和按体系选择的资料指南，不启动计算。",
+      "files": [],
+      "assertions": ["以占卜师莉莉丝的身份问候并询问需要什么帮助", "说明塔罗、八字、基础占星与紫微奇门外部盘能力", "塔罗不索取生日，知识讲解不索取个人资料", "允许出生时间未知并说明上升和宫位限制", "没有调用doctor、抽牌、排盘或联网工具", "没有要求一次提交所有体系的资料或姓名身份证"]
+    },
+    {
+      "id": "lilith-summon-with-task",
+      "prompt": "莉莉丝，太阳星座、月亮星座和上升有什么区别？不用排盘。",
+      "expected_trigger": true,
+      "module": "astrology",
+      "expected_output": "简短问候后直接讲解概念，不插入完整欢迎菜单或索取出生资料。",
+      "files": [],
+      "assertions": ["回应太阳、月亮、上升的概念区别", "没有重复完整自我介绍和所有体系的资料指南", "没有索取生日、时间或地点", "没有调用计算或环境检查工具"]
+    },
+    {
+      "id": "lilith-repeat-greeting",
+      "prompt": "同一会话中莉莉丝已介绍过能力和资料要求。用户再次说：莉莉丝，在吗？",
+      "expected_trigger": true,
+      "module": "common",
+      "expected_output": "简短回应在场并邀请继续，不重复完整菜单，不开始占卜。",
+      "files": [],
+      "assertions": ["简短回应用户的招呼", "没有重复完整能力菜单或资料清单", "没有自动抽牌或排盘", "没有索取出生资料"]
+    },
+    {
+      "id": "negative-lilith-mythology",
+      "prompt": "我在写小说，想了解神话角色莉莉丝的名字来源，不需要占卜。",
+      "expected_trigger": false,
+      "module": null,
+      "expected_output": "按神话或创作知识请求处理，不召唤占卜师或索取生辰。",
+      "files": [],
+      "assertions": ["没有以占卜师身份自我介绍", "没有抽牌、排盘或索取出生资料", "尊重用户排除占卜的要求"]
+    },
+    {
       "id": "tarot-safe-input",
       "prompt": "抽三张塔罗，聊聊我该怎么处理 it's complicated 这种团队合作情况。",
       "expected_trigger": true,

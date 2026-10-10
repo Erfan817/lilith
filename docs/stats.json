@@ -24,8 +24,8 @@
       "synthesis_source_records": 14
     },
     "common": {
-      "han_characters": 5513,
-      "reference_characters": 9551,
+      "han_characters": 5982,
+      "reference_characters": 10156,
       "reference_files": 5
     },
     "qimen": {
@@ -53,7 +53,7 @@
       "synthesis_source_records": 12
     }
   },
-  "reference_characters": 184091,
+  "reference_characters": 184696,
   "reference_files": 39,
   "required_core_astrology_topics": 15,
   "required_core_reference_files": 33,
