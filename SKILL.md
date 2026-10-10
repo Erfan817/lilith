@@ -26,9 +26,22 @@ metadata:
 
 ## 运行前检查
 
-`<skill-root>` 是本文件所在目录，安装目录必须叫 `lilith-diviner`。`<python>` 是该技能独立环境的解释器，不是任意系统 Python。下面是命令内容，不是特定宿主工具调用：Claude Code 使用 Bash/Read，Hermes 使用 terminal/read_file，Cursor 使用其实际终端/读文件工具。不要发明宿主没有的参数。
+`<skill-root>` 是本文件所在目录，安装目录必须叫 `lilith-diviner`。`<python>` 是按下面流程验证过的解释器绝对路径，不是固定命令名 `python3`。Python 3.10 及以上满足版本要求，包括 3.14.5；`python`、`python3`、`py -3` 是启动方式，不是不同的兼容版本。下面是命令内容，不是特定宿主工具调用：Claude Code 使用 Bash/Read，Hermes 使用 terminal/read_file，Cursor 使用其实际终端/读文件工具。不要发明宿主没有的参数。
 
-第一次执行某模块前，先检查技能目录中已存在的 `.venv`，用它的解释器运行doctor；不要先试宿主的 `python3`，不要从别的项目猜借环境或擅自装包。运行：
+第一次执行某模块前，按顺序发现并验证解释器：
+
+1. **优先技能自带环境**：检查 `<skill-root>/.venv/Scripts/python.exe`（Windows）或 `<skill-root>/.venv/bin/python`（Linux/macOS）。已有环境先直接探测，不要求激活，也不依赖 PATH 中的 `python3`。文件存在不等于可运行；失效时保留原因并继续下一步，不删除或覆盖旧环境。
+2. **查找备用解释器**：没有可用技能环境时，Windows 依次检查 `python`、`py -3`、`python3`；Linux/macOS 依次检查 `python3`、`python`。用宿主命令发现工具（如 PowerShell `Get-Command`、POSIX `command -v`）确认路径。Windows 路径指向 `Microsoft/WindowsApps` 的应用执行别名时，先跳过，避免启动应用商店；不要因此断言机器没有 Python。必要时 Windows 用 `py --list-paths`（旧启动器可用 `py -0p`），POSIX 用命令发现工具列出已有的 `python3.x` 命令，检查其他已安装版本。不要从别的项目猜借环境或擅自装包。
+3. **实际运行验证**：对每个候选执行下面的只读探测，设约 10 秒超时。必须退出码为 0、有可解析 JSON、`version` 至少为 `[3, 10]`。只看命令存在、没有输出或 `--version` 文本不够；超时、占位程序、空输出或旧版本只淘汰当前候选，继续检查其余候选。全部已发现候选都失败后，才报告未找到可用解释器，并列出实际检查结果。
+
+```text
+<候选启动命令> -c "import json,sys; print(json.dumps({'executable': sys.executable, 'version': list(sys.version_info[:3])}))"
+```
+
+4. **固定已验证路径**：取探测结果的 `executable` 作为 `<python>`，安全引用绝对路径；PowerShell 调用带引号的路径时使用 `&`。后续 doctor、计算、报告和该环境的 pip 全部沿用这一路径，不切回 `python3` 或其他默认命令。
+5. **区分解释器与依赖**：先用已验证解释器运行 doctor。doctor 的 JSON 里 `python.supported=true`、`ready=false` 表示依赖未就绪，不是 Python 不可用。没有技能虚拟环境时，塔罗可直接使用已验证的系统解释器；八字/占星先检查依赖，缺依赖时在获得安装授权后用已验证解释器创建技能 `.venv`，再探测新环境并安装其中的依赖。已有 `.venv` 失效时先说明原因，不能直接覆写。
+
+运行：
 
 ```text
 <python> <skill-root>/scripts/lilith.py doctor --module tarot
@@ -36,9 +49,9 @@ metadata:
 <python> <skill-root>/scripts/lilith.py doctor --module astrology
 ```
 
-doctor 只检查当前解释器，不安装、不联网；`doctor --module bazi` 默认检查全部八字功能，单查民用时用 `--feature civil`，使用视太阳时前用 `--feature apparent-solar` 核验 astronomy-engine。如果缺依赖，先告诉用户缺项和影响；用户允许后在技能目录创建 `.venv`，运行该环境的 `python -m pip install -r <skill-root>/requirements.txt`，然后重跑 doctor。Linux/macOS 常见解释器是 `.venv/bin/python`，Windows 是 `.venv/Scripts/python.exe`。不要修改宿主 Agent 的依赖。
+doctor 只检查当前解释器，不安装、不联网；`doctor --module bazi` 默认检查全部八字功能，单查民用时用 `--feature civil`，使用视太阳时前用 `--feature apparent-solar` 核验 astronomy-engine。如果缺依赖，先告诉用户缺项和影响；用户允许后使用技能独立环境的 `<python> -m pip install -r <skill-root>/requirements.txt`，然后重跑 doctor。不要修改宿主 Agent 的依赖。
 
-`allowed-tools` 是实验性权限提示：上面的窄范围规则仅针对 Claude 风格工具及仓库根相对命令；绝对路径、虚拟环境解释器和其它宿主可能仍需批准。不授予整个 shell/Python 任意执行权限，不绕过宿主审批。
+`allowed-tools` 是实验性权限提示：上面的窄范围规则仅针对 Claude 风格工具及仓库根相对命令，不是解释器名称或版本白名单。已验证的绝对路径、虚拟环境解释器和其它宿主可能仍需批准，不能因此退回不可用的 `python3` 或声称 Python 不受支持。不授予整个 shell/Python 任意执行权限，不绕过宿主审批。
 
 ## 安全执行
 

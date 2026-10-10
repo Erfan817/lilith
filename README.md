@@ -43,6 +43,20 @@
 
 技能目录必须叫 lilith-diviner。只选择自己使用的宿主路径，不要同时安装多份。
 
+需要 Python 3.10 或更新版本，Python 3.14.5 也满足版本要求；命令不必叫 `python3`。已有技能 `.venv` 时优先使用其中的解释器，不必重新创建。下面的安装示例适用于首次安装。
+
+### 找到可用的 Python
+
+先实际运行探测，确认退出成功并输出解释器路径与版本：
+
+```text
+python -c "import json,sys; print(json.dumps({'executable': sys.executable, 'version': list(sys.version_info[:3])}))"
+```
+
+Windows 可依次检查 `python`、`py -3`、`python3`；Linux/macOS 可检查 `python3`、`python`。一个命令失败或无输出时继续检查其他候选。Windows 的 `python3` 可能只是应用商店占位程序：用 `Get-Command python,py,python3 -ErrorAction SilentlyContinue` 查路径，优先跳过指向 `Microsoft/WindowsApps` 的别名。多版本可用 Windows `py --list-paths`（旧版 `py -0p`）或 POSIX 命令发现工具查看已安装的 `python3.x`。
+
+把下面创建环境的命令替换为已验证的启动方式，例如 `python -m venv .venv` 或 `python3.14 -m venv .venv`；带空格的绝对路径在 PowerShell 中用 `& "路径"` 调用。创建后统一使用 `.venv` 中的解释器。doctor 报依赖缺失时，只需按提示补齐技能环境，不代表 Python 不可用。
+
 ### Linux / macOS
 
 ```bash
@@ -58,12 +72,14 @@ python3 -m venv .venv
 ```powershell
 git clone https://github.com/Erfan817/lilith-diviner.git "$HOME/.agents/skills/lilith-diviner"
 Set-Location "$HOME/.agents/skills/lilith-diviner"
-py -3 -m venv .venv
+python -m venv .venv
 $env:PYTHONUTF8 = "1"
 $env:PYTHONIOENCODING = "utf-8"
 .venv/Scripts/python.exe -m pip install -r requirements.txt
 .venv/Scripts/python.exe scripts/lilith.py doctor
 ```
+
+如果 `python` 不可用，再尝试 `py -3 -m venv .venv`。不要用没有输出的 `python3` 应用商店占位别名判断 Python 不存在。
 
 也可以安装到 Claude Code、Cursor 或 Hermes 使用的技能目录。宿主的发现路径、工具名称和审批规则不同；当前真实多轮流程已验证 Hermes，Claude Code 和 Cursor 仍需要在各自环境中单独验收。
 
@@ -80,6 +96,8 @@ $env:PYTHONIOENCODING = "utf-8"
 ```
 
 Windows PowerShell 把 .venv/bin/python 替换为 .venv/Scripts/python.exe 即可。
+
+报告在 POSIX 系统使用 0600 权限；Windows 的隐私取决于父目录和文件 ACL，不由 Python 的数字 mode 保证。请选择仅本人可访问的目录，并在分享前预览。
 
 ### 隐私输入
 
